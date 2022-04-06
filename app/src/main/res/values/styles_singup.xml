@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SingUp_Title">
+        <item name="android:textSize">42sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/fredoka_condensed_regular</item>
+    </style>
+
+    <style name="SingUp_TextInputEditText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textColorHint">@color/color_sing_up_hint</item>
+        <item name="singleLine">true</item>
+        <item name="paddingStart">24dp</item>
+        <item name="hintTextColor">@color/color_sing_up_hint</item>
+    </style>
+
+    <style name="SingUp_TextInputLayout">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textColorHint">@color/color_sing_up_hint</item>
+        <item name="hintTextColor">@color/color_sing_up_hint</item>
+    </style>
+
+    <style name="SingUp_RadioGroup_Text">
+        <item name="android:textColor">@color/color_sing_up_hint</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="RadioButton_SingUp">
+        <item name="android:textSize">18sp</item>
+        <item name="color">@color/black</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="buttonTint">@color/black</item>
+        <item name="fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="UserMessengerTextStyle">
+        <item name="android:textColor">#54000000</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/inter_regular</item>
+    </style>
+
+
+    <style name="SingUp_TextButtonDisable_Style">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/button_string_sing_up_disable</item>
+    </style>
+
+    <style name="SingUp_TextButtonEnable_Style">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextErrorStyle">
+        <item name="android:textColor">@color/error_color</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

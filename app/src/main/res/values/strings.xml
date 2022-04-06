@@ -1,3 +1,4 @@
 <resources>
+    <!-- Não alterar nome do arquivo (se não da erro) -->
     <string name="app_name">App Camp</string>
 </resources>

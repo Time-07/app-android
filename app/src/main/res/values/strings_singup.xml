@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="singUp">Cadastro</string>
+    <string name="user_sing_up_string">Como posso te chamar?*</string>
+    <string name="email_sing_up_string">Qual é o seu email?</string>
+    <string name="password_sing_up_string">Escolha uma senha forte</string>
+    <string name="confirm_password_sing_up_string">Confirme sua senha</string>
+    <string name="radio_group_text">Você se identifica como:</string>
+    <string name="first_option_sing_up_string">Mulher Trans</string>
+    <string name="second_option_sing_up_string">Homem Trans</string>
+    <string name="third_option_sing_up_string">Pessoa Trans Não Binária</string>
+    <string name="fourth_option_sing_up_string">Outra Identidade</string>
+    <string name="user_messenger_string">Nome pelo qual você se identifica*</string>
+    <string name="sing_up_button_string">Cadastro</string>
+    <string name="others_option_sing_up_string">Qual é a sua identidade de gênero</string>
+    <string name="error_email_sing_up_string">Formato de email inválido</string>
+    <string name="error_password_string">As senhas precisam ser iguais</string>
+    <string name="terms_of_use_sing_up_string">Ao se casdastrar você concorda com nossos</string>
+    <string name="required_genre_string">Campo obrigatório</string>
+</resources>
