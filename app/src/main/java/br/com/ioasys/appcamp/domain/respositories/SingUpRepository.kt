@@ -5,5 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface SingUpRepository {
 
-    fun singUp(user: String, email: String, password: String, genre: String): Flow<SingUpItems>
+    fun singUp(user: String, email: String, password: String, confirmPassword: String, genre: String): Flow<SingUpItems>
 }
