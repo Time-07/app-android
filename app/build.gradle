@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -61,8 +62,11 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:4.6.0'
 
     def nav_version = "2.4.1"
+    //noinspection GradleDependency
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    //noinspection GradleDependency
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    //noinspection GradleDependency
     implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
 
     def coilVersion = "1.4.0"

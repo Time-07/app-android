@@ -9,6 +9,15 @@
         android:id="@+id/SingUpFragment"
         android:name="br.com.ioasys.appcamp.presentation.ui.fragments.SingUpFragment"
         android:label="fragment_book_list"
-        tools:layout="@layout/fragment_sing_up" />
+        tools:layout="@layout/fragment_sing_up" >
+        <action
+            android:id="@+id/action_SingUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="br.com.ioasys.appcamp.presentation.ui.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 
 </navigation>

@@ -3,14 +3,16 @@ package br.com.ioasys.appcamp.presentation.ui.fragments
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.constraintlayout.motion.utils.ViewState
-import androidx.fragment.app.Fragment
+import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.appcamp.databinding.FragmentLoginBinding
 import br.com.ioasys.appcamp.presentation.viewmodel.LoginViewModel
+import br.com.ioasys.appcamp.utils.ViewState
+
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginFragment : Fragment() {
@@ -18,7 +20,7 @@ class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding: FragmentLoginBinding get() = _binding!!
 
-    private val loginViewModel : LoginViewModel by viewModel()
+    private val loginViewModel: LoginViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -61,8 +63,8 @@ class LoginFragment : Fragment() {
                 textFieldEditEmail,
                 textFieldEditPassword
             )
-            for (editText in editTexts){
-                editText.addTextChangedListener(object: TextWatcher{
+            for (editText in editTexts) {
+                editText.addTextChangedListener(object : TextWatcher {
                     override fun beforeTextChanged(
                         s: CharSequence?,
                         start: Int,
@@ -83,7 +85,7 @@ class LoginFragment : Fragment() {
                         val passwordInput = editTexts[1].text.toString().trim()
 
                         mbLogin.isEnabled =
-                            emailInput.isNotEmpty()&&
+                            emailInput.isNotEmpty() &&
                                     passwordInput.isNotEmpty()
                     }
 
@@ -95,13 +97,13 @@ class LoginFragment : Fragment() {
         }
     }
 
-    private fun addObserver(){
+    private fun addObserver() {
         loginViewModel.loggedUserViewState.observe(viewLifecycleOwner) { state ->
 
-            when(state){
+            when (state) {
                 is ViewState.Success -> {
                     findNavController().navigate(
-                        LoginFragmentDirections.actionTvSignupLinkToFragmentSignup()
+                        LoginFragmentDirections.actionLoginFragmentToSearchFragment()
                     )
                 }
                 is ViewState.Error -> {
@@ -119,4 +121,5 @@ class LoginFragment : Fragment() {
         loginViewModel.resetViewState()
         _binding = null
     }
+}
 
