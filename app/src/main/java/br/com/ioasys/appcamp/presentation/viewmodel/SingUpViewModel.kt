@@ -17,7 +17,7 @@ class SingUpViewModel(
     val singUpViewState = _singUpViewState as LiveData<ViewState<List<SingUpItems>>>
 
     private var _genre: String = null ?: ""
-    private val genreValue: String = _genre
+    val genreValue: String = _genre
 
 
     fun setGenre(genreValue: String){
@@ -28,7 +28,8 @@ class SingUpViewModel(
         user: String,
         email: String,
         password: String,
-        confirmPassword: String
+        confirmPassword: String,
+        genre: String
     ){
         _singUpViewState.postLoading()
         singUpUseCase(
@@ -37,9 +38,11 @@ class SingUpViewModel(
                 email = email,
                 password = password,
                 confirmPassword = confirmPassword,
-                genre = genreValue
+                genre = genre
             ),
-            onSuccess = {},
+            onSuccess = {
+
+            },
             onError = {
                 _singUpViewState.postError(it)
             }
