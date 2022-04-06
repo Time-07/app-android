@@ -92,6 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/error_text"
+        android:textColor="@color/error_color"
         android:textSize="14sp"
         android:visibility="visible"
         android:drawableStart="@drawable/ic_error"
