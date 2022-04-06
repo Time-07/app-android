@@ -1,7 +1,6 @@
-package com.example.ioasysbooks.util
+package br.com.ioasys.appcamp.utils
 
 import androidx.lifecycle.MutableLiveData
-import br.com.ioasys.appcamp.utils.ViewState
 
 fun <T> MutableLiveData<ViewState<T>>.postSuccess(data : T){
     postValue(ViewState.Success(data))
