@@ -3,11 +3,13 @@ package br.com.ioasys.appcamp.presentation.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import br.com.ioasys.transapp.ViewState
-import br.com.ioasys.transapp.domain.usecase.LoginUseCase
-import br.com.ioasys.transapp.postError
-import br.com.ioasys.transapp.postNeutral
-import br.com.ioasys.transapp.postSuccess
+import br.com.ioasys.appcamp.domain.usecase.LoginUseCase
+import br.com.ioasys.appcamp.utils.ViewState
+import br.com.ioasys.appcamp.utils.postError
+import br.com.ioasys.appcamp.utils.postNeutral
+import br.com.ioasys.appcamp.utils.postSuccess
+
+
 
 class LoginViewModel(
     private val loginUseCase: LoginUseCase

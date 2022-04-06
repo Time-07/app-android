@@ -1,10 +1,10 @@
 package br.com.ioasys.appcamp.domain.usecase
 
+import br.com.ioasys.appcamp.domain.model.User
+import br.com.ioasys.appcamp.domain.respositories.LoginRepository
 import br.com.ioasys.appcamp.domain.utils.UseCase
-import br.com.ioasys.transapp.domain.model.User
-import br.com.ioasys.transapp.domain.model.exception.InvalidEmailException
-import br.com.ioasys.transapp.domain.model.exception.InvalidPasswordException
-import br.com.ioasys.transapp.domain.repositories.LoginRepository
+import br.com.ioasys.transapp.domain.exception.InvalidEmailException
+import br.com.ioasys.transapp.domain.exception.InvalidPasswordException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 

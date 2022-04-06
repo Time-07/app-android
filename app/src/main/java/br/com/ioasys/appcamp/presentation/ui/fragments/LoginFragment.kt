@@ -3,16 +3,14 @@ package br.com.ioasys.appcamp.presentation.ui.fragments
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.constraintlayout.motion.utils.ViewState
-import androidx.core.widget.addTextChangedListener
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import br.com.ioasys.transapp.ViewState
-import br.com.ioasys.transapp.databinding.FragmentLoginBinding
-import br.com.ioasys.transapp.presentation.viewmodel.LoginViewModel
+import br.com.ioasys.appcamp.databinding.FragmentLoginBinding
+import br.com.ioasys.appcamp.presentation.viewmodel.LoginViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginFragment : Fragment() {

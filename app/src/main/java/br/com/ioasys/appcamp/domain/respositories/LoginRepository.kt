@@ -1,6 +1,6 @@
 package br.com.ioasys.appcamp.domain.respositories
 
-import br.com.ioasys.transapp.domain.model.User
+import br.com.ioasys.appcamp.domain.model.User
 import kotlinx.coroutines.flow.Flow
 
 interface LoginRepository {
