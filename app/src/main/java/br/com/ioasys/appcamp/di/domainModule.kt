@@ -1,5 +1,6 @@
-package br.com.ioasys.transapp.di
+package br.com.ioasys.appcamp.di
 
+import br.com.ioasys.appcamp.domain.usecase.SingUpUseCase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import org.koin.dsl.module
@@ -7,4 +8,6 @@ import org.koin.dsl.module
 val domainModule = module {
 
     single { CoroutineScope(Dispatchers.IO) }
+
+    factory { SingUpUseCase(get(), get()) }
 }

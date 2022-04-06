@@ -19,6 +19,6 @@ class SingUpUseCase(
         val user: String,
         val email: String,
         val password: String,
-        val gender: String
+        val genre: String
     )
 }

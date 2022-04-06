@@ -1,8 +1,9 @@
 package br.com.ioasys.appcamp.activity
 
 import android.app.Application
-import br.com.ioasys.transapp.di.domainModule
-import br.com.ioasys.transapp.di.presentationModule
+import br.com.ioasys.appcamp.di.PresentationModule
+import br.com.ioasys.appcamp.di.dataModule
+import br.com.ioasys.appcamp.di.domainModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -12,8 +13,9 @@ class MainApplication: Application() {
         super.onCreate()
         startKoin {
             modules(
-                presentationModule,
-                domainModule
+                PresentationModule,
+                domainModule,
+                dataModule
             ).androidContext(applicationContext)
         }
     }
