@@ -10,11 +10,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import br.com.ioasys.appcamp.databinding.FragmentSingUpBinding
+import br.com.ioasys.appcamp.domain.exception.EmptyInputException
+import br.com.ioasys.appcamp.domain.exception.InvalidEmailException
+import br.com.ioasys.appcamp.domain.exception.InvalidPasswordException
 import br.com.ioasys.appcamp.presentation.viewmodel.SingUpViewModel
 import br.com.ioasys.appcamp.utils.ViewState
-import br.com.ioasys.transapp.domain.exception.EmptyInputException
-import br.com.ioasys.transapp.domain.exception.InvalidEmailException
-import br.com.ioasys.transapp.domain.exception.InvalidPasswordException
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 
 class SingUpFragment : Fragment() {

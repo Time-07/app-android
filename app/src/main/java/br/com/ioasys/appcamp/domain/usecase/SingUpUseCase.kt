@@ -1,12 +1,12 @@
 package br.com.ioasys.appcamp.domain.usecase
 
+import br.com.ioasys.appcamp.domain.exception.EmptyInputException
+import br.com.ioasys.appcamp.domain.exception.InvalidEmailException
+import br.com.ioasys.appcamp.domain.exception.InvalidPasswordException
 import br.com.ioasys.appcamp.domain.model.SingUpItems
 import br.com.ioasys.appcamp.domain.respositories.SingUpRepository
 import br.com.ioasys.appcamp.domain.utils.DomainConstants
 import br.com.ioasys.appcamp.domain.utils.UseCase
-import br.com.ioasys.transapp.domain.exception.EmptyInputException
-import br.com.ioasys.transapp.domain.exception.InvalidEmailException
-import br.com.ioasys.transapp.domain.exception.InvalidPasswordException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 

@@ -1,3 +1,3 @@
-package br.com.ioasys.transapp.domain.exception
+package br.com.ioasys.appcamp.domain.exception
 
 class InvalidPasswordException: Throwable()
