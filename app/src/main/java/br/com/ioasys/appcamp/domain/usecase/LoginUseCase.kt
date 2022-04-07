@@ -16,6 +16,7 @@ class LoginUseCase(
     override fun run(params: Params?): Flow<User> = when {
         params?.email?.isEmpty() == true -> throw InvalidEmailException()
         params?.password?.isEmpty() == true -> throw InvalidPasswordException()
+
         else ->  loginRepository.login(
             email = params?.email ?: "",
             password = params?.password ?: ""
