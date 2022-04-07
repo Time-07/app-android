@@ -5,10 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import br.com.ioasys.appcamp.domain.model.SingUpItems
 import br.com.ioasys.appcamp.domain.usecase.SingUpUseCase
-import br.com.ioasys.appcamp.utils.ViewState
-import br.com.ioasys.appcamp.utils.postError
-import br.com.ioasys.appcamp.utils.postLoading
-import br.com.ioasys.appcamp.utils.postNeutral
+import br.com.ioasys.appcamp.utils.*
 
 class SingUpViewModel(
     private val singUpUseCase: SingUpUseCase
@@ -42,7 +39,7 @@ class SingUpViewModel(
                 genre = genre
             ),
             onSuccess = {
-
+                _singUpViewState.postSuccess(listOf(it))
             },
             onError = {
                 _singUpViewState.postError(it)
@@ -51,7 +48,7 @@ class SingUpViewModel(
     }
 
 
-    fun resetViewState(){
+    fun  resetViewState(){
         _singUpViewState.postNeutral()
     }
 

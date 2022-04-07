@@ -1,5 +1,6 @@
 package br.com.ioasys.appcamp.presentation.ui.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -10,8 +11,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import br.com.ioasys.appcamp.databinding.FragmentSingUpBinding
-import br.com.ioasys.appcamp.domain.exception.EmptyInputException
-import br.com.ioasys.appcamp.domain.exception.InvalidEmailException
 import br.com.ioasys.appcamp.domain.exception.InvalidPasswordException
 import br.com.ioasys.appcamp.presentation.viewmodel.SingUpViewModel
 import br.com.ioasys.appcamp.utils.ViewState
@@ -85,8 +84,8 @@ class SingUpFragment : Fragment() {
                 is ViewState.Error -> {
                     when(state.throwable){
                         is InvalidPasswordException -> showInvalidPasswordError(true)
-                        is InvalidEmailException -> showInvalidEmailError(true)
-                        is EmptyInputException -> showInvalidRequiredGenreError(true)
+//                        is InvalidEmailException -> showInvalidEmailError(true)
+//                        is EmptyInputException -> showInvalidRequiredGenreError(true)
                         else -> Unit
                     }
                 }
@@ -171,11 +170,16 @@ class SingUpFragment : Fragment() {
     private fun setVisibility(isVisible: Boolean): Int = if (isVisible) View.VISIBLE else View.GONE
 
     private fun showInvalidEmailError(hasError: Boolean){
-        binding.errorEmailSingUp.visibility = if(hasError) View.VISIBLE else View.GONE
+        binding.apply {
+            errorEmailSingUp.visibility = if(hasError) View.VISIBLE else View.GONE
+        }
     }
 
     private fun showInvalidPasswordError(hasError: Boolean){
         binding.errorPasswordSingUp.visibility = if(hasError) View.VISIBLE else View.GONE
+        if(hasError){
+            binding.emailTextLayoutInput.boxStrokeErrorColor
+        }
     }
 
     private fun showInvalidRequiredGenreError(hasError: Boolean){
@@ -184,7 +188,7 @@ class SingUpFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        /*singUpViewModel.resetViewState()*/
+        singUpViewModel.resetViewState()
         _binding = null
     }
 }
