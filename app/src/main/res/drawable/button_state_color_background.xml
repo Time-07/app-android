@@ -4,21 +4,21 @@
     <item android:state_enabled="false">
         <color android:color="@color/button_sing_up_grey_disable"/>
         <shape android:shape="rectangle">
-            <corners android:radius="16dp"/>
+            <corners android:radius="8dp"/>
         </shape>
     </item>
 
     <item android:state_enabled="true" android:state_pressed="false">
         <color android:color="@color/button_sing_up_grey_enable"/>
         <shape android:shape="rectangle">
-            <corners android:radius="16dp"/>
+            <corners android:radius="8dp"/>
         </shape>
     </item>
 
     <item android:state_pressed="true" >
         <color android:color="@color/button_sing_up_grey_pressed"/>
         <shape android:shape="rectangle">
-            <corners android:radius="16dp"/>
+            <corners android:radius="8dp"/>
         </shape>
     </item>
 
