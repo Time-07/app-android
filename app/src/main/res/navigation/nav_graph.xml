@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/login_search_nav_graph"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment">
 
     <fragment
@@ -14,9 +14,21 @@
             android:id="@+id/action_loginFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/SingUpFragment"
+        android:name="br.com.ioasys.appcamp.presentation.ui.fragments.SingUpFragment"
+        android:label="fragment_book_list"
+        tools:layout="@layout/fragment_sing_up" >
+        <action
+            android:id="@+id/action_SingUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/searchFragment"
         android:name="br.com.ioasys.appcamp.presentation.ui.fragments.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
+
 </navigation>
