@@ -1,6 +1,6 @@
 package br.com.ioasys.appcamp.presentation.ui.fragments
 
-import android.graphics.Color
+
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -10,7 +10,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
+import br.com.ioasys.appcamp.R
 import br.com.ioasys.appcamp.databinding.FragmentSingUpBinding
+import br.com.ioasys.appcamp.domain.exception.EmptyInputException
+import br.com.ioasys.appcamp.domain.exception.InvalidEmailException
 import br.com.ioasys.appcamp.domain.exception.InvalidPasswordException
 import br.com.ioasys.appcamp.presentation.viewmodel.SingUpViewModel
 import br.com.ioasys.appcamp.utils.ViewState
@@ -53,7 +56,8 @@ class SingUpFragment : Fragment() {
                     errorEmailSingUp.visibility = View.GONE
                 }
                 confirmPasswordTextInputEditText.addTextChangedListener {
-                    errorPasswordSingUp.visibility = View.GONE
+                    confirmPasswordTextLayoutInput.error = null
+                    binding.errorPasswordSingUp.visibility = View.GONE
                 }
                 passwordTextInputEditText.addTextChangedListener{
                     errorPasswordSingUp.visibility = View.GONE
@@ -84,8 +88,8 @@ class SingUpFragment : Fragment() {
                 is ViewState.Error -> {
                     when(state.throwable){
                         is InvalidPasswordException -> showInvalidPasswordError(true)
-//                        is InvalidEmailException -> showInvalidEmailError(true)
-//                        is EmptyInputException -> showInvalidRequiredGenreError(true)
+                        is InvalidEmailException -> showInvalidEmailError(true)
+                        is EmptyInputException -> showInvalidRequiredGenreError(true)
                         else -> Unit
                     }
                 }
@@ -176,9 +180,9 @@ class SingUpFragment : Fragment() {
     }
 
     private fun showInvalidPasswordError(hasError: Boolean){
-        binding.errorPasswordSingUp.visibility = if(hasError) View.VISIBLE else View.GONE
-        if(hasError){
-            binding.emailTextLayoutInput.boxStrokeErrorColor
+        if (hasError){
+            binding.confirmPasswordTextLayoutInput.error = getString(R.string.error_password_string)
+            binding.errorPasswordSingUp.visibility = View.VISIBLE
         }
     }
 
