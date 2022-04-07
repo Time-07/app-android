@@ -10,7 +10,9 @@
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_sing_up.xml" value="0.1537037037037037" />
         <entry key="app/src/main/res/drawable/button_state_color_background.xml" value="0.32" />
         <entry key="app/src/main/res/drawable/ic_baseline_warning_amber.xml" value="0.279" />
+        <entry key="app/src/main/res/drawable/input_sing_up_background.xml" value="0.1435" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
       </map>
     </option>
   </component>

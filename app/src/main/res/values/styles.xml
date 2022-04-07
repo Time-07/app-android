@@ -8,15 +8,19 @@
         <item name="fontFamily">@font/fredoka_regular</item>
     </style>
 
-    <style name="Edit_Text_Label">
+    <style name="Login_Input_text_layout">
         <item name="fontFamily">@font/inter_regular</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/color_sing_up_hint</item>
+        <item name="hintTextColor">@color/color_sing_up_hint</item>
     </style>
 
     <style name="Login_Button">
         <item name="fontFamily">@font/inter_medium</item>
         <item name="android:textSize">24sp</item>
+        <item name="android:listSelector">@drawable/button_state_color_background</item>
+
     </style>
 
     <style name="Signup_Question">
