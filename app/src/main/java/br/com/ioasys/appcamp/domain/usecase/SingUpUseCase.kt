@@ -16,9 +16,9 @@ class SingUpUseCase(
 ) : UseCase<SingUpUseCase.Params, SingUpItems>(scope = scope) {
 
     override fun run(params: Params?): Flow<SingUpItems> = when {
-        params?.password == params?.confirmPassword -> throw InvalidPasswordException()
-//        params?.genre?.isEmpty() == true -> throw EmptyInputException()
-//        params?.email?.let { DomainConstants.EMAIL_REGEX.toRegex().matches(it) } == true -> throw InvalidEmailException()
+        params?.password != params?.confirmPassword -> throw InvalidPasswordException()
+        params?.genre?.isEmpty() == true -> throw EmptyInputException()
+        params?.email?.let { DomainConstants.EMAIL_REGEX.toRegex().matches(it) } == true -> throw InvalidEmailException()
         else -> {
             singUpRepository.singUp(
                 user = params?.user ?: "",
