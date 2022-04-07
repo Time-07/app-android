@@ -8,6 +8,7 @@ import br.com.ioasys.appcamp.domain.usecase.SingUpUseCase
 import br.com.ioasys.appcamp.utils.ViewState
 import br.com.ioasys.appcamp.utils.postError
 import br.com.ioasys.appcamp.utils.postLoading
+import br.com.ioasys.appcamp.utils.postNeutral
 
 class SingUpViewModel(
     private val singUpUseCase: SingUpUseCase
@@ -49,6 +50,10 @@ class SingUpViewModel(
         )
     }
 
+
+    fun resetViewState(){
+        _singUpViewState.postNeutral()
+    }
 
 
 }

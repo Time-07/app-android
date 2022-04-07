@@ -3,8 +3,9 @@ package br.com.ioasys.appcamp.data.repositories
 import br.com.ioasys.appcamp.domain.model.SingUpItems
 import br.com.ioasys.appcamp.domain.respositories.SingUpRepository
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 
-class SingUpRepositoryImpl(): SingUpRepository {
+class SingUpRepositoryImpl: SingUpRepository {
 
     override fun singUp(
         user: String,
@@ -12,7 +13,7 @@ class SingUpRepositoryImpl(): SingUpRepository {
         password: String,
         confirmPassword: String,
         genre: String
-    ): Flow<SingUpItems> {
-        TODO("Not yet implemented")
+    ): Flow<SingUpItems> = flow {
+
     }
 }
