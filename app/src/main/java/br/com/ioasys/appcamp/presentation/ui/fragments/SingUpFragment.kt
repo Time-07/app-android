@@ -34,7 +34,8 @@ class SingUpFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = FragmentSingUpBinding.inflate(inflater, container, false).apply {
+    ): View = FragmentSingUpBinding.inflate(inflater, container,
+        false).apply {
         _binding = this
     }.root
 
@@ -178,8 +179,7 @@ class SingUpFragment : Fragment() {
     private fun showInvalidEmailError(hasError: Boolean){
         binding.apply {
             errorEmailSingUp.visibility = if(hasError) View.VISIBLE else View.GONE
-        }
-    }
+        }    }
 
     private fun showInvalidPasswordError(hasError: Boolean){
         if (hasError){
