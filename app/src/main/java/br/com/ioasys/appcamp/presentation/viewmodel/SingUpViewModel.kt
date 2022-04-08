@@ -14,13 +14,6 @@ class SingUpViewModel(
     private var _singUpViewState = MutableLiveData<ViewState<List<SingUpItems>>>()
     val singUpViewState = _singUpViewState as LiveData<ViewState<List<SingUpItems>>>
 
-    private var _genre: String = null ?: ""
-    val genreValue: String = _genre
-
-    fun setGenre(genreValue: String){
-        _genre = genreValue
-    }
-
     fun singUp(
         user: String,
         email: String,
@@ -38,13 +31,7 @@ class SingUpViewModel(
                 genre = genre
             ),
             onSuccess = {
-                _singUpViewState.postSuccess(data = listOf(SingUpItems(
-                    user,
-                    email,
-                    password,
-                    confirmPassword,
-                    genre
-                )))
+                _singUpViewState.postSuccess(listOf(it))
             },
             onError = {
                 _singUpViewState.postError(it)
@@ -55,7 +42,6 @@ class SingUpViewModel(
 
     fun  resetViewState(){
         _singUpViewState.postNeutral()
-        _genre = null.toString()
     }
 
 
