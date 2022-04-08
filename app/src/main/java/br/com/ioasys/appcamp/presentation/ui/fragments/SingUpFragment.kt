@@ -107,22 +107,20 @@ class SingUpFragment : Fragment() {
 
 
     private fun getInputRadioButton() {
-
+        var isVisible = false
         binding.apply {
-            var isVisible: Boolean
             radioGroupSingUp.setOnCheckedChangeListener { _, checkedId ->
 
                 _genre = when (checkedId) {
                     buttonFirstOption.id -> getString(R.string.first_option_sing_up_string)
                     buttonSecondOption.id -> getString(R.string.second_option_sing_up_string)
                     buttonThirdOption.id -> getString(R.string.third_option_sing_up_string)
-                    buttonFourthOption.id -> otherOptionTextInputEditText.text.toString()
+                    buttonFourthOption.id -> {
+                        isVisible = true
+                        otherOptionTextInputEditText.text.toString()
+                    }
 
                     else -> ""
-                }
-                isVisible = when (checkedId){
-                    buttonFourthOption.id -> true
-                    else -> false
                 }
                 otherOptionTextInputLayout.visibility = setVisibility(isVisible)
             }
@@ -199,3 +197,4 @@ class SingUpFragment : Fragment() {
         _genre = null ?: ""
     }
 }
+

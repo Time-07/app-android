@@ -34,6 +34,7 @@
     <string name="signup_link">Cadastre-se!</string>
     <string name="email_text">farias.fabianam@gmail.com</string>
     <string name="password_text">***************</string>
+    <string name="cpf_string">Digite seu CPF</string>
 
 
 </resources>
