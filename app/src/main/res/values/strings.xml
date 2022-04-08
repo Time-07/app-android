@@ -40,10 +40,7 @@
     <string name="search_hint">nome (opcional)</string>
 
 
-
-
-
-
+    <!-- List Fragment Strings-->
     <string name="disconnect_string">Sair</string>
     <string name="list_title_string">Profissionais Aliados e Aliadas</string>
 </resources>
