@@ -29,7 +29,7 @@ class SingUpFragment : Fragment() {
     }
 
     private var _genre: String = null ?: ""
-    private val genreValue: String = _genre
+    private val genre: String = _genre
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -54,7 +54,7 @@ class SingUpFragment : Fragment() {
                     email = emailTextInputEditText.text.toString(),
                     password = passwordTextInputEditText.text.toString(),
                     confirmPassword = confirmPasswordTextInputEditText.text.toString(),
-                    genre = genreValue
+                    genre = genre
                 )
                 emailTextInputEditText.addTextChangedListener{
                     errorEmailSingUp.visibility = View.GONE
