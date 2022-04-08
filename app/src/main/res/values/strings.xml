@@ -35,6 +35,8 @@
     <string name="email_text">farias.fabianam@gmail.com</string>
     <string name="password_text">***************</string>
     <string name="cpf_string">Digite seu CPF</string>
+    <string name="search_text">Pesquisa</string>
+    <string name="search_hint">nome (opcional)</string>
 
 
 </resources>

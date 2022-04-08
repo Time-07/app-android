@@ -15,5 +15,7 @@
     <color name="button_sing_up_grey_enable">#CACACA</color>
     <color name="button_sing_up_grey_pressed">#9C9C9C</color>
     <color name="error_color">#F30000</color>
+    <color name="background_search">#EDEDED</color>
+    <color name="hint_search_color">#6F6F6F</color>
 
 </resources>
