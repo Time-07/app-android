@@ -98,8 +98,6 @@
         app:layout_constraintTop_toBottomOf="@id/textFieldPassword"
         />
 
-
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogin"
         style="@style/Login_Button"
@@ -130,7 +128,7 @@
         app:layout_constraintTop_toBottomOf="@id/btnLogin" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/tvSignupLink"
+        android:id="@+id/btnSignupLink"
         style="@style/Signup_Link"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

@@ -30,7 +30,8 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = FragmentLoginBinding.inflate(inflater, container, false).apply {
+    ): View = FragmentLoginBinding.inflate(inflater, container,
+        false).apply {
         _binding = this
     }.root
 
@@ -38,7 +39,6 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setListeners()
         addObservers()
-        editEnableButton()
     }
 
     private fun setListeners() {
@@ -60,6 +60,35 @@ class LoginFragment : Fragment() {
         editEnableButton()
     }
 
+    private fun addObservers() {
+        loginViewModel.loggedUserViewState.observe(viewLifecycleOwner) { state ->
+
+            when (state) {
+                is ViewState.Success -> {
+                    findNavController().navigate(
+                        LoginFragmentDirections.actionLoginFragmentToSearchFragment()
+                    )
+                    Toast.makeText(context, "DEU CERTOOO!", Toast.LENGTH_SHORT).show()
+                    showInvalidPasswordError(false)
+                    showInvalidEmailError(false)
+
+
+
+                }
+                is ViewState.Error -> {
+                    when(state.throwable){
+                        is InvalidPasswordException -> showInvalidPasswordError(true)
+                        is InvalidEmailException -> showInvalidEmailError(true)
+                        else -> Unit
+                    }
+                }
+                is ViewState.Loading -> {
+                    Toast.makeText(context, "Aguarde", Toast.LENGTH_SHORT).show()
+                }
+                else -> Unit
+            }
+        }
+    }
 
     private fun editEnableButton() {
         binding.btnLogin.isEnabled = false
@@ -101,39 +130,14 @@ class LoginFragment : Fragment() {
     }
 
     private fun showInvalidEmailError(hasError: Boolean){
-        binding.txtLoginError.visibility = if(hasError) View.VISIBLE else View.GONE
-
+        binding.apply {
+            textFieldEmail.visibility = if(hasError) View.VISIBLE else View.GONE
+        }
     }
 
     private fun showInvalidPasswordError(hasError: Boolean){
-        binding.txtLoginError.visibility = if(hasError) View.VISIBLE else View.GONE
-    }
-
-
-    private fun addObservers() {
-        loginViewModel.loggedUserViewState.observe(viewLifecycleOwner) { state ->
-
-            when (state) {
-                is ViewState.Success -> {
-                    findNavController().navigate(
-                        LoginFragmentDirections.actionLoginFragmentToSearchFragment()
-                    )
-                    showInvalidPasswordError(false)
-                    showInvalidEmailError(false)
-                }
-                is ViewState.Error -> {
-                    when(state.throwable){
-                        is InvalidPasswordException -> showInvalidPasswordError(true)
-                        is InvalidEmailException -> showInvalidEmailError(true)
-                        else -> Unit
-                    }
-
-                }
-                is ViewState.Loading -> {
-                    Toast.makeText(context, "Aguarde", Toast.LENGTH_SHORT).show()
-                }
-                else -> Unit
-            }
+        if (hasError){
+            binding.textFieldPassword.visibility = View.VISIBLE
         }
     }
 
