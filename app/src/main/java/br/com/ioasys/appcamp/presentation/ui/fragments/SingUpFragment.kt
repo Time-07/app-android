@@ -28,6 +28,8 @@ class SingUpFragment : Fragment() {
         getViewModel()
     }
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -46,10 +48,10 @@ class SingUpFragment : Fragment() {
         binding.singUpButton.setOnClickListener {
             binding.run {
                 singUpViewModel.singUp(
-                    user = userTextInputEditText.toString(),
-                    email = emailTextInputEditText.toString(),
-                    password = passwordTextInputEditText.toString(),
-                    confirmPassword = confirmPasswordTextInputEditText.toString(),
+                    user = userTextInputEditText.text.toString(),
+                    email = emailTextInputEditText.text.toString(),
+                    password = passwordTextInputEditText.text.toString(),
+                    confirmPassword = confirmPasswordTextInputEditText.text.toString(),
                     genre = singUpViewModel.genreValue
                 )
                 emailTextInputEditText.addTextChangedListener{

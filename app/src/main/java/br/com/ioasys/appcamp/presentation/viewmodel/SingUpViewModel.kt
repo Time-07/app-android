@@ -17,7 +17,6 @@ class SingUpViewModel(
     private var _genre: String = null ?: ""
     val genreValue: String = _genre
 
-
     fun setGenre(genreValue: String){
         _genre = genreValue
     }
@@ -39,7 +38,13 @@ class SingUpViewModel(
                 genre = genre
             ),
             onSuccess = {
-                _singUpViewState.postSuccess(listOf(it))
+                _singUpViewState.postSuccess(data = listOf(SingUpItems(
+                    user,
+                    email,
+                    password,
+                    confirmPassword,
+                    genre
+                )))
             },
             onError = {
                 _singUpViewState.postError(it)
@@ -50,6 +55,7 @@ class SingUpViewModel(
 
     fun  resetViewState(){
         _singUpViewState.postNeutral()
+        _genre = null.toString()
     }
 
 
