@@ -3,6 +3,11 @@
 
     <!-- Styles Login -->
 
+    <style name="InputError" parent="TextAppearance.Design.Error"/>
+    <style name="InputError.Purple">
+        <item name="android:textColor">@color/error_color</item>
+    </style>
+
     <style name="Login_Label">
         <item name="android:textSize">32sp</item>
         <item name="fontFamily">@font/fredoka_regular</item>

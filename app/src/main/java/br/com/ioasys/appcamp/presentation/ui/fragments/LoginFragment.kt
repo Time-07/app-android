@@ -15,14 +15,16 @@ import br.com.ioasys.appcamp.domain.exception.InvalidEmailException
 import br.com.ioasys.appcamp.domain.exception.InvalidPasswordException
 import br.com.ioasys.appcamp.presentation.viewmodel.LoginViewModel
 import br.com.ioasys.appcamp.utils.ViewState
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.ext.android.getViewModel
 
 class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding: FragmentLoginBinding get() = _binding!!
 
-    private val loginViewModel: LoginViewModel by viewModel()
+    private val loginViewModel: LoginViewModel by lazy {
+        getViewModel()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -98,9 +100,9 @@ class LoginFragment : Fragment() {
         }
     }
 
-
     private fun showInvalidEmailError(hasError: Boolean){
         binding.txtLoginError.visibility = if(hasError) View.VISIBLE else View.GONE
+
     }
 
     private fun showInvalidPasswordError(hasError: Boolean){
@@ -125,6 +127,7 @@ class LoginFragment : Fragment() {
                         is InvalidEmailException -> showInvalidEmailError(true)
                         else -> Unit
                     }
+
                 }
                 is ViewState.Loading -> {
                     Toast.makeText(context, "Aguarde", Toast.LENGTH_SHORT).show()
