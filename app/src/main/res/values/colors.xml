@@ -17,5 +17,6 @@
     <color name="error_color">#F30000</color>
     <color name="background_search">#EDEDED</color>
     <color name="hint_search_color">#6F6F6F</color>
+    <color name="black_transparence_50">#80000000</color>
 
 </resources>
