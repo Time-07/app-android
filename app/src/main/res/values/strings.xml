@@ -40,8 +40,6 @@
     <string name="search_text">Pesquisa</string>
     <string name="search_hint">nome (opcional)</string>
     <string name="specialty_title">especialidade</string>
-    <string name="disconnect_string">Sair</string>
-    <string name="list_title_string">Profissionais Aliados e Aliadas</string>
     <string name="psychologist_chip_text">Psicologia</string>
 
     <!-- List Fragment Strings-->
@@ -53,5 +51,7 @@
     <string name="text_filter_4">Urologia</string>
     <string name="text_filter_5">Endocrinologia</string>
     <string name="text_filter_6">Todas</string>
+    <string name="explain_search_string">Use o botão Pesquisar para encontrar profissionais que se cadastraram com o compromisso de tratar (bem) pacientes trans.</string>
+    <string name="search_string">Pesquisar</string>
 
 </resources>

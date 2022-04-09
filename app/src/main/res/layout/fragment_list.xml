@@ -58,7 +58,7 @@
         android:maxLines="6"
         android:lineSpacingExtra="10dp"
         android:fontFamily="@font/inter_regular"
-        android:text="@string/explication_string"
+        android:text="@string/explain_search_string"
         android:textColor="@color/black"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="@id/guideline3"
