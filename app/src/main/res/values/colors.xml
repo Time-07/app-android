@@ -18,5 +18,8 @@
     <color name="background_search">#EDEDED</color>
     <color name="hint_search_color">#6F6F6F</color>
     <color name="black_transparence_50">#80000000</color>
+    <color name="text_color_chips">#49454F</color>
+    <color name="chip_stroke_color">#79747E</color>
+
 
 </resources>

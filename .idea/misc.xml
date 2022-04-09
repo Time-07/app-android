@@ -14,9 +14,12 @@
         <entry key="app/src/main/res/drawable/edittext_normal.xml" value="0.219" />
         <entry key="app/src/main/res/drawable/edittext_red_focused.xml" value="0.219" />
         <entry key="app/src/main/res/drawable/error_background.xml" value="0.142" />
+        <entry key="app/src/main/res/drawable/filter_search_background.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/ic_baseline_warning_amber.xml" value="0.279" />
+        <entry key="app/src/main/res/drawable/input_search_background.xml" value="0.1965" />
         <entry key="app/src/main/res/drawable/input_sing_up_background.xml" value="0.1435" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
       </map>
     </option>
