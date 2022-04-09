@@ -56,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/specialty_title"
+        android:text="@string/specialty_subtitle_text"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/tilSpecialistNameSearch" />
 
@@ -160,49 +160,78 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         style="@style/Search_Text_Subtitles"
-        android:id="@+id/tvLocalizationTitle"
+        android:id="@+id/tvLocalizationSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/localization_title"
+        android:text="@string/localization_subtitle_text"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tiLocalizationMenu1"
+        android:id="@+id/tiLocalizationFilterMenuState"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:hint="@string/hint_menu_localization_state"
+        android:hint="@string/text_input_hint_menu_localization_state"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/tvLocalizationTitle">
+        app:layout_constraintTop_toBottomOf="@+id/tvLocalizationSubtitle">
 
         <AutoCompleteTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
-            android:text="@string/hint_menu" />
+            android:text="@string/text_view_hint_filter_menu" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tiLocalizationMenu2"
+        android:id="@+id/tiLocalizationFilterMenuCity"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="@string/hint_menu_localization_city"
+        android:hint="@string/text_input_hint_menu_localization_city"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/tiLocalizationMenu1">
+        app:layout_constraintTop_toBottomOf="@+id/tiLocalizationFilterMenuState">
 
         <AutoCompleteTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
-            android:text="@string/hint_menu" />
+            android:text="@string/text_view_hint_filter_menu" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/Search_Text_Subtitles"
+        android:id="@+id/tvGenderSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/gender_subtitle_text"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/tiLocalizationFilterMenuCity" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiGenderFilterMenu"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:hint="@string/text_input_hint_menu_gender"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvGenderSubtitle">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:text="@string/text_view_hint_filter_menu" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

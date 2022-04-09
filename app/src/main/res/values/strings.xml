@@ -39,8 +39,9 @@
     <!-- Search Strings-->
     <string name="search_text">Pesquisa</string>
     <string name="search_hint">nome (opcional)</string>
-    <string name="specialty_title">especialidade</string>
-    <string name="localization_title">localização</string>
+    <string name="specialty_subtitle_text">especialidade</string>
+    <string name="localization_subtitle_text">localização</string>
+    <string name="gender_subtitle_text">gênero do(a) profissional</string>
     <string name="psychologist_chip_text">Psicologia</string>
 
     <!-- List Fragment Strings-->
@@ -54,8 +55,9 @@
     <string name="text_filter_6">Todas</string>
     <string name="explain_search_string">Use o botão Pesquisar para encontrar profissionais que se cadastraram com o compromisso de tratar (bem) pacientes trans.</string>
     <string name="search_string">Pesquisar</string>
-    <string name="hint_menu_localization_state">UF-Estado</string>
-    <string name="hint_menu_localization_city">Cidade</string>
-    <string name="hint_menu">Qualquer</string>
+    <string name="text_input_hint_menu_localization_state">UF-Estado</string>
+    <string name="text_input_hint_menu_localization_city">Cidade</string>
+    <string name="text_input_hint_menu_gender">identidade de gênero</string>
+    <string name="text_view_hint_filter_menu">Qualquer</string>
 
 </resources>
