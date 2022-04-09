@@ -48,6 +48,39 @@
         app:layout_constraintStart_toStartOf="@id/guideline3"
         app:layout_constraintTop_toBottomOf="@id/nameUserTV"/>
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingEnd="50dp"
+        android:paddingStart="32dp"
+        android:textSize="14sp"
+        android:maxLines="6"
+        android:lineSpacingExtra="10dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="@string/explication_string"
+        android:textColor="@color/black"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/listTitleTV" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/searchListButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:drawablePadding="8dp"
+        android:text="@string/search_string"
+        android:textAllCaps="false"
+        android:drawableStart="@drawable/ic_baseline_manage_search"
+        android:background="@drawable/search_button_background"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/listTitleTV"/>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
@@ -62,7 +95,7 @@
         android:paddingEnd="7dp"
         android:paddingStart="0dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="20dp" />
+        app:layout_constraintGuide_end="32dp" />
 
 
 

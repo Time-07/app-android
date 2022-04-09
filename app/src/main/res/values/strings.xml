@@ -45,4 +45,6 @@
     <string name="disconnect_string">Sair</string>
     <string name="list_title_string">Profissionais Aliados e Aliadas</string>
     <string name="psychologist_chip_text">Psicologia</string>
+    <string name="explication_string">Use o botão Pesquisar para encontrar profissionais que se cadastraram com o compromisso de tratar (bem) pacientes trans.</string>
+    <string name="search_string">Pesquisar</string>
 </resources>
