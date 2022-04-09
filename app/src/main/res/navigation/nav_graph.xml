@@ -21,8 +21,8 @@
         android:label="fragment_book_list"
         tools:layout="@layout/fragment_sing_up" >
         <action
-            android:id="@+id/action_SingUpFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            android:id="@+id/action_SingUpFragment_to_listFragment"
+            app:destination="@id/listFragment" />
     </fragment>
 
     <fragment
@@ -30,5 +30,16 @@
         android:name="br.com.ioasys.appcamp.presentation.ui.fragments.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="br.com.ioasys.appcamp.presentation.ui.fragments.ListFragment"
+        android:label="list_fragment"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@id/listFragment"
+            app:destination="@id/loginFragment"
+            />
+    </fragment>
 
 </navigation>
