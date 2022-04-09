@@ -44,5 +44,10 @@
     <!-- List Fragment Strings-->
     <string name="disconnect_string">Sair</string>
     <string name="list_title_string">Profissionais Aliados e Aliadas</string>
-    <string name="psychologist_chip_text">Psicologia</string>
+    <string name="text_filter_1">Psicologia</string>
+    <string name="text_filter_2">Psiquiatria</string>
+    <string name="text_filter_3">Ginecologia</string>
+    <string name="text_filter_4">Urologia</string>
+    <string name="text_filter_5">Endocrinologia</string>
+    <string name="text_filter_6">Todas</string>
 </resources>
