@@ -38,9 +38,11 @@
 
     <string name="search_text">Pesquisa</string>
     <string name="search_hint">nome (opcional)</string>
+    <string name="specialty_title">especialidade</string>
 
 
     <!-- List Fragment Strings-->
     <string name="disconnect_string">Sair</string>
     <string name="list_title_string">Profissionais Aliados e Aliadas</string>
+    <string name="psychologist_chip_text">Psicologia</string>
 </resources>
