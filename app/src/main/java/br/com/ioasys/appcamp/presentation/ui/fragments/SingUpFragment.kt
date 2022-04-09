@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
+import androidx.navigation.fragment.findNavController
 import br.com.ioasys.appcamp.R
 import br.com.ioasys.appcamp.databinding.FragmentSingUpBinding
 import br.com.ioasys.appcamp.domain.exception.EmptyInputException
@@ -88,6 +89,9 @@ class SingUpFragment : Fragment() {
                     showInvalidPasswordError(false)
                     showInvalidEmailError(false)
                     showInvalidRequiredGenreError(false)
+                    findNavController().navigate(
+                        SingUpFragmentDirections.actionSingUpFragmentToListFragment()
+                    )
                 }
                 is ViewState.Error -> {
                     when(state.throwable){
