@@ -20,6 +20,7 @@
     <color name="black_transparence_50">#80000000</color>
     <color name="text_color_chips">#49454F</color>
     <color name="chip_stroke_color">#79747E</color>
+    <color name="custom_popup_background_color">#A4A4A4</color>
 
 
 </resources>
