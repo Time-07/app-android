@@ -144,4 +144,10 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="ProfilePhotoList">
+        <item name="android:shape">oval</item>
+        <item name="itemShapeFillColor">@color/button_sing_up_grey_enable</item>
+        <item name="android:radius">16dp</item>
+    </style>
+
 </resources>
