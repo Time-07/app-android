@@ -181,7 +181,7 @@
     <style name="ProfileInformationTextStyle">
         <item name="fontFamily">@font/inter_regular</item>
         <item name="android:textSize">14sp</item>
-        <item name="android:lineSpacingExtra">10dp</item>
+        <item name="android:lineSpacingExtra">1dp</item>
         <item name="maxLines">2</item>
     </style>
 
