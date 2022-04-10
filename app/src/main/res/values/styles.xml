@@ -90,6 +90,13 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <style name="Search_Button">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="background">@drawable/search_button</item>
+    </style>
+
 
     <!-- Styles Signup -->
 
