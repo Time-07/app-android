@@ -157,10 +157,25 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <!-- Styles - List Fragment-->
+
     <style name="ProfilePhotoList">
         <item name="android:shape">oval</item>
         <item name="itemShapeFillColor">@color/button_sing_up_grey_enable</item>
         <item name="android:radius">16dp</item>
+    </style>
+
+    <style name="NameUserTextStyle">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="ProfileInformationTextStyle">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">10dp</item>
+        <item name="maxLines">2</item>
     </style>
 
 </resources>

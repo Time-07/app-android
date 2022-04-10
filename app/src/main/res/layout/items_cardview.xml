@@ -8,18 +8,57 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="19dp"
         android:layout_marginTop="0dp">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        style="@style/ProfilePhotoList"
-        tools:background="@drawable/profile_photo_background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/profileImg"
+            style="@style/ProfilePhotoList"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/guidelineBeginCardView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/profile_photo_background" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/NameUserTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:lineSpacingExtra="10dp"
+            android:maxLines="2"
+            app:layout_constraintStart_toStartOf="@+id/guidelineBeginCardView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEndCardView"
+            tools:text="Dra. Silvia\n Maranhão" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            tools:text="Endocrinologista"
+            style="@style/ProfileInformationTextStyle"
+            app:layout_constraintStart_toStartOf="@id/guidelineBeginCardView"
+            app:layout_constraintTop_toBottomOf="@id/profileImg"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBeginCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="32dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEndCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="7dp"
+            android:paddingStart="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="32dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
