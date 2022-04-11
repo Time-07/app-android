@@ -11,13 +11,12 @@ import br.com.ioasys.appcamp.utils.postNeutral
 import br.com.ioasys.appcamp.utils.postSuccess
 
 
-
 class LoginViewModel(
     private val loginUseCase: LoginUseCase
 ) : ViewModel() {
 
-    private val _loggedUserViewState = MutableLiveData<ViewState<List<User>>>()
-    val loggedUserViewState = _loggedUserViewState as LiveData<ViewState<List<User>>>
+    private val _loggedUserViewState = MutableLiveData<ViewState<String>>()
+    val loggedUserViewState = _loggedUserViewState as LiveData<ViewState<String>>
 
     fun login(email: String, password: String) {
         loginUseCase(
@@ -26,13 +25,7 @@ class LoginViewModel(
                 password = password
             ),
             onSuccess = {
-                _loggedUserViewState.postSuccess(
-                    data = listOf(
-                        User(
-                            email,
-                            password
-                        )))
-
+                _loggedUserViewState.postSuccess(it.accessToken)
             },
             onError = {
                 _loggedUserViewState.postError(it)

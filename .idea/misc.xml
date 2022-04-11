@@ -9,7 +9,7 @@
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_list.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
-        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/items_cardview.xml" value="0.33" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/items_cardview.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/button_state_color_background.xml" value="0.32" />
         <entry key="app/src/main/res/drawable/custom_popup_background.xml" value="0.258" />
         <entry key="app/src/main/res/drawable/edittext_focused.xml" value="0.219" />
@@ -21,6 +21,8 @@
         <entry key="app/src/main/res/drawable/input_search_background.xml" value="0.1965" />
         <entry key="app/src/main/res/drawable/input_sing_up_background.xml" value="0.1435" />
         <entry key="app/src/main/res/drawable/list_item.xml" value="0.258" />
+        <entry key="app/src/main/res/drawable/search_button.xml" value="0.2165" />
+        <entry key="app/src/main/res/drawable/search_button_background.xml" value="0.198" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
@@ -33,12 +35,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.16" />
-      </ProjectState>
-    </option>
   </component>
 </project>
