@@ -29,9 +29,6 @@ class SingUpFragment : Fragment() {
         getViewModel()
     }
 
-    private var _genre: String = null ?: ""
-    private val genre: String = _genre
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -50,12 +47,15 @@ class SingUpFragment : Fragment() {
     private fun setListeners(){
         binding.singUpButton.setOnClickListener {
             binding.run {
+                if (singUpViewModel.genre.isBlank()){
+                    singUpViewModel.setGenre(otherOptionTextInputEditText.text.toString())
+                }
                 singUpViewModel.singUp(
                     user = userTextInputEditText.text.toString(),
                     email = emailTextInputEditText.text.toString(),
                     password = passwordTextInputEditText.text.toString(),
                     confirmPassword = confirmPasswordTextInputEditText.text.toString(),
-                    genre = genre
+                    genre = singUpViewModel.genre
                 )
                 emailTextInputEditText.addTextChangedListener{
                     errorEmailSingUp.visibility = View.GONE
@@ -112,22 +112,17 @@ class SingUpFragment : Fragment() {
 
 
     private fun getInputRadioButton() {
-        var isVisible = false
         binding.apply {
             radioGroupSingUp.setOnCheckedChangeListener { _, checkedId ->
 
-                _genre = when (checkedId) {
+                singUpViewModel.setGenre(when (checkedId) {
                     buttonFirstOption.id -> getString(R.string.first_option_sing_up_string)
                     buttonSecondOption.id -> getString(R.string.second_option_sing_up_string)
                     buttonThirdOption.id -> getString(R.string.third_option_sing_up_string)
-                    buttonFourthOption.id -> {
-                        isVisible = true
-                        otherOptionTextInputEditText.text.toString()
-                    }
-
                     else -> ""
-                }
-                otherOptionTextInputLayout.visibility = setVisibility(isVisible)
+                })
+
+                otherOptionTextInputLayout.visibility = setVisibility(checkedId == buttonFourthOption.id)
             }
         }
     }
@@ -198,7 +193,6 @@ class SingUpFragment : Fragment() {
         super.onDestroyView()
         singUpViewModel.resetViewState()
         _binding = null
-        _genre = null ?: ""
     }
 }
 

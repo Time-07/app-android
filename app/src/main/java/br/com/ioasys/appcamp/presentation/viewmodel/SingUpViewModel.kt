@@ -14,6 +14,13 @@ class SingUpViewModel(
     private var _singUpViewState = MutableLiveData<ViewState<List<SingUpItems>>>()
     val singUpViewState = _singUpViewState as LiveData<ViewState<List<SingUpItems>>>
 
+    var genre: String = ""
+        private set
+
+    fun setGenre(text: String){
+        genre = text
+    }
+
     fun singUp(
         user: String,
         email: String,

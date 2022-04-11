@@ -1,5 +1,6 @@
 package br.com.ioasys.appcamp.domain.usecase
 
+import br.com.ioasys.appcamp.commons.extensions.isNotEmail
 import br.com.ioasys.appcamp.domain.exception.EmptyInputException
 import br.com.ioasys.appcamp.domain.exception.InvalidEmailException
 import br.com.ioasys.appcamp.domain.exception.InvalidPasswordException
@@ -15,17 +16,23 @@ class SingUpUseCase(
     scope: CoroutineScope
 ) : UseCase<SingUpUseCase.Params, SingUpItems>(scope = scope) {
 
-    override fun run(params: Params?): Flow<SingUpItems> = when {
-        params?.password != params?.confirmPassword -> throw InvalidPasswordException()
-        params?.genre?.isEmpty() == true -> throw EmptyInputException()
-        params?.email?.let { DomainConstants.EMAIL_REGEX.toRegex().matches(it) } == true -> throw InvalidEmailException()
-        else -> singUpRepository.singUp(
-                user = params?.user ?: "",
-                email = params?.email ?: "",
-                password = params?.password ?: "",
-                confirmPassword = params?.confirmPassword ?:"",
-                genre = params?.genre ?: ""
-            )
+    override fun run(params: Params?): Flow<SingUpItems>{
+        return if(params == null) throw Throwable()
+        else {
+
+            when {
+                params.password != params.confirmPassword -> throw InvalidPasswordException()
+                params.genre.isEmpty() -> throw EmptyInputException()
+                params.email.isNotEmail() -> throw InvalidEmailException()
+                else -> singUpRepository.singUp(
+                    user = params.user,
+                    email = params.email ,
+                    password = params.password ,
+                    confirmPassword = params.confirmPassword,
+                    genre = params.genre
+                )
+            }
+        }
     }
 
     data class Params(
