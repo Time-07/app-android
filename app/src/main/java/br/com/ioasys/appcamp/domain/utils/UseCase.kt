@@ -17,7 +17,7 @@ abstract class UseCase<in Params, out T>(
     ){
         scope.launch(handleError(onError)) {
                 run(params = params).collect {
-                    onSuccess.invoke(it)
+                    onSuccess(it)
                 }
         }
     }

@@ -9,4 +9,5 @@ import org.koin.dsl.module
 val PresentationModule = module {
     viewModel { SingUpViewModel() }
     viewModel { LoginViewModel(get()) }
+
 }
