@@ -11,11 +11,11 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
-        <action
-            android:id="@+id/action_btnSignupLink_to_SingUpFragment"
+            android:id="@+id/action_loginFragment_to_SingUpFragment"
             app:destination="@id/SingUpFragment" />
+        <action
+            android:id="@+id/action_btnSignupLink_to_SearchFragment"
+            app:destination="@id/searchFragment" />
     </fragment>
 
     <fragment

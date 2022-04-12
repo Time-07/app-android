@@ -29,7 +29,8 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = FragmentLoginBinding.inflate(inflater, container, false).apply {
+    ): View = FragmentLoginBinding
+        .inflate(inflater, container, false).apply {
         _binding = this
     }.root
 
@@ -58,7 +59,7 @@ class LoginFragment : Fragment() {
 
         binding.btnSignupLink.setOnClickListener {
             findNavController().navigate(
-                LoginFragmentDirections.actionBtnSignupLinkToSingUpFragment()
+                LoginFragmentDirections.actionBtnSignupLinkToSearchFragment()
             )
         }
         editEnableButton()
@@ -66,15 +67,17 @@ class LoginFragment : Fragment() {
 
 
     private fun addObserver(){
-        loginViewModel.loggedUserViewState.observe(viewLifecycleOwner) { state ->
+        loginViewModel.loggedUserViewState
+            .observe(viewLifecycleOwner) { state ->
 
             when(state){
                 is ViewState.Success -> {
-                    Toast.makeText(context, "DEU CERTOOO!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        context, "DEU CERTOOO!", Toast.LENGTH_SHORT).show()
                     showInvalidPassword(false)
                     showInvalidEmail(false)
                     findNavController().navigate(
-                        LoginFragmentDirections.actionLoginFragmentToSearchFragment()
+                        LoginFragmentDirections.actionLoginFragmentToSingUpFragment()
                     )
                 }
                 is ViewState.Error -> {
