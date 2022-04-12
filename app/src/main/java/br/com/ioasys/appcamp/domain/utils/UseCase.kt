@@ -1,11 +1,9 @@
 package br.com.ioasys.appcamp.domain.utils
 
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlin.coroutines.CoroutineContext
 
 abstract class UseCase<in Params, out T>(
     private val scope: CoroutineScope
@@ -17,18 +15,14 @@ abstract class UseCase<in Params, out T>(
         onSuccess: (T) -> Unit = {},
         onError: (Throwable) -> Unit = {}
     ){
-        scope.launch(Dispatchers.IO) {
-            try {
+        scope.launch(handleError(onError)) {
                 run(params = params).collect {
-                    withContext(Dispatchers.Main){
-                        onSuccess.invoke(it)
-                    }
+                    onSuccess.invoke(it)
                 }
-            } catch (err: Exception){
-                withContext(Dispatchers.Main){
-                    onError.invoke(err)
-                }
-            }
         }
+    }
+
+    private fun handleError(onError: (Throwable) -> Unit): CoroutineContext {
+        return CoroutineExceptionHandler { _, throwable -> onError(throwable) }
     }
 }
