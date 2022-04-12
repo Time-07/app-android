@@ -4,5 +4,5 @@ object LocalConstants {
 
     const val SHARED_PREFERENCES_NAME = "br.com.ioasys.appcamp.data.data_local.utils.sharedpreferences"
     const val ACCESS_TOKEN_KEY = "access_token"
-    const val BOOK_DATABASE_NAME = "book-database"
+    const val PROFISSIONAL_DATABASE_NAME = "profissional-database"
 }
