@@ -10,6 +10,7 @@ val domainModule = module {
 
     single { CoroutineScope(Dispatchers.IO) }
 
-    factory { SingUpUseCase(get(), get()) }
+    factory { (scope:CoroutineScope) ->
+        SingUpUseCase(get(), scope) }
     factory { LoginUseCase(get(), get()) }
 }

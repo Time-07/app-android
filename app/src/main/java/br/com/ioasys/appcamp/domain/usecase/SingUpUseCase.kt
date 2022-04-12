@@ -16,24 +16,20 @@ class SingUpUseCase(
     scope: CoroutineScope
 ) : UseCase<SingUpUseCase.Params, SingUpItems>(scope = scope) {
 
-    override fun run(params: Params?): Flow<SingUpItems>{
-        return if(params == null) throw Throwable()
-        else {
-
-            when {
-                params.password != params.confirmPassword -> throw InvalidPasswordException()
-                params.genre.isEmpty() -> throw EmptyInputException()
-                params.email.isNotEmail() -> throw InvalidEmailException()
-                else -> singUpRepository.singUp(
-                    user = params.user,
-                    email = params.email ,
-                    password = params.password ,
-                    confirmPassword = params.confirmPassword,
-                    genre = params.genre
-                )
-            }
+    override fun run(params: Params?): Flow<SingUpItems> =
+        when {
+            params == null -> throw Throwable()
+            params.password != params.confirmPassword -> throw InvalidPasswordException()
+            params.genre.isEmpty() -> throw EmptyInputException()
+            params.email.isNotEmail() -> throw InvalidEmailException()
+            else -> singUpRepository.singUp(
+                user = params.user,
+                email = params.email,
+                password = params.password,
+                confirmPassword = params.confirmPassword,
+                genre = params.genre
+            )
         }
-    }
 
     data class Params(
         val user: String,
