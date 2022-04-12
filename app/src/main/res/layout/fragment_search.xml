@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_search"
+    android:fillViewport="true"
     android:fitsSystemWindows="true"
+    tools:context=".presentation.ui.fragments.SearchFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_search"
+    android:fillViewport="true"
     tools:context=".presentation.ui.fragments.SearchFragment">
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -30,8 +37,8 @@
         android:id="@+id/tilSpecialistNameSearch"
         style="@style/Login_Input_text_layout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
         android:hint="@string/search_hint"
         app:boxStrokeColor="@color/transparent"
         app:boxStrokeWidth="0dp"
@@ -55,7 +62,7 @@
         style="@style/Search_Text_Subtitles"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         android:text="@string/specialty_subtitle_text"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/tilSpecialistNameSearch" />
@@ -66,7 +73,7 @@
         style="@style/Widget.MaterialComponents.ChipGroup"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="8dp"
         app:ensureMinTouchTargetSize="true"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/tvSpecialtyFilterTitle">
@@ -163,7 +170,7 @@
         style="@style/Search_Text_Subtitles"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         android:text="@string/localization_subtitle_text"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
@@ -173,7 +180,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/text_input_hint_menu_localization_state"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
@@ -192,7 +199,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="16dp"
         android:hint="@string/text_input_hint_menu_localization_city"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
@@ -211,7 +218,7 @@
         style="@style/Search_Text_Subtitles"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         android:text="@string/gender_subtitle_text"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@id/tiLocalizationFilterMenuCity"
@@ -222,7 +229,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/text_input_hint_menu_gender"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
@@ -241,13 +248,14 @@
         style="@style/Search_Button"
         android:layout_width="165dp"
         android:layout_height="56dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:drawableStart="@drawable/ic_baseline_manage_searchdrawable"
         android:text="@string/search_text_btn"
         android:textAllCaps="false"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toEndOf="@id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/tiGenderFilterMenu" />
+        app:layout_constraintTop_toBottomOf="@+id/tiGenderFilterMenu"
+        app:layout_constraintBottom_toTopOf="@id/guidelineBottom"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineStart"
@@ -279,6 +287,9 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_end="23dp" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+
 

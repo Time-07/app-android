@@ -23,10 +23,13 @@
         <entry key="app/src/main/res/drawable/list_item.xml" value="0.258" />
         <entry key="app/src/main/res/drawable/search_button.xml" value="0.2165" />
         <entry key="app/src/main/res/drawable/search_button_background.xml" value="0.198" />
+        <entry key="app/src/main/res/layout/fragment_list.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
-        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.38461538461538464" />
         <entry key="app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/items_cardview.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.3536458333333333" />
+        <entry key="app/src/main/res/layout/search_filters.xml" value="0.25" />
       </map>
     </option>
   </component>

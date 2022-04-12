@@ -58,7 +58,7 @@ class LoginFragment : Fragment() {
 
         binding.btnSignupLink.setOnClickListener {
             findNavController().navigate(
-                LoginFragmentDirections.actionBtnSignupLinkToSingUpFragment()
+                LoginFragmentDirections.actionBtnSignupLinkToSearchFragment()
             )
         }
         editEnableButton()
@@ -74,7 +74,7 @@ class LoginFragment : Fragment() {
                     showInvalidPassword(false)
                     showInvalidEmail(false)
                     findNavController().navigate(
-                        LoginFragmentDirections.actionLoginFragmentToSearchFragment()
+                        LoginFragmentDirections.actionLoginFragmentToSingUpFragment()
                     )
                 }
                 is ViewState.Error -> {
