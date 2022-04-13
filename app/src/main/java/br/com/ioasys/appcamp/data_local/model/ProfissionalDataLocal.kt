@@ -7,7 +7,8 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "Profissionals")
 data class ProfissionalDataLocal(
     @PrimaryKey @NonNull
-    val name: String? = null,
+    val id: String,
+    val name: String?,
     val email: String? = null,
     val password: String? = null,
     val cpf: String? = null,

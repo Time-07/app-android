@@ -1,8 +1,10 @@
 package br.com.ioasys.appcamp.presentation.ui.fragments
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -42,6 +44,7 @@ class LoginFragment : Fragment() {
 
     private fun setListener() {
         binding.btnLogin.setOnClickListener {
+            Log.e(TAG, "CLICK BOTÃO")
             binding.run {
                 loginViewModel.login(
                     textFieldEditEmail.text.toString(),
@@ -58,8 +61,9 @@ class LoginFragment : Fragment() {
         }
 
         binding.btnSignupLink.setOnClickListener {
+            Log.e(TAG, "CLICK LINK")
             findNavController().navigate(
-                LoginFragmentDirections.actionBtnSignupLinkToSearchFragment()
+                LoginFragmentDirections.actionBtnSignupLinkToSingUpFragment()
             )
         }
         editEnableButton()
@@ -72,12 +76,11 @@ class LoginFragment : Fragment() {
 
             when(state){
                 is ViewState.Success -> {
-                    Toast.makeText(
-                        context, "DEU CERTOOO!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "DEU CERTOOO!", Toast.LENGTH_SHORT).show()
                     showInvalidPassword(false)
                     showInvalidEmail(false)
                     findNavController().navigate(
-                        LoginFragmentDirections.actionLoginFragmentToSingUpFragment()
+                        LoginFragmentDirections.actionLoginFragmentToSearchFragment()
                     )
                 }
                 is ViewState.Error -> {

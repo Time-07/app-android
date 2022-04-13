@@ -6,13 +6,15 @@ import br.com.ioasys.appcamp.data.data_local.utils.LocalConstants.PROFISSIONAL_D
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
-//val databaseModule = module {
-//
-//    single {
-//        Room.databaseBuilder(
-//            androidContext(),
-//            ProfissionalDatabase::class.java
-//
-//        )
-//    }
-//}
+val databaseModule = module {
+
+    single {
+        Room.databaseBuilder(
+            androidContext(),
+            ProfissionalDatabase::class.java,
+            PROFISSIONAL_DATABASE_NAME
+        ).build()
+    }
+
+    single { get<ProfissionalDatabase>().profissionalDao() }
+}
