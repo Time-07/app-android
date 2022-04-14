@@ -18,11 +18,11 @@ class SingUpViewModel: ViewModel(), KoinComponent {
     private var _singUpViewState = MutableLiveData<ViewState<List<SingUpItems>>>()
     val singUpViewState = _singUpViewState as LiveData<ViewState<List<SingUpItems>>>
 
-    var genre: String = ""
+    var gender: String = ""
         private set
 
-    fun setGenre(text: String){
-        genre = text
+    fun setGender(text: String){
+        gender = text
     }
 
     fun singUp(
@@ -39,7 +39,7 @@ class SingUpViewModel: ViewModel(), KoinComponent {
                 email = email,
                 password = password,
                 confirmPassword = confirmPassword,
-                genre = genre
+                gender = genre
             ),
             onSuccess = {
                 _singUpViewState.postSuccess(listOf(it))

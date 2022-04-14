@@ -6,7 +6,6 @@ import br.com.ioasys.appcamp.domain.exception.InvalidEmailException
 import br.com.ioasys.appcamp.domain.exception.InvalidPasswordException
 import br.com.ioasys.appcamp.domain.model.SingUpItems
 import br.com.ioasys.appcamp.domain.respositories.SingUpRepository
-import br.com.ioasys.appcamp.domain.utils.DomainConstants
 import br.com.ioasys.appcamp.domain.utils.UseCase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
@@ -20,14 +19,14 @@ class SingUpUseCase(
         when {
             params == null -> throw Throwable()
             params.password != params.confirmPassword -> throw InvalidPasswordException()
-            params.genre.isEmpty() -> throw EmptyInputException()
+            params.gender.isEmpty() -> throw EmptyInputException()
             params.email.isNotEmail() -> throw InvalidEmailException()
             else -> singUpRepository.singUp(
                 user = params.user,
                 email = params.email,
                 password = params.password,
                 confirmPassword = params.confirmPassword,
-                genre = params.genre
+                gender = params.gender
             )
         }
 
@@ -36,6 +35,6 @@ class SingUpUseCase(
         val email: String,
         val password: String,
         val confirmPassword: String,
-        val genre: String
+        val gender: String
     )
 }

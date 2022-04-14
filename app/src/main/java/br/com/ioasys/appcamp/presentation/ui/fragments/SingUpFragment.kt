@@ -47,15 +47,15 @@ class SingUpFragment : Fragment() {
     private fun setListeners(){
         binding.singUpButton.setOnClickListener {
             binding.run {
-                if (singUpViewModel.genre.isBlank()){
-                    singUpViewModel.setGenre(otherOptionTextInputEditText.text.toString())
+                if (singUpViewModel.gender.isBlank()){
+                    singUpViewModel.setGender(otherOptionTextInputEditText.text.toString())
                 }
                 singUpViewModel.singUp(
                     user = userTextInputEditText.text.toString(),
                     email = emailTextInputEditText.text.toString(),
                     password = passwordTextInputEditText.text.toString(),
                     confirmPassword = confirmPasswordTextInputEditText.text.toString(),
-                    genre = singUpViewModel.genre
+                    genre = singUpViewModel.gender
                 )
                 emailTextInputEditText.addTextChangedListener{
                     errorEmailSingUp.visibility = View.GONE
@@ -115,7 +115,7 @@ class SingUpFragment : Fragment() {
         binding.apply {
             radioGroupSingUp.setOnCheckedChangeListener { _, checkedId ->
 
-                singUpViewModel.setGenre(when (checkedId) {
+                singUpViewModel.setGender(when (checkedId) {
                     buttonFirstOption.id -> getString(R.string.first_option_sing_up_string)
                     buttonSecondOption.id -> getString(R.string.second_option_sing_up_string)
                     buttonThirdOption.id -> getString(R.string.third_option_sing_up_string)

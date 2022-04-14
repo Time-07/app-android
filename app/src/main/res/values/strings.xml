@@ -23,7 +23,7 @@
     <string name="error_email_sing_up_string">Formato de email inválido</string>
     <string name="error_password_string">As senhas precisam ser iguais</string>
     <string name="terms_of_use_sing_up_string">Ao se casdastrar você concorda com nossos</string>
-    <string name="required_genre_field_string">Campo obrigatório</string>
+    <string name="required_gender_field_string">Campo obrigatório</string>
 
     <!-- Login Strings -->
     <string name="login_title">Login</string>
