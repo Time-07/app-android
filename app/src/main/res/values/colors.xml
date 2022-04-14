@@ -22,6 +22,7 @@
     <color name="chip_stroke_color">#79747E</color>
     <color name="custom_popup_background_color">#A4A4A4</color>
     <color name="button_search_color">#CACACA</color>
+    <color name="professional_profile_background_color">#E5E5E5</color>
 
 
 </resources>

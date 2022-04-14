@@ -25,6 +25,7 @@
         <entry key="app/src/main/res/drawable/search_button_background.xml" value="0.198" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/fragment_profissional_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.38461538461538464" />
         <entry key="app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
         <entry key="app/src/main/res/layout/items_cardview.xml" value="0.19270833333333334" />
