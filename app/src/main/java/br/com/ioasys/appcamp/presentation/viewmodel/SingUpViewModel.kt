@@ -30,7 +30,8 @@ class SingUpViewModel: ViewModel(), KoinComponent {
         email: String,
         password: String,
         confirmPassword: String,
-        genre: String
+        genre: String,
+        cpf: String
     ){
         _singUpViewState.postLoading()
         singUpUseCase(
@@ -39,7 +40,8 @@ class SingUpViewModel: ViewModel(), KoinComponent {
                 email = email,
                 password = password,
                 confirmPassword = confirmPassword,
-                gender = genre
+                gender = genre,
+                cpf = cpf
             ),
             onSuccess = {
                 _singUpViewState.postSuccess(listOf(it))

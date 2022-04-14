@@ -15,8 +15,9 @@ class SingUpRepositoryImpl(
         email: String,
         password: String,
         confirmPassword: String,
-        gender: String
+        gender: String,
+        cpf: String
     ): Flow<SingUpItems> = flow {
-        emit(SingUpItems(user, email, password, confirmPassword, gender))
+        emit(SingUpItems(user, email, password, confirmPassword, gender, cpf))
     }
 }

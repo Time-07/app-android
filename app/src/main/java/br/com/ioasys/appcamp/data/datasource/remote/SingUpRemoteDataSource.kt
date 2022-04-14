@@ -5,5 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface SingUpRemoteDataSource {
 
-    fun singUp(user: String, email: String, password: String, confirmPassword: String, gender: String): Flow<SingUpItems>
+    fun singUp(user: String, email: String, password: String, confirmPassword: String, gender: String, cpf: String): Flow<SingUpItems>
 }

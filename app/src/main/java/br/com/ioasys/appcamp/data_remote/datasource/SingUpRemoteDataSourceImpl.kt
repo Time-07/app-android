@@ -16,9 +16,10 @@ class SingUpRemoteDataSourceImpl(
         email: String,
         password: String,
         confirmPassword: String,
-        gender: String
+        gender: String,
+        cpf: String
     ): Flow<SingUpItems> = flow {
-        singUpService.singUpUser(SingUpResponse(user, email, password, gender, roleId = "81609aa5-d934-413c-bfb9-0745fc24788b"))
+        singUpService.singUpUser(SingUpResponse(user, email, password, gender, cpf, roleId = "81609aa5-d934-413c-bfb9-0745fc24788b"))
 
     }
 }

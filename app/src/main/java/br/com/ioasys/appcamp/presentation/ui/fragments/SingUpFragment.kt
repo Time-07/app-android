@@ -55,7 +55,8 @@ class SingUpFragment : Fragment() {
                     email = emailTextInputEditText.text.toString(),
                     password = passwordTextInputEditText.text.toString(),
                     confirmPassword = confirmPasswordTextInputEditText.text.toString(),
-                    genre = singUpViewModel.gender
+                    genre = singUpViewModel.gender,
+                    cpf = cpfTIET.text.toString()
                 )
                 emailTextInputEditText.addTextChangedListener{
                     errorEmailSingUp.visibility = View.GONE

@@ -9,10 +9,10 @@ data class SingUpResponse(
     val email: String,
     @SerializedName("password")
     val password: String,
-//    @SerializedName("cpf")
-//    val cpf: String,
     @SerializedName("gender")
     val gender: String,
+    @SerializedName("cpf")
+    val cpf: String,
     @SerializedName("role_id")
     val roleId: String
 )

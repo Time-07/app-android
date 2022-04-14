@@ -26,7 +26,8 @@ class SingUpUseCase(
                 email = params.email,
                 password = params.password,
                 confirmPassword = params.confirmPassword,
-                gender = params.gender
+                gender = params.gender,
+                cpf = params.cpf
             )
         }
 
@@ -35,6 +36,7 @@ class SingUpUseCase(
         val email: String,
         val password: String,
         val confirmPassword: String,
-        val gender: String
+        val gender: String,
+        val cpf: String
     )
 }

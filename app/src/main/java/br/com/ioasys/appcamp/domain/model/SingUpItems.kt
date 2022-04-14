@@ -5,5 +5,6 @@ data class SingUpItems(
     val emailSingUp: String,
     val passwordSingUp: String,
     val confirmPassword: String,
-    val gender: String
+    val gender: String,
+    val cpf: String
 )
