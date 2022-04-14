@@ -8,10 +8,46 @@
     android:fillViewport="true"
     tools:context=".presentation.ui.fragments.ProfissionalProfileFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileProfessionalContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/professional_profile_background_color">
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/miniLogo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/logo_login_screen"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/startHorizontal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userName"
+            style="@style/UserNameStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/endVertical"
+            app:layout_constraintTop_toBottomOf="@id/startHorizontal"
+            android:text="@string/user_name" />
+
+          <androidx.appcompat.widget.AppCompatButton
+              android:id="@+id/logoutBtn"
+              style="@style/logoutBtnStyle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/transparent"
+              app:layout_constraintTop_toBottomOf="@id/userName"
+              app:layout_constraintEnd_toStartOf="@id/endVertical"
+              android:text="@string/logoutBtn_text"
+              />
+
+
+
+
+
+
+
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/startVertical"

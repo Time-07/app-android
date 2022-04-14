@@ -60,5 +60,7 @@
     <string name="text_input_hint_menu_gender">identidade de gênero</string>
     <string name="text_view_hint_filter_menu">Qualquer</string>
     <string name="search_text_btn">Pesquisar</string>
+    <string name="user_name">Meu nome</string>
+    <string name="logoutBtn_text">Sair</string>
 
 </resources>

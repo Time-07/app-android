@@ -185,4 +185,20 @@
         <item name="maxLines">2</item>
     </style>
 
+    <!-- Styles - Professional Profile Layout-->
+
+    <style name="UserNameStyle">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="logoutBtnStyle">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/logoutBtn_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAlignment">textEnd</item>
+    </style>
+
 </resources>
