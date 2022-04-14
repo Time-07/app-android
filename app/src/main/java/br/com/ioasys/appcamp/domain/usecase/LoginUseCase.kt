@@ -1,7 +1,7 @@
 package br.com.ioasys.appcamp.domain.usecase
 
-import br.com.ioasys.appcamp.domain.exception.InvalidEmailException
-import br.com.ioasys.appcamp.domain.exception.InvalidPasswordException
+import br.com.ioasys.appcamp.domain.model.exception.InvalidEmailException
+import br.com.ioasys.appcamp.domain.model.exception.InvalidPasswordException
 import br.com.ioasys.appcamp.domain.model.User
 import br.com.ioasys.appcamp.domain.respositories.LoginRepository
 import br.com.ioasys.appcamp.domain.utils.UseCase
