@@ -1,9 +1,9 @@
 package br.com.ioasys.appcamp.domain.model
 
 data class User(
-    val email: String,
-    val password: String,
-    val accessToken: String,
+    val name: String,
+    val birthdate: String,
     val gender: String,
+    val accessToken: String,
     val id: String
     )
