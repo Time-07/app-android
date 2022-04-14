@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
     android:fillViewport="true"
     tools:context=".presentation.ui.fragments.ProfissionalProfileFragment">
@@ -10,7 +11,39 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/professional_profile_background_color"
-        />
+        android:background="@color/professional_profile_background_color">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="32dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="32dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="21dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="21dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.core.widget.NestedScrollView>
