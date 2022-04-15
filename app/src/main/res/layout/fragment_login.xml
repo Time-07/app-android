@@ -50,7 +50,6 @@
             android:id="@+id/textFieldEditEmail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/email_text"
             android:inputType="textEmailAddress"
             android:singleLine="true"
             android:background="@drawable/input_sing_up_background"/>
@@ -77,7 +76,6 @@
             android:id="@+id/textFieldEditPassword"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/password_text"
             android:inputType="textPassword"
             android:singleLine="true"
             android:background="@drawable/input_sing_up_background"/>

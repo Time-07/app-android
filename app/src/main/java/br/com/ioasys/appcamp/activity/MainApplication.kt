@@ -5,17 +5,17 @@ import br.com.ioasys.appcamp.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
-@Suppress("unused")
 class MainApplication: Application() {
 
     override fun onCreate() {
         super.onCreate()
         startKoin {
             modules(
-                PresentationModule,
-                domainModule,
+                presentationModule,
                 dataModule,
-                dataRemoteModule
+                dataRemoteModule,
+                dataLocalModule,
+                domainModule
             ).androidContext(applicationContext)
         }
     }
