@@ -42,6 +42,7 @@
     <string name="specialty_subtitle_text">especialidade</string>
     <string name="localization_subtitle_text">localização</string>
     <string name="gender_subtitle_text">gênero do(a) profissional</string>
+    <string name="name_search">busca por nome</string>
     <string name="psychologist_chip_text">Psicologia</string>
 
     <!-- List Fragment Strings-->
