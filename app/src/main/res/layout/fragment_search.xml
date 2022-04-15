@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,288 +8,317 @@
     android:fitsSystemWindows="true"
     tools:context=".presentation.ui.fragments.SearchFragment">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colors_white"
-    android:fillViewport="true"
-    tools:context=".presentation.ui.fragments.SearchFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".presentation.ui.fragments.SearchFragment">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvSearchLabelText"
-        style="@style/SearchLabelText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/search_text"
-        app:layout_constraintStart_toEndOf="@id/guidelineStart"
-        app:layout_constraintTop_toTopOf="@id/guidelineTop" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btnSearchLabelClose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_baseline_close"
-        app:layout_constraintBottom_toBottomOf="@+id/tvSearchLabelText"
-        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
-        app:layout_constraintTop_toTopOf="@id/guidelineTop" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilSpecialistNameSearch"
-        style="@style/Login_Input_text_layout"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="24dp"
-        android:hint="@string/search_hint"
-        app:boxStrokeColor="@color/transparent"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
-        app:layout_constraintStart_toStartOf="@id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@id/tvSearchLabelText">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textFieldSpecialistNameSearch"
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSpecialtyFilterTitle"
+            style="@style/Search_Text_Subtitles"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/input_search_background"
-            android:singleLine="true" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvSpecialtyFilterTitle"
-        style="@style/Search_Text_Subtitles"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/specialty_subtitle_text"
-        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/tilSpecialistNameSearch" />
+            android:text="@string/specialty_subtitle_text"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            tools:layout_editor_absoluteY="23dp" />
 
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup"
-        style="@style/Widget.MaterialComponents.ChipGroup"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:ensureMinTouchTargetSize="true"
-        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/tvSpecialtyFilterTitle">
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupGender"
+            style="@style/Widget.MaterialComponents.ChipGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:ensureMinTouchTargetSize="true"
+            app:layout_constraintTop_toBottomOf="@+id/tvGenderSubtitle"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:singleLine="true"
+            tools:layout_editor_absoluteX="32dp">
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/text_filter_1"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_filter_1"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/text_filter_1"
+                android:textAlignment="center"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_filter_2"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/text_filter_2"
+                android:textAlignment="center"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_filter_3"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/text_filter_3"
+                android:textAlignment="center"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_filter_4"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/text_filter_4"
+                android:textAlignment="center"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_filter_5"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/text_filter_5"
+                android:textAlignment="center"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_filter_6"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/text_filter_6"
+                android:textAlignment="center"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeWidth="1dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupSpecialty"
+            style="@style/Widget.MaterialComponents.ChipGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:ensureMinTouchTargetSize="true"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintTop_toBottomOf="@+id/tvSpecialtyFilterTitle"
+            app:singleLine="true"
+            tools:layout_editor_absoluteX="32dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_filter_7"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/text_filter_1"
+                android:textAlignment="center"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_filter_8"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/text_filter_2"
+                android:textAlignment="center"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_filter_9"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/text_filter_3"
+                android:textAlignment="center"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_filter_10"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/text_filter_4"
+                android:textAlignment="center"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_filter_11"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/text_filter_5"
+                android:textAlignment="center"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/text_filter_12"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/text_filter_6"
+                android:textAlignment="center"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeWidth="1dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLocalizationSubtitle"
+            style="@style/Search_Text_Subtitles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/localization_subtitle_text"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroupSpecialty" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSpecialistLocalization"
+            style="@style/Login_Input_text_layout"
+            android:layout_width="347dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/search_hint"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocalizationSubtitle"
+            tools:layout_editor_absoluteX="32dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textFieldSpecialistLocalization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_search_background"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGenderSubtitle"
+            style="@style/Search_Text_Subtitles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/gender_subtitle_text"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tilSpecialistLocalization" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNameSearchSubtitle"
+            style="@style/Search_Text_Subtitles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Nome (opcional)"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroupGender"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            tools:layout_editor_absoluteX="32dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSpecialistNameSearch"
+            style="@style/Login_Input_text_layout"
+            android:layout_width="347dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/search_hint"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameSearchSubtitle"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            tools:layout_editor_absoluteX="32dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textFieldSpecialistNameSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_search_background"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/SearchButton"
+            style="@style/Search_Button"
+            android:layout_width="165dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="36dp"
+            android:drawableStart="@drawable/ic_baseline_manage_searchdrawable"
+            android:text="@string/search_text_btn"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tilSpecialistNameSearch" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/text_filter_1"
-            android:textAlignment="center"
-            android:textColor="@color/colors_neutral_500"
-            app:chipBackgroundColor="@color/colors_white"
-            app:chipCornerRadius="8dp"
-            app:chipStrokeColor="@color/colors_neutral_100"
-            app:chipStrokeWidth="1dp" />
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintGuide_begin="32dp"
+            tools:visibility="visible" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/text_filter_2"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/text_filter_2"
-            android:textAlignment="center"
-            android:textColor="@color/colors_neutral_500"
-            app:chipBackgroundColor="@color/colors_white"
-            app:chipCornerRadius="8dp"
-            app:chipStrokeColor="@color/colors_neutral_100"
-            app:chipStrokeWidth="1dp" />
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="32dp" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/text_filter_3"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/text_filter_3"
-            android:textAlignment="center"
-            android:textColor="@color/colors_neutral_500"
-            app:chipBackgroundColor="@color/colors_white"
-            app:chipCornerRadius="8dp"
-            app:chipStrokeColor="@color/colors_neutral_100"
-            app:chipStrokeWidth="1dp" />
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="23dp" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/text_filter_4"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/text_filter_4"
-            android:textAlignment="center"
-            android:textColor="@color/colors_neutral_500"
-            app:chipBackgroundColor="@color/colors_white"
-            app:chipCornerRadius="8dp"
-            app:chipStrokeColor="@color/colors_neutral_100"
-            app:chipStrokeWidth="1dp" />
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="23dp" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/text_filter_5"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/text_filter_5"
-            android:textAlignment="center"
-            android:textColor="@color/colors_neutral_500"
-            app:chipBackgroundColor="@color/colors_white"
-            app:chipCornerRadius="8dp"
-            app:chipStrokeColor="@color/colors_neutral_100"
-            app:chipStrokeWidth="1dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/text_filter_6"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/text_filter_6"
-            android:textAlignment="center"
-            android:textColor="@color/colors_neutral_500"
-            app:chipBackgroundColor="@color/colors_white"
-            app:chipCornerRadius="8dp"
-            app:chipStrokeColor="@color/colors_neutral_100"
-            app:chipStrokeWidth="1dp" />
-
-    </com.google.android.material.chip.ChipGroup>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvLocalizationSubtitle"
-        style="@style/Search_Text_Subtitles"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/localization_subtitle_text"
-        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tiLocalizationFilterMenuState"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/text_input_hint_menu_localization_state"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/tvLocalizationSubtitle">
-
-        <AutoCompleteTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none"
-            android:text="@string/text_view_hint_filter_menu" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tiLocalizationFilterMenuCity"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="@string/text_input_hint_menu_localization_city"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/tiLocalizationFilterMenuState">
-
-        <AutoCompleteTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none"
-            android:text="@string/text_view_hint_filter_menu" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvGenderSubtitle"
-        style="@style/Search_Text_Subtitles"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/gender_subtitle_text"
-        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@id/tiLocalizationFilterMenuCity"
-        tools:layout_editor_absoluteY="496dp" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tiGenderFilterMenu"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/text_input_hint_menu_gender"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@id/tvGenderSubtitle">
-
-        <AutoCompleteTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none"
-            android:text="@string/text_view_hint_filter_menu" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/SearchButton"
-        style="@style/Search_Button"
-        android:layout_width="165dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="24dp"
-        android:drawableStart="@drawable/ic_baseline_manage_searchdrawable"
-        android:text="@string/search_text_btn"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-        app:layout_constraintStart_toEndOf="@id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/tiGenderFilterMenu"
-        app:layout_constraintBottom_toTopOf="@id/guidelineBottom"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="visible"
-        app:layout_constraintGuide_begin="32dp"
-        tools:visibility="visible" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineEnd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="32dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="23dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="23dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</androidx.core.widget.NestedScrollView>
 
 

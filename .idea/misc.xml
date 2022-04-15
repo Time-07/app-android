@@ -16,12 +16,14 @@
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/search_button.xml" value="0.101" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/see_profile_button_background.xml" value="0.16" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_list.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_default_list.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_list.xml" value="0.22" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_list_filtered.xml" value="0.22" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_login.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_search.xml" value="0.25" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/items_cardview.xml" value="0.25" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/header_list.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/header_list_component.xml" value="0.22" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/items_cardview.xml" value="0.18" />
@@ -40,25 +42,20 @@
         <entry key="app/src/main/res/drawable/search_button_background.xml" value="0.198" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/fragment_professional_profile.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.38461538461538464" />
         <entry key="app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/header_list_component.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/items_cardview.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.3536458333333333" />
         <entry key="app/src/main/res/layout/search_filters.xml" value="0.25" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.14" />
-      </ProjectState>
-    </option>
   </component>
 </project>
