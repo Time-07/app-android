@@ -280,7 +280,7 @@
             app:layout_constraintStart_toStartOf="@id/guideline1"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
             android:layout_marginTop="35dp"
-            android:textColor="@color/black"
+            android:textColor="@color/$_colors_neutral_800"
             android:textSize="14sp"
             android:text="@string/terms_of_use_sing_up_string" />
 
