@@ -61,7 +61,7 @@
     <!-- others -->
     <color name="transparent">#00FFFFFF</color>
     <color name="error_color">#F30000</color>
-    <color name="$_color_trasparence_pink_33">#DB98F5</color>
+    <color name="color_trasparence_pink_33">#DB98F5</color>
 
 
 </resources>

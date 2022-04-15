@@ -10,7 +10,7 @@
     android:elevation="20dp"
     android:focusable="true"
     app:cardCornerRadius="16.39dp"
-    app:strokeColor="@color/$_color_trasparence_pink_33"
+    app:strokeColor="@color/color_trasparence_pink_33"
     app:strokeWidth="0.5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
