@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginVertical="4dp"
-    android:backgroundTint="@color/$_colors_white"
+    android:backgroundTint="@color/colors_white"
     android:elevation="20dp"
     android:focusable="true"
     app:cardCornerRadius="16.39dp"
@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                app:chipBackgroundColor="@color/$_colors_accent_blue_10"
+                app:chipBackgroundColor="@color/colors_accent_blue_10"
                 tools:text="Endocrinologista" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -44,7 +44,7 @@
                 android:layout_marginTop="14dp"
                 android:drawableStart="@drawable/ic_money"
                 android:drawablePadding="12dp"
-                android:textColor="@color/$_colors_neutral_800"
+                android:textColor="@color/colors_neutral_800"
                 tools:text="R$ 150,00" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -68,7 +68,7 @@
                 android:drawableStart="@drawable/ic_localization"
                 android:drawablePadding="8dp"
                 android:maxLines="2"
-                android:textColor="@color/$_colors_neutral_800"
+                android:textColor="@color/colors_neutral_800"
                 tools:text="São Paulo - SP" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -79,7 +79,7 @@
                 android:layout_marginEnd="52dp"
                 android:drawableStart="@drawable/ic_meet_type"
                 android:drawablePadding="8dp"
-                android:textColor="@color/$_colors_neutral_800"
+                android:textColor="@color/colors_neutral_800"
                 tools:text="Presencial e\nOnline" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
