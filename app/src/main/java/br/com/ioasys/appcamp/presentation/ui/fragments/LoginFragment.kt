@@ -55,7 +55,13 @@ class LoginFragment : Fragment() {
                 }
             }
         }
-        Log.i(ContentValues.TAG, "Click!!!")
+        binding.btnSignupLink.setOnClickListener {
+            binding.run {
+                findNavController().navigate(
+                    LoginFragmentDirections.actionBtnSignupLinkToSingUpFragment()
+                )
+            }
+        }
     }
 
 
