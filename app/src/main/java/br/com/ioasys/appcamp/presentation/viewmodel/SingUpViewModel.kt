@@ -4,25 +4,24 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import br.com.ioasys.appcamp.domain.model.SingUpItems
-import br.com.ioasys.appcamp.domain.usecase.SingUpUseCase
-import br.com.ioasys.appcamp.util.*
+import br.com.ioasys.appcamp.domain.usecase.SignUpUseCase
+import br.com.ioasys.appcamp.utils.*
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import org.koin.core.parameter.parametersOf
 
 class SingUpViewModel: ViewModel(), KoinComponent {
 
-    private val singUpUseCase: SingUpUseCase by inject { parametersOf(viewModelScope) }
+    private val signUpUseCase: SignUpUseCase by inject { parametersOf(viewModelScope) }
 
-    private var _singUpViewState = MutableLiveData<ViewState<List<SingUpItems>>>()
-    val singUpViewState = _singUpViewState as LiveData<ViewState<List<SingUpItems>>>
+    private var _singUpViewState = MutableLiveData<ViewState<List<Boolean>>>()
+    val singUpViewState = _singUpViewState as LiveData<ViewState<List<Boolean>>>
 
-    var genre: String = ""
+    var gender: String = ""
         private set
 
-    fun setGenre(text: String){
-        genre = text
+    fun setGender(text: String){
+        gender = text
     }
 
     fun singUp(
@@ -30,22 +29,23 @@ class SingUpViewModel: ViewModel(), KoinComponent {
         email: String,
         password: String,
         confirmPassword: String,
-        genre: String
+        genre: String,
+        cpf: String
     ){
         _singUpViewState.postLoading()
-        singUpUseCase(
-            params = SingUpUseCase.Params(
+        signUpUseCase(
+            params = SignUpUseCase.SignUpModels(
                 user = user,
                 email = email,
                 password = password,
                 confirmPassword = confirmPassword,
-                genre = genre
+                gender = genre,
+                cpf = cpf
             ),
             onSuccess = {
                 _singUpViewState.postSuccess(listOf(it))
             },
             onError = {
-                it.printStackTrace()
                 _singUpViewState.postError(it)
             }
         )
