@@ -99,6 +99,22 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Dra. Silvia\nMaranhão" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/seeProfileButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/see_profile_button_background"
+            android:drawableStart="@drawable/ic_baseline_person_search"
+            android:paddingStart="118dp"
+            android:paddingEnd="118dp"
+            android:layout_marginTop="128dp"
+            android:textSize="18sp"
+            android:text="@string/see_profile_string"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/profileImg"
+            app:layout_constraintStart_toStartOf="@id/guidelineBeginCardView"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEndCardView"/>
+
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineBeginCardView"

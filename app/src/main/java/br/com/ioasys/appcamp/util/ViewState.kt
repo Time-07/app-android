@@ -1,4 +1,4 @@
-package br.com.ioasys.appcamp.utils
+package br.com.ioasys.appcamp.util
 
 sealed class ViewState<out T> {
 

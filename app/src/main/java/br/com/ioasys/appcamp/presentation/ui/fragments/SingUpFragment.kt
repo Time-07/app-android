@@ -13,11 +13,11 @@ import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.appcamp.R
 import br.com.ioasys.appcamp.databinding.FragmentSingUpBinding
-import br.com.ioasys.appcamp.domain.exception.EmptyInputException
-import br.com.ioasys.appcamp.domain.exception.InvalidEmailException
-import br.com.ioasys.appcamp.domain.exception.InvalidPasswordException
+import br.com.ioasys.appcamp.domain.model.exception.EmptyInputException
+import br.com.ioasys.appcamp.domain.model.exception.InvalidEmailException
+import br.com.ioasys.appcamp.domain.model.exception.InvalidPasswordException
 import br.com.ioasys.appcamp.presentation.viewmodel.SingUpViewModel
-import br.com.ioasys.appcamp.utils.ViewState
+import br.com.ioasys.appcamp.util.ViewState
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 
 class SingUpFragment : Fragment() {
@@ -25,7 +25,7 @@ class SingUpFragment : Fragment() {
     private var _binding: FragmentSingUpBinding? = null
     private val binding: FragmentSingUpBinding get() = _binding!!
 
-    private val singUpViewModel : SingUpViewModel by lazy {
+    private val singUpViewModel: SingUpViewModel by lazy {
         getViewModel()
     }
 
@@ -33,8 +33,10 @@ class SingUpFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = FragmentSingUpBinding.inflate(inflater, container,
-        false).apply {
+    ): View = FragmentSingUpBinding.inflate(
+        inflater, container,
+        false
+    ).apply {
         _binding = this
     }.root
 
@@ -44,10 +46,10 @@ class SingUpFragment : Fragment() {
         setListeners()
     }
 
-    private fun setListeners(){
-        binding.singUpButton.setOnClickListener {
-            binding.run {
-                if (singUpViewModel.gender.isBlank()){
+    private fun setListeners() {
+        binding.run {
+            singUpButton.setOnClickListener {
+                if (singUpViewModel.gender.isBlank()) {
                     singUpViewModel.setGender(otherOptionTextInputEditText.text.toString())
                 }
                 singUpViewModel.singUp(
@@ -58,21 +60,21 @@ class SingUpFragment : Fragment() {
                     genre = singUpViewModel.gender,
                     cpf = cpfTIET.text.toString()
                 )
-                emailTextInputEditText.addTextChangedListener{
+                emailTextInputEditText.addTextChangedListener {
                     errorEmailSingUp.visibility = View.GONE
                 }
                 confirmPasswordTextInputEditText.addTextChangedListener {
                     confirmPasswordTextLayoutInput.error = null
                     binding.errorPasswordSingUp.visibility = View.GONE
                 }
-                passwordTextInputEditText.addTextChangedListener{
+                passwordTextInputEditText.addTextChangedListener {
                     errorPasswordSingUp.visibility = View.GONE
                 }
                 otherOptionTextInputEditText.addTextChangedListener {
                     errorRequiredGenreSingUp.visibility = View.GONE
                 }
                 radioGroupSingUp.setOnCheckedChangeListener { _, checkedId ->
-                    when(checkedId){
+                    when (checkedId) {
                         0, 1, 2 -> errorRequiredGenreSingUp.visibility = View.GONE
                     }
                 }
@@ -82,9 +84,9 @@ class SingUpFragment : Fragment() {
         editEnableButton()
     }
 
-    private fun addObserves(){
-        singUpViewModel.singUpViewState.observe(viewLifecycleOwner){ state ->
-            when(state){
+    private fun addObserves() {
+        singUpViewModel.singUpViewState.observe(viewLifecycleOwner) { state ->
+            when (state) {
                 is ViewState.Success -> {
                     Toast.makeText(context, "DEU CERTOOO!", Toast.LENGTH_SHORT).show()
                     showInvalidPasswordError(false)
@@ -95,11 +97,11 @@ class SingUpFragment : Fragment() {
                     )
                 }
                 is ViewState.Error -> {
-                    when(state.throwable){
+                    when (state.throwable) {
                         is InvalidPasswordException -> showInvalidPasswordError(true)
                         is InvalidEmailException -> showInvalidEmailError(true)
                         is EmptyInputException -> showInvalidRequiredGenreError(true)
-                        else -> Unit
+                        else -> Toast.makeText(requireActivity(), "Deu errado, merda", Toast.LENGTH_SHORT).show()
                     }
                 }
                 is ViewState.Loading -> {
@@ -111,19 +113,21 @@ class SingUpFragment : Fragment() {
     }
 
 
-
     private fun getInputRadioButton() {
         binding.apply {
             radioGroupSingUp.setOnCheckedChangeListener { _, checkedId ->
 
-                singUpViewModel.setGender(when (checkedId) {
-                    buttonFirstOption.id -> getString(R.string.first_option_sing_up_string)
-                    buttonSecondOption.id -> getString(R.string.second_option_sing_up_string)
-                    buttonThirdOption.id -> getString(R.string.third_option_sing_up_string)
-                    else -> ""
-                })
+                singUpViewModel.setGender(
+                    when (checkedId) {
+                        buttonFirstOption.id -> getString(R.string.first_option_sing_up_string)
+                        buttonSecondOption.id -> getString(R.string.second_option_sing_up_string)
+                        buttonThirdOption.id -> getString(R.string.third_option_sing_up_string)
+                        else -> ""
+                    }
+                )
 
-                otherOptionTextInputLayout.visibility = setVisibility(checkedId == buttonFourthOption.id)
+                otherOptionTextInputLayout.visibility =
+                    setVisibility(checkedId == buttonFourthOption.id)
             }
         }
     }
@@ -174,20 +178,21 @@ class SingUpFragment : Fragment() {
 
     private fun setVisibility(isVisible: Boolean): Int = if (isVisible) View.VISIBLE else View.GONE
 
-    private fun showInvalidEmailError(hasError: Boolean){
+    private fun showInvalidEmailError(hasError: Boolean) {
         binding.apply {
-            errorEmailSingUp.visibility = if(hasError) View.VISIBLE else View.GONE
-        }    }
+            errorEmailSingUp.visibility = if (hasError) View.VISIBLE else View.GONE
+        }
+    }
 
-    private fun showInvalidPasswordError(hasError: Boolean){
-        if (hasError){
+    private fun showInvalidPasswordError(hasError: Boolean) {
+        if (hasError) {
             binding.confirmPasswordTextLayoutInput.error = getString(R.string.error_password_string)
             binding.errorPasswordSingUp.visibility = View.VISIBLE
         }
     }
 
-    private fun showInvalidRequiredGenreError(hasError: Boolean){
-        binding.errorRequiredGenreSingUp.visibility = if(hasError) View.VISIBLE else View.GONE
+    private fun showInvalidRequiredGenreError(hasError: Boolean) {
+        binding.errorRequiredGenreSingUp.visibility = if (hasError) View.VISIBLE else View.GONE
     }
 
     override fun onDestroyView() {

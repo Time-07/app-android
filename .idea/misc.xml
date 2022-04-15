@@ -9,8 +9,12 @@
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/input_sing_up_background.xml" value="0.106" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/profile_photo_background.xml" value="0.101" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/search_button.xml" value="0.101" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/see_profile_button_background.xml" value="0.112" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_list.xml" value="0.22" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/bottom_navigation_menu.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_list.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_login.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/header_list.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/header_list_component.xml" value="0.22" />
@@ -43,12 +47,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.14" />
-      </ProjectState>
-    </option>
   </component>
 </project>

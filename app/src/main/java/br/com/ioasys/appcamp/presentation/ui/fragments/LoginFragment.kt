@@ -1,19 +1,19 @@
 package br.com.ioasys.appcamp.presentation.ui.fragments
 
+import android.content.ContentValues
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
-import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.appcamp.databinding.FragmentLoginBinding
-import br.com.ioasys.appcamp.domain.exception.*
+import br.com.ioasys.appcamp.domain.model.exception.*
 import br.com.ioasys.appcamp.presentation.viewmodel.LoginViewModel
-import br.com.ioasys.appcamp.utils.ViewState
+import br.com.ioasys.appcamp.util.ViewState
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 
 class LoginFragment : Fragment() {
@@ -29,8 +29,7 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = FragmentLoginBinding
-        .inflate(inflater, container, false).apply {
+    ): View = FragmentLoginBinding.inflate(inflater, container, false).apply {
         _binding = this
     }.root
 
@@ -56,34 +55,26 @@ class LoginFragment : Fragment() {
                 }
             }
         }
-
-        binding.btnSignupLink.setOnClickListener {
-            findNavController().navigate(
-                LoginFragmentDirections.actionBtnSignupLinkToSearchFragment()
-            )
-        }
-        editEnableButton()
+        Log.i(ContentValues.TAG, "Click!!!")
     }
 
 
     private fun addObserver(){
-        loginViewModel.loggedUserViewState
-            .observe(viewLifecycleOwner) { state ->
+        loginViewModel.loggedUserViewState.observe(viewLifecycleOwner) { state ->
 
             when(state){
                 is ViewState.Success -> {
-                    Toast.makeText(
-                        context, "DEU CERTOOO!", Toast.LENGTH_SHORT).show()
-                    showInvalidPassword(false)
-                    showInvalidEmail(false)
+                    Toast.makeText(context, "DEU CERTOOO!", Toast.LENGTH_SHORT).show()
+                    invalidPassword(false)
+                    invalidEmail(false)
                     findNavController().navigate(
-                        LoginFragmentDirections.actionLoginFragmentToSingUpFragment()
+                        LoginFragmentDirections.actionLoginFragmentToListFragment()
                     )
                 }
                 is ViewState.Error -> {
                     when(state.throwable){
-                        is InvalidPasswordException -> showInvalidPassword(true)
-                        is InvalidEmailException -> showInvalidEmail(true)
+                        is InvalidPassword -> invalidPassword(true)
+                        is InvalidEmail -> invalidEmail(true)
                         else -> Unit
                     }
                 }
@@ -95,56 +86,17 @@ class LoginFragment : Fragment() {
         }
     }
 
-    private fun editEnableButton() {
-        binding.btnLogin.isEnabled = false
-        binding.apply {
-            val editTexts = listOf(
-                textFieldEditEmail,
-                textFieldEditPassword
-            )
-            for (editText in editTexts) {
-                editText.addTextChangedListener(object : TextWatcher {
-                    override fun beforeTextChanged(
-                        s: CharSequence?,
-                        start: Int,
-                        count: Int,
-                        after: Int
-                    ) {
-                    }
 
-                    override fun onTextChanged(
-                        s: CharSequence?,
-                        start: Int,
-                        before: Int,
-                        count: Int
-                    ) {
-                        val emailInput = editTexts[0].text.toString().trim()
-                        val passwordInput = editTexts[1].text.toString().trim()
-
-                        btnLogin.isEnabled =
-                                    emailInput.isEmpty().not() &&
-                                    passwordInput.isEmpty().not()
-                    }
-
-                    override fun afterTextChanged(s: Editable?) {}
-
-                })
-            }
-        }
-    }
-
-    private fun showInvalidEmail(hasError: Boolean){
+    private fun invalidEmail(hasError: Boolean){
         binding.apply {
             txtLoginError.visibility = if(hasError) View.VISIBLE else View.GONE
+        }    }
+
+    private fun invalidPassword(hasError: Boolean){
+        if (hasError){
+            binding.txtLoginError.visibility = View.VISIBLE
         }
     }
-
-    private fun showInvalidPassword(hasError: Boolean){
-        binding.apply {
-            txtLoginError.visibility = if(hasError) View.VISIBLE else View.GONE
-        }
-    }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
