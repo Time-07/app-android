@@ -23,5 +23,12 @@
     <color name="custom_popup_background_color">#A4A4A4</color>
     <color name="button_search_color">#CACACA</color>
 
+    <!-- Paleta de Cores (Alta fidelidade) -->
+
+    <!-- List Fragment Colors -->
+    <color name="primary_30">#ECDBF4</color>
+    <color name="accent_pink_10">#FCF1F3</color>
+    <color name="accent_pink_50">#F5A9B8</color>
+
 
 </resources>

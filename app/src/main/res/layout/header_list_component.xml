@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/primary_30"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logoList"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/logo_login_screen"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineHeaderBegin"
+        app:layout_constraintEnd_toEndOf="@id/guidelineHeaderEnd"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nameUserTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineHeaderEnd"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="16sp"
+        android:fontFamily="@font/inter_medium"
+        tools:text="Fernanda"
+        android:textColor="@color/black"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/textButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="0dp"
+        android:paddingStart="60dp"
+        android:gravity="top"
+        android:fontFamily="@font/inter_medium"
+        app:layout_constraintTop_toBottomOf="@id/nameUserTV"
+        app:layout_constraintEnd_toEndOf="@id/guidelineHeaderEnd"
+        android:text="@string/disconnect_string"
+        android:textSize="14sp"
+        android:textColor="@color/black_transparence_50"
+        android:background="@color/transparent"
+        app:textAllCaps="false"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/listTitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingTop="24dp"
+        android:textSize="32sp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:text="@string/list_title_string"
+        android:textColor="@color/black"
+        android:fontFamily="@font/fredoka_regular_400"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/guidelineHeaderEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineHeaderBegin"
+        app:layout_constraintTop_toBottomOf="@id/logoList"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHeaderBegin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHeaderEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

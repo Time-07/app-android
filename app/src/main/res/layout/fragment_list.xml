@@ -6,49 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".presentation.ui.fragments.ListFragment">
 
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/nameUserTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        app:layout_constraintEnd_toEndOf="@id/guideline4"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textSize="20sp"
-        android:fontFamily="@font/inter_medium"
-        tools:text="Fernanda"
-        android:textColor="@color/black"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/textButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingEnd="0dp"
-        android:paddingStart="60dp"
-        android:gravity="top"
-        android:fontFamily="@font/inter_regular"
-        app:layout_constraintTop_toBottomOf="@id/nameUserTV"
-        app:layout_constraintEnd_toEndOf="@id/guideline4"
-        android:text="@string/disconnect_string"
-        android:textSize="14sp"
-        android:textColor="@color/black_transparence_50"
-        android:background="@color/transparent"
-        app:textAllCaps="false"
-        />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/listTitleTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="@string/list_title_string"
-        android:textSize="32sp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/fredoka_regular_400"
+    <include
+        android:id="@+id/header_title"
+        layout="@layout/header_list_component"
         app:layout_constraintStart_toStartOf="@id/guideline3"
-        app:layout_constraintTop_toBottomOf="@id/nameUserTV"/>
+        app:layout_constraintEnd_toEndOf="@id/guideline4"/>
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/explainTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -63,13 +28,13 @@
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="@id/guideline3"
         app:layout_constraintEnd_toEndOf="@id/guideline4"
-        app:layout_constraintTop_toBottomOf="@id/listTitleTV" />
+        app:layout_constraintTop_toBottomOf="@id/header_title" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/searchListButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="16dp"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
         android:drawablePadding="8dp"
@@ -79,18 +44,18 @@
         android:background="@drawable/search_button"
         app:layout_constraintStart_toStartOf="@id/guideline3"
         app:layout_constraintEnd_toEndOf="@id/guideline4"
-        app:layout_constraintTop_toBottomOf="@id/listTitleTV"/>
+        app:layout_constraintTop_toBottomOf="@id/explainTitle"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="80dp"
         android:orientation="vertical"
         tools:listitem="@layout/items_cardview"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/listTitleTV"
+        app:layout_constraintTop_toTopOf="@id/searchListButton"
         app:layout_constraintEnd_toEndOf="@id/guideline4"
         app:layout_constraintStart_toStartOf="@id/guideline3"
         android:paddingHorizontal="0dp"
