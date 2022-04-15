@@ -46,21 +46,14 @@
         app:layout_constraintEnd_toEndOf="@id/guideline4"
         app:layout_constraintTop_toBottomOf="@id/explainTitle"/>
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="80dp"
-        android:orientation="vertical"
-        tools:listitem="@layout/items_cardview"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/searchListButton"
-        app:layout_constraintEnd_toEndOf="@id/guideline4"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="296dp"
+        android:layout_height="281.44dp"
+        android:background="@drawable/professionals_icon"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/searchListButton"
         app:layout_constraintStart_toStartOf="@id/guideline3"
-        android:paddingHorizontal="0dp"
-        android:clipToPadding="true"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        app:layout_constraintEnd_toEndOf="@id/guideline4"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
