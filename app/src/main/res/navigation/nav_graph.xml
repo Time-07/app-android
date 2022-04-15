@@ -41,7 +41,7 @@
         android:id="@+id/listFragment"
         android:name="br.com.ioasys.appcamp.presentation.ui.fragments.ListFragment"
         android:label="list_fragment"
-        tools:layout="@layout/fragment_list">
+        tools:layout="@layout/fragment_default_list">
         <action
             android:id="@id/listFragment"
             app:destination="@id/loginFragment"
