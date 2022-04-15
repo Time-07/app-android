@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/$_colors_primary_30"
+    android:background="@color/colors_primary_30"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -26,7 +26,7 @@
         android:textSize="16sp"
         android:fontFamily="@font/inter_medium"
         tools:text="Fernanda"
-        android:textColor="@color/$_colors_neutral_800"/>
+        android:textColor="@color/colors_neutral_800"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/textButton"
@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="@id/guidelineHeaderEnd"
         android:text="@string/disconnect_string"
         android:textSize="14sp"
-        android:textColor="@color/$_colors_neutral_800"
+        android:textColor="@color/colors_neutral_800"
         android:background="@color/transparent"
         app:textAllCaps="false"
         />
@@ -55,9 +55,9 @@
         android:paddingStart="32dp"
         android:paddingEnd="32dp"
         android:text="@string/list_title_string"
-        android:textColor="@color/$_colors_neutral_800"
+        android:textColor="@color/colors_neutral_800"
         android:fontFamily="@font/fredoka_regular_400"
-        android:background="@color/$_colors_white"
+        android:background="@color/colors_white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logoList"/>

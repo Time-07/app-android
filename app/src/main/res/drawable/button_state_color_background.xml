@@ -2,21 +2,21 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:state_enabled="false">
-        <color android:color="@color/$_colors_neutral_20"/>
+        <color android:color="@color/colors_neutral_20"/>
         <shape android:shape="rectangle">
             <corners android:radius="8dp"/>
         </shape>
     </item>
 
     <item android:state_enabled="true" android:state_pressed="false">
-        <color android:color="@color/$_colors_neutral_30"/>
+        <color android:color="@color/colors_neutral_30"/>
         <shape android:shape="rectangle">
             <corners android:radius="8dp"/>
         </shape>
     </item>
 
     <item android:state_pressed="true" >
-        <color android:color="@color/$_colors_neutral_80"/>
+        <color android:color="@color/colors_neutral_80"/>
         <shape android:shape="rectangle">
             <corners android:radius="8dp"/>
         </shape>
