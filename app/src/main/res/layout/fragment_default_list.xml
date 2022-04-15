@@ -24,7 +24,7 @@
         android:lineSpacingExtra="10dp"
         android:fontFamily="@font/inter_regular"
         android:text="@string/explain_search_string"
-        android:textColor="@color/black"
+        android:textColor="@color/$_colors_neutral_800"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="@id/guideline3"
         app:layout_constraintEnd_toEndOf="@id/guideline4"

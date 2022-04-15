@@ -11,7 +11,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_search"
+    android:background="@color/$_colors_white"
     android:fillViewport="true"
     tools:context=".presentation.ui.fragments.SearchFragment">
 
@@ -87,10 +87,10 @@
             android:fontFamily="@font/inter_medium"
             android:text="@string/text_filter_1"
             android:textAlignment="center"
-            android:textColor="@color/text_color_chips"
-            app:chipBackgroundColor="@color/background_search"
+            android:textColor="@color/$_colors_neutral_500"
+            app:chipBackgroundColor="@color/$_colors_white"
             app:chipCornerRadius="8dp"
-            app:chipStrokeColor="@color/chip_stroke_color"
+            app:chipStrokeColor="@color/$_colors_neutral_100"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -101,10 +101,10 @@
             android:fontFamily="@font/inter_medium"
             android:text="@string/text_filter_2"
             android:textAlignment="center"
-            android:textColor="@color/text_color_chips"
-            app:chipBackgroundColor="@color/background_search"
+            android:textColor="@color/$_colors_neutral_500"
+            app:chipBackgroundColor="@color/$_colors_white"
             app:chipCornerRadius="8dp"
-            app:chipStrokeColor="@color/chip_stroke_color"
+            app:chipStrokeColor="@color/$_colors_neutral_100"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -115,10 +115,10 @@
             android:fontFamily="@font/inter_medium"
             android:text="@string/text_filter_3"
             android:textAlignment="center"
-            android:textColor="@color/text_color_chips"
-            app:chipBackgroundColor="@color/background_search"
+            android:textColor="@color/$_colors_neutral_500"
+            app:chipBackgroundColor="@color/$_colors_white"
             app:chipCornerRadius="8dp"
-            app:chipStrokeColor="@color/chip_stroke_color"
+            app:chipStrokeColor="@color/$_colors_neutral_100"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -129,10 +129,10 @@
             android:fontFamily="@font/inter_medium"
             android:text="@string/text_filter_4"
             android:textAlignment="center"
-            android:textColor="@color/text_color_chips"
-            app:chipBackgroundColor="@color/background_search"
+            android:textColor="@color/$_colors_neutral_500"
+            app:chipBackgroundColor="@color/$_colors_white"
             app:chipCornerRadius="8dp"
-            app:chipStrokeColor="@color/chip_stroke_color"
+            app:chipStrokeColor="@color/$_colors_neutral_100"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -143,10 +143,10 @@
             android:fontFamily="@font/inter_medium"
             android:text="@string/text_filter_5"
             android:textAlignment="center"
-            android:textColor="@color/text_color_chips"
-            app:chipBackgroundColor="@color/background_search"
+            android:textColor="@color/$_colors_neutral_500"
+            app:chipBackgroundColor="@color/$_colors_white"
             app:chipCornerRadius="8dp"
-            app:chipStrokeColor="@color/chip_stroke_color"
+            app:chipStrokeColor="@color/$_colors_neutral_100"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -157,10 +157,10 @@
             android:fontFamily="@font/inter_medium"
             android:text="@string/text_filter_6"
             android:textAlignment="center"
-            android:textColor="@color/text_color_chips"
-            app:chipBackgroundColor="@color/background_search"
+            android:textColor="@color/$_colors_neutral_500"
+            app:chipBackgroundColor="@color/$_colors_white"
             app:chipCornerRadius="8dp"
-            app:chipStrokeColor="@color/chip_stroke_color"
+            app:chipStrokeColor="@color/$_colors_neutral_100"
             app:chipStrokeWidth="1dp" />
 
     </com.google.android.material.chip.ChipGroup>

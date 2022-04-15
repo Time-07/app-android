@@ -1,34 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Não alterar nome do arquivo (se não da erro) -->
+    <!-- theme colors -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="light_grey_hint_color">#6F6F6F</color>
+
+    <!-- color palette -->
+
+    <!-- neutral -->
+    <color name="$_colors_neutral_800">#111111</color>
+    <color name="$_colors_neutral_700">#282828</color>
+    <color name="$_colors_neutral_600">#2E2E2E</color>
+    <color name="$_colors_neutral_500">#404040</color>
+    <color name="$_colors_neutral_300">#5A5A5A</color>
+    <color name="$_colors_neutral_100">#787878</color>
+    <color name="$_colors_neutral_80">#9A9A9A</color>
+    <color name="$_colors_neutral_50">#BBBBBB</color>
+    <color name="$_colors_neutral_30">#D9D9D9</color>
+    <color name="$_colors_neutral_20">#F0F0F0</color>
+    <color name="$_colors_white">#FFFFFF</color>
+
+    <!-- primary -->
+    <color name="$_colors_primary_800">#1D1620</color>
+    <color name="$_colors_primary_600">#44314B</color>
+    <color name="$_colors_primary_300">#744D83</color>
+    <color name="$_colors_primary_100">#A768C0</color>
+    <color name="$_colors_primary_70">#D782F8</color>
+    <color name="$_colors_primary_60">#DB98F5</color>
+    <color name="$_colors_primary_50">#DFB0F2</color>
+    <color name="$_colors_primary_40">#E5C7F2</color>
+    <color name="$_colors_primary_30">#ECDBF4</color>
+    <color name="$_colors_primary_20">#F5EDF8</color>
+
+    <!-- accent blue -->
+    <color name="$_colors_accent_blue_700">#102A34</color>
+    <color name="$_colors_accent_blue_600">#153745</color>
+    <color name="$_colors_accent_blue_400">#25596C</color>
+    <color name="$_colors_accent_blue_100">#38829F</color>
+    <color name="$_colors_accent_blue_80">#4CADD2</color>
+    <color name="$_colors_accent_blue_50">#5BCEFA</color>
+    <color name="$_colors_accent_blue_40">#8EDBF9</color>
+    <color name="$_colors_accent_blue_30">#B0E4F8</color>
+    <color name="$_colors_accent_blue_20">#CAEBF8</color>
+    <color name="$_colors_accent_blue_10">#E8F6FB</color>
+
+    <!-- accent pink -->
+    <color name="$_colors_accent_pink_800">#391419</color>
+    <color name="$_colors_accent_pink_700">#481F26</color>
+    <color name="$_colors_accent_pink_400">#703D45</color>
+    <color name="$_colors_accent_pink_200">#9F646E</color>
+    <color name="$_colors_accent_pink_80">#CF8A97</color>
+    <color name="$_colors_accent_pink_50">#F5A9B8</color>
+    <color name="$_colors_accent_pink_40">#F7C3CE</color>
+    <color name="$_colors_accent_pink_30">#F9D7DD</color>
+    <color name="$_colors_accent_pink_20">#FAE5E9</color>
+    <color name="$_colors_accent_pink_10">#FCF1F3</color>
+
+    <!-- others -->
     <color name="transparent">#00FFFFFF</color>
-    <color name="button_sing_up_grey_disable">#EBEBEB</color>
-    <color name="button_string_sing_up_disable">#868686</color>
-    <color name="button_sing_up_grey_enable">#CACACA</color>
-    <color name="button_sing_up_grey_pressed">#9C9C9C</color>
     <color name="error_color">#F30000</color>
-    <color name="background_search">#EDEDED</color>
-    <color name="hint_search_color">#6F6F6F</color>
-    <color name="black_transparence_50">#80000000</color>
-    <color name="text_color_chips">#49454F</color>
-    <color name="chip_stroke_color">#79747E</color>
-    <color name="custom_popup_background_color">#A4A4A4</color>
-    <color name="button_search_color">#CACACA</color>
-
-    <!-- Paleta de Cores (Alta fidelidade) -->
-
-    <!-- List Fragment Colors -->
-    <color name="primary_30">#ECDBF4</color>
-    <color name="accent_pink_10">#FCF1F3</color>
-    <color name="accent_pink_50">#F5A9B8</color>
 
 
 </resources>

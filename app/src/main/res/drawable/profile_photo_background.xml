@@ -3,7 +3,7 @@
 
     <item >
         <shape android:shape="oval">
-            <solid tools:color="@color/button_sing_up_grey_enable"/>
+            <solid tools:color="@color/$_colors_neutral_30"/>
         </shape>
     </item>
 

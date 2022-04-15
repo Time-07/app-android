@@ -2,21 +2,21 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:state_enabled="false">
-        <color android:color="@color/button_sing_up_grey_disable"/>
+        <color android:color="@color/$_colors_neutral_20"/>
         <shape android:shape="rectangle">
             <corners android:radius="8dp"/>
         </shape>
     </item>
 
     <item android:state_enabled="true" android:state_pressed="false">
-        <color android:color="@color/button_sing_up_grey_enable"/>
+        <color android:color="@color/$_colors_neutral_30"/>
         <shape android:shape="rectangle">
             <corners android:radius="8dp"/>
         </shape>
     </item>
 
     <item android:state_pressed="true" >
-        <color android:color="@color/button_sing_up_grey_pressed"/>
+        <color android:color="@color/$_colors_neutral_80"/>
         <shape android:shape="rectangle">
             <corners android:radius="8dp"/>
         </shape>
