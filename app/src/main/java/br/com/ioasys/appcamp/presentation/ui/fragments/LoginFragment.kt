@@ -55,13 +55,6 @@ class LoginFragment : Fragment() {
                 }
             }
         }
-        binding.btnSignupLink.setOnClickListener {
-            binding.run {
-                findNavController().navigate(
-                    LoginFragmentDirections.actionBtnSignupLinkToSingUpFragment()
-                )
-            }
-        }
         Log.i(ContentValues.TAG, "Click!!!")
     }
 
@@ -75,7 +68,7 @@ class LoginFragment : Fragment() {
                     invalidPassword(false)
                     invalidEmail(false)
                     findNavController().navigate(
-                        LoginFragmentDirections.actionLoginFragmentToSearchFragment()
+                        LoginFragmentDirections.actionLoginFragmentToListFragment()
                     )
                 }
                 is ViewState.Error -> {
@@ -92,8 +85,6 @@ class LoginFragment : Fragment() {
             }
         }
     }
-
-
 
 
     private fun invalidEmail(hasError: Boolean){
