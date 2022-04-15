@@ -26,6 +26,7 @@
         <entry key="app/src/main/res/drawable/edittext_red_focused.xml" value="0.219" />
         <entry key="app/src/main/res/drawable/error_background.xml" value="0.142" />
         <entry key="app/src/main/res/drawable/filter_search_background.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2295" />
         <entry key="app/src/main/res/drawable/ic_baseline_warning_amber.xml" value="0.279" />
         <entry key="app/src/main/res/drawable/input_search_background.xml" value="0.1965" />
         <entry key="app/src/main/res/drawable/input_sing_up_background.xml" value="0.1435" />
@@ -34,6 +35,8 @@
         <entry key="app/src/main/res/drawable/search_button_background.xml" value="0.198" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/fragment_professional_profile.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_profissional_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.38461538461538464" />
         <entry key="app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
         <entry key="app/src/main/res/layout/items_cardview.xml" value="0.19270833333333334" />

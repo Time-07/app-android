@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
+    tools:context=".presentation.ui.fragments.ProfissionalProfileFragment">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileProfessionalContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/miniLogo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/logo_login_screen"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/startHorizontal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userName"
+            style="@style/UserNameStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/endVertical"
+            app:layout_constraintTop_toBottomOf="@id/startHorizontal"
+            android:text="@string/user_name" />
+
+          <androidx.appcompat.widget.AppCompatButton
+              android:id="@+id/logoutBtn"
+              style="@style/logoutBtnStyle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/transparent"
+              app:layout_constraintTop_toBottomOf="@id/userName"
+              app:layout_constraintEnd_toStartOf="@id/endVertical"
+              android:text="@string/logoutBtn_text"
+              />
+
+          <androidx.appcompat.widget.AppCompatImageButton
+              android:id="@+id/leftArrowBtn"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:layout_constraintStart_toEndOf="@id/startVertical"
+              app:layout_constraintTop_toBottomOf="@id/headHorizontal"
+              android:src="@drawable/ic_baseline_arrow_back_24"
+              android:background="@color/transparent" />
+
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/profilePicture"
+              android:layout_width="120dp"
+              android:layout_height="120dp"
+              app:layout_constraintTop_toBottomOf="@id/headHorizontal"
+              app:layout_constraintStart_toEndOf="@id/startVertical"
+              app:layout_constraintEnd_toStartOf="@id/endVertical"
+              android:src="@drawable/foto" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/genderSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_female"
+            app:layout_constraintBottom_toBottomOf="@id/profilePicture"
+            app:layout_constraintEnd_toStartOf="@+id/endVertical"
+            app:layout_constraintStart_toEndOf="@+id/profilePicture" />
+
+
+
+
+
+
+
+
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="32dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="32dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="21dp" />
+
+          <androidx.constraintlayout.widget.Guideline
+              android:id="@+id/headHorizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              app:layout_constraintGuide_begin="96dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="21dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
