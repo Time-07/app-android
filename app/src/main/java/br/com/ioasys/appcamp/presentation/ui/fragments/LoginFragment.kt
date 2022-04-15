@@ -68,7 +68,7 @@ class LoginFragment : Fragment() {
                     invalidPassword(false)
                     invalidEmail(false)
                     findNavController().navigate(
-                        SingUpFragmentDirections.actionSingUpFragmentToListFragment()
+                        LoginFragmentDirections.actionLoginFragmentToListFragment()
                     )
                 }
                 is ViewState.Error -> {
