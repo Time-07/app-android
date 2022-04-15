@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import br.com.ioasys.appcamp.domain.usecase.SignUpUseCase
-import br.com.ioasys.appcamp.utils.*
+import br.com.ioasys.appcamp.util.*
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import org.koin.core.parameter.parametersOf
