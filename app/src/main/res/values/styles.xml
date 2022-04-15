@@ -16,9 +16,9 @@
     <style name="Login_Input_text_layout">
         <item name="fontFamily">@font/inter_regular</item>
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/$_colors_neutral_800</item>
-        <item name="android:textColorHint">@color/$_colors_neutral_300</item>
-        <item name="hintTextColor">@color/$_colors_neutral_300</item>
+        <item name="android:textColor">@color/colors_neutral_800</item>
+        <item name="android:textColorHint">@color/colors_neutral_300</item>
+        <item name="hintTextColor">@color/colors_neutral_300</item>
     </style>
 
     <style name="Login_Button">
@@ -49,7 +49,7 @@
     </style>
 
     <style name="App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-        <item name="boxBackgroundColor">@color/$_colors_white</item>
+        <item name="boxBackgroundColor">@color/colors_white</item>
     </style>
 
     <style name="HintTextAppearance" parent="TextAppearance.AppCompat">
@@ -58,22 +58,22 @@
     </style>
     
     <style name="SearchLabelText">
-        <item name="android:textColor">@color/$_colors_neutral_800</item>
+        <item name="android:textColor">@color/colors_neutral_800</item>
         <item name="android:textSize">32sp</item>
         <item name="android:fontFamily">@font/fredoka_regular</item>
     </style>
 
     <style name="Search_TextInputLayout">
         <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/$_colors_neutral_800</item>
+        <item name="android:textColor">@color/colors_neutral_800</item>
         <item name="fontFamily">@font/inter_regular</item>
-        <item name="android:textColorHint">@color/$_colors_neutral_300</item>
-        <item name="hintTextColor">@color/$_colors_neutral_300</item>
+        <item name="android:textColorHint">@color/colors_neutral_300</item>
+        <item name="hintTextColor">@color/colors_neutral_300</item>
     </style>
 
     <style name="Search_Text_Subtitles">
         <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/$_colors_neutral_800</item>
+        <item name="android:textColor">@color/colors_neutral_800</item>
         <item name="fontFamily">@font/fredoka_regular</item>
     </style>
 
@@ -86,14 +86,14 @@
 
     <style name="TextAppearance.App.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="fontFamily">@font/inter_regular</item>
-        <item name="android:textColor">@color/$_colors_neutral_800</item>
+        <item name="android:textColor">@color/colors_neutral_800</item>
         <item name="android:textSize">18sp</item>
     </style>
 
     <style name="Search_Button">
         <item name="fontFamily">@font/inter_medium</item>
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/$_colors_neutral_800</item>
+        <item name="android:textColor">@color/colors_neutral_800</item>
         <item name="background">@drawable/search_button</item>
     </style>
 
@@ -102,30 +102,30 @@
 
     <style name="SingUp_Title">
         <item name="android:textSize">42sp</item>
-        <item name="android:textColor">@color/$_colors_neutral_800</item>
+        <item name="android:textColor">@color/colors_neutral_800</item>
         <item name="fontFamily">@font/fredoka_condensed_regular</item>
     </style>
 
     <style name="SingUp_TextInputEditText">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/$_colors_neutral_800</item>
+        <item name="android:textColor">@color/colors_neutral_800</item>
         <item name="fontFamily">@font/inter_regular</item>
-        <item name="android:textColorHint">@color/$_colors_neutral_300</item>
+        <item name="android:textColorHint">@color/colors_neutral_300</item>
         <item name="singleLine">true</item>
         <item name="paddingStart">24dp</item>
-        <item name="hintTextColor">@color/$_colors_neutral_300</item>
+        <item name="hintTextColor">@color/colors_neutral_300</item>
     </style>
 
     <style name="SingUp_TextInputLayout">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/$_colors_neutral_800</item>
+        <item name="android:textColor">@color/colors_neutral_800</item>
         <item name="fontFamily">@font/inter_regular</item>
-        <item name="android:textColorHint">@color/$_colors_neutral_300</item>
-        <item name="hintTextColor">@color/$_colors_neutral_300</item>
+        <item name="android:textColorHint">@color/colors_neutral_300</item>
+        <item name="hintTextColor">@color/colors_neutral_300</item>
     </style>
 
     <style name="SingUp_RadioGroup_Text">
-        <item name="android:textColor">@color/$_colors_neutral_300</item>
+        <item name="android:textColor">@color/colors_neutral_30</item>
         <item name="android:textSize">14sp</item>
         <item name="android:layout_marginStart">24dp</item>
         <item name="android:layout_marginBottom">8dp</item>
@@ -134,10 +134,10 @@
 
     <style name="RadioButton_SingUp">
         <item name="android:textSize">18sp</item>
-        <item name="color">@color/$_colors_neutral_800</item>
+        <item name="color">@color/colors_neutral_800</item>
         <item name="android:layout_marginStart">24dp</item>
         <item name="android:layout_marginBottom">8dp</item>
-        <item name="buttonTint">@color/$_colors_neutral_800</item>
+        <item name="buttonTint">@color/colors_neutral_800</item>
         <item name="fontFamily">@font/inter_regular</item>
     </style>
 
@@ -150,12 +150,12 @@
 
     <style name="SingUp_TextButtonDisable_Style">
         <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/$_colors_neutral_80</item>
+        <item name="android:textColor">@color/colors_neutral_80</item>
     </style>
 
     <style name="SingUp_TextButtonEnable_Style">
         <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/$_colors_neutral_800</item>
+        <item name="android:textColor">@color/colors_neutral_800</item>
     </style>
 
     <style name="TextErrorStyle">
@@ -168,21 +168,31 @@
 
     <style name="ProfilePhotoList">
         <item name="android:shape">oval</item>
-        <item name="itemShapeFillColor">@color/$_colors_neutral_30</item>
+        <item name="itemShapeFillColor">@color/colors_neutral_30</item>
         <item name="android:radius">16dp</item>
     </style>
 
     <style name="NameUserTextStyle">
         <item name="fontFamily">@font/inter_medium</item>
         <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/$_colors_neutral_800</item>
+        <item name="android:textColor">@color/colors_neutral_800</item>
     </style>
 
-    <style name="ProfileInformationTextStyle">
-        <item name="fontFamily">@font/inter_regular</item>
+    <style name="TextResult_InterMediumStyle">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textColor">@color/colors_neutral_800</item>
+    </style>
+
+    <style name="TextResult_InterMedium_ChipStyle">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textColor">@color/colors_neutral_700</item>
         <item name="android:textSize">14sp</item>
-        <item name="android:lineSpacingExtra">1dp</item>
-        <item name="maxLines">2</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
     </style>
 
 </resources>

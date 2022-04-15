@@ -61,5 +61,6 @@
     <string name="text_view_hint_filter_menu">Qualquer</string>
     <string name="search_text_btn">Pesquisar</string>
     <string name="see_profile_string">Ver Perfil</string>
+    <string name="results">Resultados</string>
 
 </resources>

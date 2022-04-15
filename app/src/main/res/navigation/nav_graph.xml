@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/listFilteredFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -41,11 +41,22 @@
         android:id="@+id/listFragment"
         android:name="br.com.ioasys.appcamp.presentation.ui.fragments.ListFragment"
         android:label="list_fragment"
-        tools:layout="@layout/fragment_list">
+        tools:layout="@layout/fragment_default_list">
         <action
             android:id="@id/listFragment"
             app:destination="@id/loginFragment"
             />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/listFilteredFragment"
+        android:name="br.com.ioasys.appcamp.presentation.ui.fragments.ListFilteredFragment"
+        android:label="list_filtered_fragment"
+        tools:layout="@layout/fragment_list_filtered">
+        <action
+            android:id="@id/listFilteredFragment"
+            app:destination="@id/searchFragment"/>
     </fragment>
 
 </navigation>
