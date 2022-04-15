@@ -178,11 +178,21 @@
         <item name="android:textColor">@color/$_colors_neutral_800</item>
     </style>
 
-    <style name="ProfileInformationTextStyle">
-        <item name="fontFamily">@font/inter_regular</item>
+    <style name="TextResult_InterMediumStyle">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textColor">@color/$_colors_neutral_800</item>
+    </style>
+
+    <style name="TextResult_InterMedium_ChipStyle">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textColor">@color/$_colors_neutral_700</item>
         <item name="android:textSize">14sp</item>
-        <item name="android:lineSpacingExtra">1dp</item>
-        <item name="maxLines">2</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
     </style>
 
 </resources>
