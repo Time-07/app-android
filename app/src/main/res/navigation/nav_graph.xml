@@ -16,7 +16,10 @@
         <action
             android:id="@+id/action_btnSignupLink_to_SingUpFragment"
             app:destination="@id/SingUpFragment"/>
-        </fragment>
+        <action
+            android:id="@+id/action_loginFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/SingUpFragment"
