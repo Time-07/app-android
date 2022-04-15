@@ -12,5 +12,8 @@ val domainModule = module {
 
     factory { (scope:CoroutineScope) ->
         SingUpUseCase(get(), scope) }
-    factory { LoginUseCase(get(), get()) }
+    factory { (scope:CoroutineScope ) ->
+        LoginUseCase(get(), scope)
+    }
+
 }

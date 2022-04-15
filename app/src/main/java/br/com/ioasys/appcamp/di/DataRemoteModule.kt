@@ -1,5 +1,7 @@
 package br.com.ioasys.appcamp.di
 
+import br.com.ioasys.appcamp.data.datasource.remote.LoginRemoteDataSource
+import br.com.ioasys.appcamp.data_remote.datasource.LoginRemoteDataSourceImpl
 import br.com.ioasys.appcamp.data_remote.service.AuthService
 import br.com.ioasys.appcamp.data_remote.utils.ApiConstants
 import br.com.ioasys.appcamp.data_remote.utils.WebServiceFactory
@@ -15,5 +17,9 @@ val dataRemoteModule = module {
     }
 
     single { WebServiceFactory.providerOkHttpClient() }
+
+    single<LoginRemoteDataSource> {
+        LoginRemoteDataSourceImpl(get())
+    }
 
 }
