@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/listFilteredFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -15,7 +15,7 @@
             app:destination="@id/searchFragment" />
         <action
             android:id="@+id/action_btnSignupLink_to_SingUpFragment"
-            app:destination="@id/SingUpFragment"/>
+            app:destination="@id/action_btnSignupLink_to_SingUpFragment"/>
         <action
             android:id="@+id/action_loginFragment_to_listFragment"
             app:destination="@id/listFragment" />
