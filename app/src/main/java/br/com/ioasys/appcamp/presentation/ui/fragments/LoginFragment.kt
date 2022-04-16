@@ -62,7 +62,7 @@ class LoginFragment : Fragment() {
                 )
             }
         }
-        Log.i(ContentValues.TAG, "Click!!!")
+
     }
 
 
