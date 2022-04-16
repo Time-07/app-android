@@ -147,7 +147,7 @@
         android:textAllCaps="false"
         android:textColor="@color/colors_white"
         android:textSize="16sp"
-        app:backgroundTint="@drawable/floating_button_background"
+        app:backgroundTint="@color/colors_primary_300"
         app:icon="@drawable/ic_primary_icon"
         app:iconPadding="8dp"
         app:iconTint="@color/colors_neutral_20"
