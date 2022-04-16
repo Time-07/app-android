@@ -12,7 +12,7 @@ import br.com.ioasys.appcamp.presentation.adapter.ProfessionalListAdapter
 import br.com.ioasys.appcamp.presentation.viewmodel.ProfessionalsListViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ProfessionalListFragment : Fragment(), ProfessionalClickListener {
+class ProfessionalSearchFragment : Fragment(), ProfessionalClickListener {
 
     private lateinit var professionalListAdapter: ProfessionalListAdapter
     private var _binding: FragmentProfessionalListBinding? = null

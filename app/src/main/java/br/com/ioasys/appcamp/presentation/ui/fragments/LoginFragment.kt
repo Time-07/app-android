@@ -58,7 +58,7 @@ class LoginFragment : Fragment() {
         binding.btnSignupLink.setOnClickListener {
             binding.run {
                 findNavController().navigate(
-                    LoginFragmentDirections.actionLoginFragmentToSearchFragment()
+                    LoginFragmentDirections.actionLoginFragmentToSingUpFragment()
                 )
             }
         }
@@ -75,7 +75,7 @@ class LoginFragment : Fragment() {
                     invalidPassword(false)
                     invalidEmail(false)
                     findNavController().navigate(
-                        LoginFragmentDirections.actionLoginFragmentToListFragment()
+                        LoginFragmentDirections.actionLoginFragmentToSearchFragment()
                     )
                 }
                 is ViewState.Error -> {

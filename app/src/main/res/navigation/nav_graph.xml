@@ -14,9 +14,6 @@
             android:id="@+id/action_loginFragment_to_SearchFragment"
             app:destination="@id/searchFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_listFragment"
-            app:destination="@id/listFragment" />
-        <action
             android:id="@+id/action_loginFragment_to_SingUpFragment"
             app:destination="@id/SingUpFragment" />
     </fragment>
@@ -33,7 +30,7 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="br.com.ioasys.appcamp.presentation.ui.fragments.ProfessionalListFragment"
+        android:name="br.com.ioasys.appcamp.presentation.ui.fragments.ProfessionalSearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_professional_list" />
 
