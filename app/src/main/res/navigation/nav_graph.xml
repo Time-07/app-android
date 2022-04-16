@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/listFilteredFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -43,7 +43,7 @@
         android:label="list_fragment"
         tools:layout="@layout/fragment_default_list">
         <action
-            android:id="@id/listFragment"
+            android:id="@+id/action_ListFragment_to_LoginFragment"
             app:destination="@id/loginFragment"
             />
 
@@ -55,8 +55,11 @@
         android:label="list_filtered_fragment"
         tools:layout="@layout/fragment_list_filtered">
         <action
-            android:id="@id/listFilteredFragment"
+            android:id="@+id/action_ListFilteredFragment_to_SearchFragment"
             app:destination="@id/searchFragment"/>
+        <action
+            android:id="@+id/action_ListFilteredFragment_to_ListFragment"
+            app:destination="@id/listFragment"/>
     </fragment>
 
 </navigation>

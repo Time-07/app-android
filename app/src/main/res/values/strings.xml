@@ -62,7 +62,7 @@
     <string name="text_view_hint_filter_menu">Qualquer</string>
     <string name="search_text_btn">Pesquisar</string>
     <string name="see_profile_string">Ver Perfil</string>
-    <string name="results">Resultados</string>
+    <string name="results">resultados</string>
     <string name="user_name">Meu nome</string>
     <string name="logoutBtn_text">Sair</string>
     <string name="search_for_name">busca por nome</string>
@@ -71,5 +71,6 @@
     <string name="gender_filter_3">Homem Cis</string>
     <string name="gender_filter_4">Homem Trans</string>
     <string name="gender_filter_5">Gênero Não Binário</string>
+    <string name="filter_string">Filtrar</string>
 
 </resources>
