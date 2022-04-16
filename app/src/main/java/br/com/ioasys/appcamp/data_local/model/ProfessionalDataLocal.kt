@@ -1,6 +1,13 @@
-package br.com.ioasys.appcamp.domain.model
+package br.com.ioasys.appcamp.data_local.model
 
-data class Professional(
+import androidx.annotation.NonNull
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "Professionals")
+data class ProfessionalDataLocal(
+
+    @PrimaryKey @NonNull
     val accessToken: String,
     val crmCrp: String,
     val id: Int,
@@ -25,4 +32,5 @@ data class Professional(
     val bathroomSpecific: Boolean,
     val linkedin: String,
     val imageUrl: String = ""
+
 )
