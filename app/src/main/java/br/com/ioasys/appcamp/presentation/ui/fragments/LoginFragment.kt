@@ -58,10 +58,11 @@ class LoginFragment : Fragment() {
         binding.btnSignupLink.setOnClickListener {
             binding.run {
                 findNavController().navigate(
-                    LoginFragmentDirections.actionBtnSignupLinkToSingUpFragment()
+                    LoginFragmentDirections.actionLoginFragmentToSearchFragment()
                 )
             }
         }
+
     }
 
 
