@@ -14,11 +14,11 @@
             android:id="@+id/action_loginFragment_to_SearchFragment"
             app:destination="@id/searchFragment" />
         <action
-            android:id="@+id/action_btnSignupLink_to_SingUpFragment"
-            app:destination="@id/action_btnSignupLink_to_SingUpFragment"/>
-        <action
             android:id="@+id/action_loginFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_SingUpFragment"
+            app:destination="@id/SingUpFragment" />
     </fragment>
 
     <fragment
