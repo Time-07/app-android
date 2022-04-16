@@ -6,9 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import br.com.ioasys.appcamp.R
 import br.com.ioasys.appcamp.databinding.FragmentListFilteredBinding
-
 
 class ListFilteredFragment : Fragment() {
 
@@ -30,18 +28,24 @@ class ListFilteredFragment : Fragment() {
         setListeners()
     }
 
-    private fun setListeners(){
-        binding.listFilteredReturnFilterButton.setOnClickListener {
-            findNavController().navigate(
-                ListFilteredFragmentDirections.actionListFilteredFragmentToSearchFragment()
-            )
+    private fun setListeners() {
+        binding.apply {
+            listFilteredReturnFilterButton.setOnClickListener {
+                findNavController().navigate(
+                    ListFilteredFragmentDirections.actionListFilteredFragmentToSearchFragment()
+                )
+            }
+            listFilteredCloseButton.setOnClickListener {
+                findNavController().navigate(
+                    ListFilteredFragmentDirections.actionListFilteredFragmentToListFragment()
+                )
+            }
+            listFilteredFloatingButton.setOnClickListener {
+                findNavController().navigate(
+                    ListFilteredFragmentDirections.actionListFilteredFragmentToSearchFragment()
+                )
+            }
         }
-        binding.listFilteredCloseButton.setOnClickListener {
-            findNavController().navigate(
-                ListFilteredFragmentDirections.actionListFilteredFragmentToListFragment()
-            )
-        }
-
     }
 
     override fun onDestroy() {

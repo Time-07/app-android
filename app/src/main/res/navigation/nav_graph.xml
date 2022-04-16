@@ -27,8 +27,8 @@
         android:label="fragment_book_list"
         tools:layout="@layout/fragment_sing_up" >
         <action
-            android:id="@+id/action_SingUpFragment_to_listFragment"
-            app:destination="@id/listFragment" />
+            android:id="@+id/action_SingUpFragment_to_LoginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 
     <fragment

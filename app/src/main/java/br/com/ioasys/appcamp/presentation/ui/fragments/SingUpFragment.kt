@@ -93,7 +93,7 @@ class SingUpFragment : Fragment() {
                     showInvalidEmailError(false)
                     showInvalidRequiredGenreError(false)
                     findNavController().navigate(
-                        SingUpFragmentDirections.actionSingUpFragmentToListFragment()
+                        SingUpFragmentDirections.actionSingUpFragmentToLoginFragment()
                     )
                 }
                 is ViewState.Error -> {
