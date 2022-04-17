@@ -1,6 +1,5 @@
 package br.com.ioasys.appcamp.domain.respositories
 
-import br.com.ioasys.appcamp.domain.model.SignUpItems
 import kotlinx.coroutines.flow.Flow
 
 interface SingUpRepository {
