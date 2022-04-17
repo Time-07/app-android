@@ -17,8 +17,10 @@
         <entry key="app/src/main/res/drawable/edittext_red_focused.xml" value="0.219" />
         <entry key="app/src/main/res/drawable/error_background.xml" value="0.142" />
         <entry key="app/src/main/res/drawable/filter_search_background.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/gender_female.xml" value="0.2485" />
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_16.xml" value="0.2365" />
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.279" />
+        <entry key="app/src/main/res/drawable/ic_baseline_female.xml" value="0.276" />
         <entry key="app/src/main/res/drawable/ic_baseline_manage_search.xml" value="0.2135" />
         <entry key="app/src/main/res/drawable/ic_baseline_person_search_24.xml" value="0.27" />
         <entry key="app/src/main/res/drawable/ic_baseline_warning_amber.xml" value="0.279" />
@@ -36,7 +38,7 @@
         <entry key="app/src/main/res/layout/fragment_list_filtered.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/fragment_professional_list.xml" value="0.35520833333333335" />
-        <entry key="app/src/main/res/layout/fragment_professional_profile.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_professional_profile.xml" value="0.4739402362751911" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
         <entry key="app/src/main/res/layout/header_list_component.xml" value="0.35208333333333336" />
