@@ -72,5 +72,8 @@
     <string name="gender_filter_4">Homem Trans</string>
     <string name="gender_filter_5">Gênero Não Binário</string>
     <string name="filter_string">Filtrar</string>
+    <string name="empty_list_response1_string">Infelizmente ainda não temos resultados para esses critérios ou localização.</string>
+    <string name="empty_list_response2_string">Estamos trabalhando para que cada vez mais profissionais estejam disponíveis na plataforma.</string>
+    <string name="empty_list_response3_string">Enquanto isso, que tal tentar uma nova pesquisa? Obrigado pela paciência!</string>
 
 </resources>
