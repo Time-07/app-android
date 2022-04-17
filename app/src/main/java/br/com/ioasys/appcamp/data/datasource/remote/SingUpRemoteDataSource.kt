@@ -1,7 +1,5 @@
 package br.com.ioasys.appcamp.data.datasource.remote
 
-import br.com.ioasys.appcamp.domain.model.SignUpItems
-import kotlinx.coroutines.flow.Flow
 import retrofit2.Response
 
 interface SingUpRemoteDataSource {

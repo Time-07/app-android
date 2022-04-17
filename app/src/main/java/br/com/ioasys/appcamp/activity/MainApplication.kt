@@ -15,7 +15,8 @@ class MainApplication: Application() {
                 dataModule,
                 dataRemoteModule,
                 dataLocalModule,
-                domainModule
+                domainModule,
+                databaseModule
             ).androidContext(applicationContext)
         }
     }

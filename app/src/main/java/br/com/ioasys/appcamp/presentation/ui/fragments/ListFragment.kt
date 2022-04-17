@@ -5,16 +5,38 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import br.com.ioasys.appcamp.R
+import androidx.navigation.fragment.findNavController
+import br.com.ioasys.appcamp.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {
 
+    private var _binding: FragmentListBinding? = null
+    private val binding: FragmentListBinding get() = _binding!!
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_default_list, container, false)
+    ): View = FragmentListBinding.inflate(inflater, container, false).apply {
+        _binding = this
+    }.root
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setListeners()
+    }
+
+    private fun setListeners(){
+        binding.searchListButton.setOnClickListener {
+            findNavController().navigate(
+                ListFilteredFragmentDirections.actionListFilteredFragmentToSearchFragment()
+            )
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 
 }

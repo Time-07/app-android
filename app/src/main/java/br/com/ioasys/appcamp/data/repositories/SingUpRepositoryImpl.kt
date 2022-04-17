@@ -1,10 +1,8 @@
 package br.com.ioasys.appcamp.data.repositories
 
 import br.com.ioasys.appcamp.data.datasource.remote.SingUpRemoteDataSource
-import br.com.ioasys.appcamp.domain.model.SignUpItems
 import br.com.ioasys.appcamp.domain.respositories.SingUpRepository
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 
 class SingUpRepositoryImpl(

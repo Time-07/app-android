@@ -11,8 +11,8 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_SearchFragment"
-            app:destination="@id/searchFragment" />
+            android:id="@+id/action_loginFragment_to_ListFragment"
+            app:destination="@id/listFragment" />
         <action
             android:id="@+id/action_loginFragment_to_SingUpFragment"
             app:destination="@id/SingUpFragment" />
@@ -24,25 +24,32 @@
         android:label="fragment_book_list"
         tools:layout="@layout/fragment_sing_up" >
         <action
-            android:id="@+id/action_SingUpFragment_to_listFragment"
-            app:destination="@id/listFragment" />
+            android:id="@+id/action_SingUpFragment_to_LoginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/searchFragment"
         android:name="br.com.ioasys.appcamp.presentation.ui.fragments.ProfessionalSearchFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_professional_list" />
+        tools:layout="@layout/fragment_professional_list">
+     <action
+         android:id="@+id/action_SearchFragment_toListFilteredFragment"
+            app:destination="@id/listFilteredFragment"/>
+    </fragment>
 
     <fragment
         android:id="@+id/listFragment"
         android:name="br.com.ioasys.appcamp.presentation.ui.fragments.ListFragment"
         android:label="list_fragment"
-        tools:layout="@layout/fragment_default_list">
+        tools:layout="@layout/fragment_list">
         <action
-            android:id="@id/listFragment"
+            android:id="@+id/action_ListFragment_to_LoginFragment"
             app:destination="@id/loginFragment"
             />
+        <action
+            android:id="@+id/action_ListFragment_toListFilteredFragment"
+            app:destination="@id/listFilteredFragment"/>
 
     </fragment>
 
@@ -52,8 +59,11 @@
         android:label="list_filtered_fragment"
         tools:layout="@layout/fragment_list_filtered">
         <action
-            android:id="@id/listFilteredFragment"
+            android:id="@+id/action_ListFilteredFragment_to_SearchFragment"
             app:destination="@id/searchFragment"/>
+        <action
+            android:id="@+id/action_ListFilteredFragment_to_ListFragment"
+            app:destination="@id/listFragment"/>
     </fragment>
 
 </navigation>

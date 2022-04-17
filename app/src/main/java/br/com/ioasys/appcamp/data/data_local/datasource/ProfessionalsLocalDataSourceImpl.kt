@@ -23,16 +23,8 @@ class ProfessionalsLocalDataSourceImpl(
         professionalList = professionalList.map { it.toDao() }
     )
 
-    override fun getProfessionals(query: String?): Flow<List<Professional>> = flow {
+    override fun getProfessionals(): Flow<List<Professional>> = flow {
         val professionalList = professionalDao.getProfessionals().map { it.toDomain() }
-        query?.let {
-            professionalList.map { professional ->
-                professional.name.trim().contains(it,ignoreCase = true)
-            }
-        } ?: kotlin.run {
-            emit(professionalList)
-        }
-
+        emit(professionalList)
     }
-
 }

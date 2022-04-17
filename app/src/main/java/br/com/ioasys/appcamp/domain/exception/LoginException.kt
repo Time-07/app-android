@@ -1,4 +1,4 @@
-package br.com.ioasys.appcamp.domain.model.exception
+package br.com.ioasys.appcamp.domain.exception
 
 import kotlin.Exception
 

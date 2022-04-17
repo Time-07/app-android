@@ -13,4 +13,5 @@ val dataLocalModule = module {
     single { SharedPreferencesHelper(androidContext()) }
     single<LoginLocalDataSource> { LoginLocalDataSourceImpl( get()) }
     single<ProfessionalsLocalDataSource> { ProfessionalsLocalDataSourceImpl(get(), get()) }
+
 }

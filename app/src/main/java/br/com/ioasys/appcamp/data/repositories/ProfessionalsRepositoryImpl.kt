@@ -13,14 +13,14 @@ class ProfessionalsRepositoryImpl(
     private val professionalsLocalDataSource: ProfessionalsLocalDataSource
 ): ProfessionalsRepository {
 
-    override fun getProfessionals(query: String?): Flow<List<Professional>> = flow{
+    override fun getProfessionals(): Flow<List<Professional>> = flow{
         professionalsLocalDataSource.getAccessToken().collect { token ->
             if (token.isNotEmpty()) {
-                professionalsRemoteDataSource.getProfessionals(token, query).collect { professionalList ->
+                professionalsRemoteDataSource.getProfessionals(token).collect { professionalList ->
                     emit(professionalList)
                 }
             } else {
-                professionalsLocalDataSource.getProfessionals(query = query).collect { professionalList ->
+                professionalsLocalDataSource.getProfessionals().collect { professionalList ->
                     emit(professionalList)
                 }
             }
@@ -31,4 +31,8 @@ class ProfessionalsRepositoryImpl(
     override fun saveProfessionals(professionalList: List<Professional>) = professionalsLocalDataSource.saveProfessionals(
         professionalList = professionalList
     )
+
+    override fun getSearchProfessionalsRepository(query: String): Flow<List<Professional>> {
+        TODO("Not yet implemented")
+    }
 }

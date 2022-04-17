@@ -13,9 +13,9 @@ import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.appcamp.R
 import br.com.ioasys.appcamp.databinding.FragmentSingUpBinding
-import br.com.ioasys.appcamp.domain.model.exception.EmptyInputException
-import br.com.ioasys.appcamp.domain.model.exception.InvalidEmailException
-import br.com.ioasys.appcamp.domain.model.exception.InvalidPasswordException
+import br.com.ioasys.appcamp.domain.exception.EmptyInputException
+import br.com.ioasys.appcamp.domain.exception.InvalidEmailException
+import br.com.ioasys.appcamp.domain.exception.InvalidPasswordException
 import br.com.ioasys.appcamp.presentation.viewmodel.SingUpViewModel
 import br.com.ioasys.appcamp.util.ViewState
 import org.koin.androidx.viewmodel.ext.android.getViewModel
@@ -94,7 +94,7 @@ class SingUpFragment : Fragment() {
                     showInvalidEmailError(false)
                     showInvalidRequiredGenreError(false)
                     findNavController().navigate(
-                        SingUpFragmentDirections.actionSingUpFragmentToListFragment()
+                        SingUpFragmentDirections.actionSingUpFragmentToLoginFragment()
                     )
                 }
                 is ViewState.Error -> {

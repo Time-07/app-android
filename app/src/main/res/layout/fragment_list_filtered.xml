@@ -17,84 +17,108 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/listFilteredReturnFilterButton"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="center"
-            android:layout_marginStart="60dp" />
+            android:layout_marginStart="40dp"
+            android:layout_weight="0"
+            android:background="@drawable/ic_baseline_arrow_back_24" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
+            android:layout_weight="0"
             android:fontFamily="@font/fredoka_regular_400"
+            android:gravity="center"
             android:text="@string/results"
             android:textColor="@color/colors_neutral_800"
             android:textSize="28sp" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/listFilteredCloseButton"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_weight="0"
+            android:background="@drawable/ic_baseline_close" />
+
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/listFilteredNameResultText"
-        style="@style/TextResult_InterMediumStyle"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/listFilteredResultsLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textSize="14sp"
-        android:visibility="gone"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/guideline6"
         app:layout_constraintStart_toStartOf="@id/guideline5"
-        app:layout_constraintTop_toBottomOf="@id/linearLayoutLisFiltered"
-        tools:text="buscando por: Silva"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutLisFiltered">
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/listFilteredProfessionResult"
-        style="@style/TextResult_InterMedium_ChipStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:visibility="gone"
-        app:chipBackgroundColor="@color/colors_accent_blue_10"
-        app:layout_constraintStart_toStartOf="@id/guideline5"
-        app:layout_constraintTop_toBottomOf="@id/listFilteredNameResultText"
-        tools:text="Endocrinologia"
-        tools:visibility="visible" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/listFilteredNameResultText"
+            style="@style/TextResult_InterMediumStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:text="buscando por: Silva"
+            tools:visibility="visible" />
 
-    <com.google.android.material.chip.Chip
-        style="@style/TextResult_InterMedium_ChipStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:visibility="gone"
-        app:chipBackgroundColor="@color/colors_accent_blue_10"
-        app:layout_constraintStart_toEndOf="@id/listFilteredProfessionResult"
-        app:layout_constraintTop_toTopOf="@id/listFilteredProfessionResult"
-        tools:text="Mulher Cis"
-        tools:visibility="visible" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/listFilteredProfessionResult"
+                style="@style/TextResult_InterMedium_ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:chipBackgroundColor="@color/colors_accent_blue_10"
+                tools:text="Endocrinologia"
+                tools:visibility="visible" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/TextResult_InterMedium_ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:chipBackgroundColor="@color/colors_accent_blue_10"
+                tools:text="Mulher Cis"
+                tools:visibility="visible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View
         style="@style/Divider"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         android:background="@color/colors_accent_blue_10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayoutLisFiltered" />
+        app:layout_constraintTop_toBottomOf="@id/listFilteredResultsLayout" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/listFilteredResultNumber"
         style="@style/TextResult_InterMediumStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="20dp"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/guideline5"
-        app:layout_constraintTop_toBottomOf="@id/linearLayoutLisFiltered"
+        app:layout_constraintTop_toBottomOf="@id/listFilteredResultsLayout"
         tools:text="3 resultados" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -112,6 +136,24 @@
         app:layout_constraintStart_toStartOf="@id/guideline5"
         app:layout_constraintTop_toBottomOf="@id/listFilteredResultNumber"
         tools:listitem="@layout/items_cardview" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/listFilteredFloatingButton"
+        style="@style/TextResult_InterMediumStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:text="@string/filter_string"
+        android:textAllCaps="false"
+        android:textColor="@color/colors_white"
+        android:textSize="16sp"
+        app:backgroundTint="@color/colors_primary_300"
+        app:icon="@drawable/ic_primary_icon"
+        app:iconPadding="8dp"
+        app:iconTint="@color/colors_neutral_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline6" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"

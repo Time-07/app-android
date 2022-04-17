@@ -5,5 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface ProfessionalsRemoteDataSource {
 
-    fun getProfessionals(accessToken: String, query: String?) : Flow<List<Professional>>
+    fun getProfessionals(accessToken: String) : Flow<List<Professional>>
 }
