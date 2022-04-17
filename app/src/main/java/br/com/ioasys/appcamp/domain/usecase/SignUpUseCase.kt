@@ -1,9 +1,9 @@
 package br.com.ioasys.appcamp.domain.usecase
 
 import br.com.ioasys.appcamp.commons.extensions.isNotEmail
-import br.com.ioasys.appcamp.domain.model.exception.EmptyInputException
-import br.com.ioasys.appcamp.domain.model.exception.InvalidEmailException
-import br.com.ioasys.appcamp.domain.model.exception.InvalidPasswordException
+import br.com.ioasys.appcamp.domain.exception.EmptyInputException
+import br.com.ioasys.appcamp.domain.exception.InvalidEmailException
+import br.com.ioasys.appcamp.domain.exception.InvalidPasswordException
 import br.com.ioasys.appcamp.domain.respositories.SingUpRepository
 import br.com.ioasys.appcamp.domain.utils.UseCase
 import kotlinx.coroutines.CoroutineScope

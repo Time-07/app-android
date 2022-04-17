@@ -5,6 +5,8 @@ import kotlinx.coroutines.flow.Flow
 
 interface ProfessionalsRepository {
 
-    fun getProfessionals(query: String?): Flow<List<Professional>>
+    fun getProfessionals(): Flow<List<Professional>>
     fun saveProfessionals(professionalList: List<Professional>)
+
+    fun getSearchProfessionalsRepository(query: String): Flow<List<Professional>>
 }

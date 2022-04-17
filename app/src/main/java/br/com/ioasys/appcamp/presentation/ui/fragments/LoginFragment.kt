@@ -1,8 +1,6 @@
 package br.com.ioasys.appcamp.presentation.ui.fragments
 
-import android.content.ContentValues
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +9,7 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.appcamp.databinding.FragmentLoginBinding
-import br.com.ioasys.appcamp.domain.model.exception.*
+import br.com.ioasys.appcamp.domain.exception.*
 import br.com.ioasys.appcamp.presentation.viewmodel.LoginViewModel
 import br.com.ioasys.appcamp.util.ViewState
 import org.koin.androidx.viewmodel.ext.android.getViewModel
@@ -75,7 +73,7 @@ class LoginFragment : Fragment() {
                     invalidPassword(false)
                     invalidEmail(false)
                     findNavController().navigate(
-                        LoginFragmentDirections.actionLoginFragmentToSearchFragment()
+                        LoginFragmentDirections.actionLoginFragmentToListFragment()
                     )
                 }
                 is ViewState.Error -> {

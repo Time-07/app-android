@@ -8,11 +8,6 @@
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/custom_popup_background.xml" value="0.101" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/error_background.xml" value="0.101" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/filter_search_background.xml" value="0.101" />
-        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/ic_baseline_manage_search.xml" value="0.101" />
-        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/card_view_background.xml" value="0.101" />
-        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/custom_popup_background.xml" value="0.101" />
-        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/error_background.xml" value="0.101" />
-        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/filter_search_background.xml" value="0.101" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/floating_button_background.xml" value="0.101" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.101" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/ic_baseline_manage_search.xml" value="0.101" />
@@ -28,11 +23,14 @@
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_list.xml" value="0.22" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_list_filtered.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_login.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_professional_list.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_professional_profile.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_search.xml" value="0.25" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/header_list.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/header_list_component.xml" value="0.22" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/items_cardview.xml" value="0.18" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/professional_item.xml" value="0.22447916666666667" />
         <entry key="app/src/main/res/drawable/button_state_color_background.xml" value="0.32" />
         <entry key="app/src/main/res/drawable/custom_popup_background.xml" value="0.258" />
         <entry key="app/src/main/res/drawable/edittext_focused.xml" value="0.219" />
@@ -48,14 +46,12 @@
         <entry key="app/src/main/res/drawable/search_button_background.xml" value="0.198" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
-        <entry key="app/src/main/res/layout/fragment_professional_list.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/fragment_professional_profile.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.38461538461538464" />
         <entry key="app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
         <entry key="app/src/main/res/layout/header_list_component.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/items_cardview.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.3536458333333333" />
-        <entry key="app/src/main/res/layout/professional_item.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/search_filters.xml" value="0.25" />
       </map>
     </option>

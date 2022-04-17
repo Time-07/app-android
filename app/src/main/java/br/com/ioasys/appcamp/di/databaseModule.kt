@@ -18,4 +18,5 @@ val databaseModule = module {
 
     single { get<ProfessionalDatabase>().professionalDao() }
 
+
 }
