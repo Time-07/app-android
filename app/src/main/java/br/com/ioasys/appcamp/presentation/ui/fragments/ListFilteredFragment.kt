@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.appcamp.databinding.FragmentListFilteredBinding
+import br.com.ioasys.appcamp.presentation.adapter.ProfessionalListAdapter
 
 class ListFilteredFragment : Fragment() {
 
+    private lateinit var professionalListAdapter: ProfessionalListAdapter
     private var _binding: FragmentListFilteredBinding? = null
     private val binding: FragmentListFilteredBinding get() = _binding!!
 
@@ -26,6 +28,7 @@ class ListFilteredFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setListeners()
+        setItemsListData()
     }
 
     private fun setListeners() {
@@ -46,6 +49,10 @@ class ListFilteredFragment : Fragment() {
                 )
             }
         }
+    }
+
+    private fun setItemsListData(){
+        binding.recycleView.adapter = professionalListAdapter
     }
 
     override fun onDestroy() {

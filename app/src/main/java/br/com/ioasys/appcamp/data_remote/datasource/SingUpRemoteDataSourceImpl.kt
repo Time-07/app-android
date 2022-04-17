@@ -3,9 +3,6 @@ package br.com.ioasys.appcamp.data_remote.datasource
 import br.com.ioasys.appcamp.data.datasource.remote.SingUpRemoteDataSource
 import br.com.ioasys.appcamp.data_remote.model.SingUpResponse
 import br.com.ioasys.appcamp.data_remote.service.SingUpService
-import br.com.ioasys.appcamp.domain.model.SignUpItems
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 import retrofit2.Response
 
 class SingUpRemoteDataSourceImpl(
