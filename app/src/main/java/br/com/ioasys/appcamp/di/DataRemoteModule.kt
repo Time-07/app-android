@@ -1,8 +1,10 @@
 package br.com.ioasys.appcamp.di
 
 import br.com.ioasys.appcamp.data.datasource.remote.LoginRemoteDataSource
+import br.com.ioasys.appcamp.data.datasource.remote.ProfessionalsRemoteDataSource
 import br.com.ioasys.appcamp.data_remote.datasource.LoginRemoteDataSourceImpl
 import br.com.ioasys.appcamp.data.datasource.remote.SingUpRemoteDataSource
+import br.com.ioasys.appcamp.data_remote.datasource.ProfessionalsRemoteDataSourceImpl
 import br.com.ioasys.appcamp.data_remote.datasource.SingUpRemoteDataSourceImpl
 import br.com.ioasys.appcamp.data_remote.service.AuthService
 import br.com.ioasys.appcamp.data_remote.service.SingUpService
@@ -34,6 +36,10 @@ val dataRemoteModule = module {
 
     single<SingUpRemoteDataSource> {
         SingUpRemoteDataSourceImpl(get())
+    }
+
+    single<ProfessionalsRemoteDataSource> {
+        ProfessionalsRemoteDataSourceImpl()
     }
 
 }

@@ -29,7 +29,7 @@ class ListFragment : Fragment() {
     private fun setListeners(){
         binding.searchListButton.setOnClickListener {
             findNavController().navigate(
-                ListFilteredFragmentDirections.actionListFilteredFragmentToSearchFragment()
+                ListFragmentDirections.actionListFragmentToSearchFragment()
             )
         }
     }
