@@ -20,7 +20,7 @@ import br.com.ioasys.appcamp.presentation.viewmodel.SingUpViewModel
 import br.com.ioasys.appcamp.util.ViewState
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 
-class SingUpFragment : Fragment() {
+class SignUpFragment : Fragment() {
 
     private var _binding: FragmentSingUpBinding? = null
     private val binding: FragmentSingUpBinding get() = _binding!!
@@ -62,6 +62,7 @@ class SingUpFragment : Fragment() {
                     cpf = cpfTIET.text.toString()
                 )
                 emailTextInputEditText.addTextChangedListener {
+                    emailTextLayoutInput.error = null
                     errorEmailSingUp.visibility = View.GONE
                 }
                 confirmPasswordTextInputEditText.addTextChangedListener {
@@ -69,9 +70,11 @@ class SingUpFragment : Fragment() {
                     binding.errorPasswordSingUp.visibility = View.GONE
                 }
                 passwordTextInputEditText.addTextChangedListener {
+                    passwordTextLayoutInput.error = null
                     errorPasswordSingUp.visibility = View.GONE
                 }
                 otherOptionTextInputEditText.addTextChangedListener {
+                    otherOptionTextInputLayout.error = null
                     errorRequiredGenreSingUp.visibility = View.GONE
                 }
                 radioGroupSingUp.setOnCheckedChangeListener { _, checkedId ->
@@ -94,7 +97,7 @@ class SingUpFragment : Fragment() {
                     showInvalidEmailError(false)
                     showInvalidRequiredGenreError(false)
                     findNavController().navigate(
-                        SingUpFragmentDirections.actionSingUpFragmentToLoginFragment()
+                        SignUpFragmentDirections.actionSingUpFragmentToLoginFragment()
                     )
                 }
                 is ViewState.Error -> {

@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/SingUpFragment"
-        android:name="br.com.ioasys.appcamp.presentation.ui.fragments.SingUpFragment"
+        android:name="br.com.ioasys.appcamp.presentation.ui.fragments.SignUpFragment"
         android:label="fragment_book_list"
         tools:layout="@layout/fragment_sing_up" >
         <action
