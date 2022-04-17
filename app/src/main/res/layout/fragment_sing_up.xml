@@ -38,6 +38,7 @@
                 android:id="@+id/userTextInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:singleLine="true"
                 android:background="@drawable/input_sing_up_background"
                 android:hint="@string/user_sing_up_string"
                 style="@style/SingUp_TextInputEditText"/>
@@ -71,6 +72,7 @@
                 android:id="@+id/cpfTIET"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:singleLine="true"
                 android:background="@drawable/input_sing_up_background"
                 android:hint="@string/cpf_string"
                 style="@style/SingUp_TextInputEditText"/>
@@ -94,6 +96,7 @@
                 android:id="@+id/emailTextInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:singleLine="true"
                 android:background="@drawable/input_sing_up_background"
                 android:hint="@string/email_sing_up_string"
                 style="@style/SingUp_TextInputEditText"/>
@@ -115,6 +118,7 @@
                 android:id="@+id/passwordTextInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:singleLine="true"
                 android:background="@drawable/input_sing_up_background"
                 android:hint="@string/password_sing_up_string"
                 style="@style/SingUp_TextInputEditText"
@@ -139,6 +143,7 @@
                 android:id="@+id/confirmPasswordTextInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:singleLine="true"
                 android:background="@drawable/input_sing_up_background"
                 android:hint="@string/confirm_password_sing_up_string"
                 style="@style/SingUp_TextInputEditText"
@@ -212,6 +217,7 @@
                 android:id="@+id/otherOptionTextInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:singleLine="true"
                 android:background="@drawable/input_sing_up_background"
                 android:hint="@string/others_option_sing_up_string"
                 style="@style/SingUp_TextInputEditText"/>
