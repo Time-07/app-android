@@ -36,7 +36,7 @@
         <entry key="app/src/main/res/layout/fragment_list_filtered.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/fragment_professional_list.xml" value="0.35520833333333335" />
-        <entry key="app/src/main/res/layout/fragment_professional_profile.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/layout/fragment_professional_profile.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
         <entry key="app/src/main/res/layout/header_list_component.xml" value="0.35208333333333336" />
