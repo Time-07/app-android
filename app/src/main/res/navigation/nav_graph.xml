@@ -50,6 +50,9 @@
         <action
             android:id="@+id/action_ListFragment_toListFilteredFragment"
             app:destination="@id/listFilteredFragment"/>
+        <action
+            android:id="@+id/action_ListFragment_to_SearchFragment"
+            app:destination="@id/searchFragment"/>
 
     </fragment>
 
