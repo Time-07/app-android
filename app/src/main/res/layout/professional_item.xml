@@ -21,11 +21,12 @@
         android:layout_height="match_parent"
         android:layout_marginTop="0dp">
 
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/cardViewLinearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="@id/guidelineBeginCardView"
             app:layout_constraintTop_toBottomOf="@id/profileImg">
@@ -40,8 +41,8 @@
                 tools:text="Endocrinologista" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/valueTxt"
                 style="@style/TextResult_InterMedium_ChipStyle"
+                android:id="@+id/tvPrize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -53,7 +54,6 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
             app:layout_constraintTop_toBottomOf="@id/profileImg">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/cityAndState"
+                android:id="@+id/tvlocalization"
                 style="@style/TextResult_InterMediumStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -77,8 +77,8 @@
                 tools:text="São Paulo - SP" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/meetType"
                 style="@style/TextResult_InterMediumStyle"
+                android:id="@+id/tvType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -102,7 +102,7 @@
             tools:background="@drawable/profile_photo_background" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/professionalName"
+            android:id="@+id/tvprofissionalName"
             style="@style/NameUserTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

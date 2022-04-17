@@ -50,7 +50,8 @@ class SingUpFragment : Fragment() {
         binding.run {
             singUpButton.setOnClickListener {
                 if (singUpViewModel.gender.isBlank()) {
-                    singUpViewModel.setGender(otherOptionTextInputEditText.text.toString())
+                    singUpViewModel.setGender(
+                        otherOptionTextInputEditText.text.toString())
                 }
                 singUpViewModel.singUp(
                     user = userTextInputEditText.text.toString(),
