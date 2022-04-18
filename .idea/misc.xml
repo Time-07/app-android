@@ -38,11 +38,11 @@
         <entry key="app/src/main/res/layout/fragment_list_filtered.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/fragment_professional_list.xml" value="0.35520833333333335" />
-        <entry key="app/src/main/res/layout/fragment_professional_profile.xml" value="0.4739402362751911" />
+        <entry key="app/src/main/res/layout/fragment_professional_profile.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
         <entry key="app/src/main/res/layout/header_list_component.xml" value="0.35208333333333336" />
-        <entry key="app/src/main/res/layout/items_cardview.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/items_cardview.xml" value="0.5" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.3536458333333333" />
         <entry key="app/src/main/res/layout/search_filters.xml" value="0.25" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.33" />

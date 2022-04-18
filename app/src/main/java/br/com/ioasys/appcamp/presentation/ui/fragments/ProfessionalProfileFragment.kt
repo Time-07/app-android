@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.ioasys.appcamp.databinding.FragmentProfessionalProfileBinding
 
-
 class ProfessionalProfileFragment : Fragment() {
 
     private var _binding: FragmentProfessionalProfileBinding? = null
@@ -25,12 +24,13 @@ class ProfessionalProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setListeners()    }
-
+        setListeners()
+    }
 
     private fun setListeners() {
-        binding.professionalFirstName.text = getFirstName("Fabiana Farias")
-        binding.professionalLastName.text = getLastName("Fabiana Farias")    }
+        binding.professionalFirstName.text = getFirstName("Silvia Maranhão")
+        binding.professionalLastName.text = getLastName("Silvia Maranhão")
+    }
 
 
     private fun getFirstName(fullName: String?): String? {

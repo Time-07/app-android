@@ -75,5 +75,7 @@
     <string name="profissional_first_name">Silvia</string>
     <string name="profissional_last_name">Maranhão</string>
     <string name="treatment_pronoun">Drª.</string>
+    <string name="specialty_title">Endocrinologista</string>
+    <string name="crm_crp">CRM:09/222222</string>
 
 </resources>
