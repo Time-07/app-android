@@ -42,7 +42,7 @@
             app:layout_constraintStart_toEndOf="@+id/profilePicture" />
 
           <androidx.appcompat.widget.LinearLayoutCompat
-              android:id="@+id/wrapName"
+              android:id="@+id/wrapProfessionalName"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginTop="24dp"
@@ -64,18 +64,29 @@
                   android:textColor="@color/colors_primary_800"/>
 
               <androidx.appcompat.widget.AppCompatTextView
-                  android:id="@+id/professionalName"
+                  android:id="@+id/professionalFirstName"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:minLines="2"
-                  android:singleLine="false"
-                  android:text="@string/profissional_name"
+                  android:singleLine="true"
+                  android:text="@string/profissional_first_name"
                   android:fontFamily="@font/fredoka_regular"
                   android:textSize="32sp"
                   android:textColor="@color/colors_primary_800"/>
 
-
           </androidx.appcompat.widget.LinearLayoutCompat>
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/professionalLastName"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/fredoka_regular"
+              android:singleLine="true"
+              android:text="@string/profissional_last_name"
+              android:textColor="@color/colors_primary_800"
+              android:textSize="32sp"
+              app:layout_constraintEnd_toEndOf="@+id/wrapProfessionalName"
+              app:layout_constraintStart_toStartOf="@+id/wrapProfessionalName"
+              app:layout_constraintTop_toBottomOf="@id/wrapProfessionalName" />
 
 
         <androidx.constraintlayout.widget.Guideline
