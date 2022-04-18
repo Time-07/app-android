@@ -1,36 +1,33 @@
 package br.com.ioasys.appcamp.data_local.model
 
-import androidx.annotation.NonNull
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Professionals")
 data class ProfessionalDataLocal(
 
-    @PrimaryKey @NonNull
-    val accessToken: String,
-    val crmCrp: String,
-    val id: Int,
-    val name: String,
-    val cpf: String,
-    val email: String,
-    val password: String,
-    val gender: String,
-    val role: String,
-    val phone: Int,
-    val cellphone: Int,
-    val specialty: String,
-    val street: String,
-    val number: Int,
-    val neighborhood: String,
-    val city: String,
-    val state: String,
-    val value: Int,
-    val description: String,
-    val courses: String,
-    val healthPlan: String,
-    val bathroomSpecific: Boolean,
-    val linkedin: String,
-    val imageUrl: String = ""
+    @PrimaryKey
+    val id: String,
+    val crmCrp: String? = null,
+    val name: String? = null,
+    val cpf: String? = null,
+    val email: String? = null,
+    val password: String? = null,
+    val gender: String? = null,
+    val role: String? = null,
+    val phone: String? = null,
+    val cellphone: String? = null,
+    val specialty: String? = null,
+    val street: String? = null,
+    val number: String? = null,
+    val neighborhood: String? = null,
+    val city: String? = null,
+    val state: String? = null,
+    val value: String? = null,
+    val description: String? = null,
+    val courses: String? = null,
+    val healthPlan: String? = null,
+    val bathroomSpecific: Boolean?=null,
+    val linkedin: String? = null,
 
 )

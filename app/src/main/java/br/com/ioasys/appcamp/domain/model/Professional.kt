@@ -1,9 +1,8 @@
 package br.com.ioasys.appcamp.domain.model
 
 data class Professional(
-    val accessToken: String,
-    val crmCrp: String,
     val id: String,
+    val crmCrp: String,
     val name: String,
     val cpf: String,
     val email: String,

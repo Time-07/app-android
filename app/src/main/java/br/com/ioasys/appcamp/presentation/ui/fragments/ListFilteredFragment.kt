@@ -5,20 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.appcamp.databinding.FragmentListFilteredBinding
 import br.com.ioasys.appcamp.domain.exception.EmptyProfessionalListException
-import br.com.ioasys.appcamp.domain.exception.UnknowException
 import br.com.ioasys.appcamp.domain.model.Professional
 import br.com.ioasys.appcamp.presentation.adapter.ProfessionalClickListener
 import br.com.ioasys.appcamp.presentation.adapter.ProfessionalListAdapter
 import br.com.ioasys.appcamp.presentation.viewmodel.ProfessionalsListViewModel
 import br.com.ioasys.appcamp.util.ViewState
 import org.koin.androidx.viewmodel.ext.android.getViewModel
-import org.koin.core.component.KoinComponent
-import org.koin.core.component.inject
-import org.koin.core.parameter.parametersOf
 
 class ListFilteredFragment : Fragment(), ProfessionalClickListener {
 
@@ -51,14 +46,20 @@ class ListFilteredFragment : Fragment(), ProfessionalClickListener {
         professionalsListViewModel.professionalListViewState.observe(viewLifecycleOwner){ state ->
             when(state){
                 is ViewState.Success -> {
-                    professionalListAdapter.submitList(
-                        state.data
-                    )
+                    professionalListAdapter.submitList(state.data)
+                    binding.apply {
+                        recycleView.visibility = View.VISIBLE
+                        setVisibility(false)
+                    }
                 }
                 is ViewState.Error -> {
                     when(state.throwable){
                         is EmptyProfessionalListException -> {
                             professionalListAdapter.submitList(listOf())
+                            binding.apply {
+                                recycleView.visibility = View.GONE
+                                setVisibility(true)
+                            }
                         }
                         else -> Unit
                     }
@@ -92,6 +93,18 @@ class ListFilteredFragment : Fragment(), ProfessionalClickListener {
         professionalListAdapter = ProfessionalListAdapter(this)
         binding.recycleView.adapter = professionalListAdapter
         professionalsListViewModel.putProfessionalListOnView()
+    }
+
+    private fun setVisibility(hasError: Boolean){
+        binding.apply {
+        val visibility = View.VISIBLE
+            if (hasError){
+                binding.imgPerson.visibility = visibility
+                responseEmptyText1.visibility = visibility
+                responseEmptyText2.visibility = visibility
+                responseEmptyText3.visibility = visibility
+            } else Unit
+        }
     }
 
     override fun onDestroy() {
