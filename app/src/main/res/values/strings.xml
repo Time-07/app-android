@@ -72,5 +72,7 @@
     <string name="gender_filter_4">Homem Trans</string>
     <string name="gender_filter_5">Gênero Não Binário</string>
     <string name="filter_string">Filtrar</string>
+    <string name="profissional_name">Silvia Maranhão</string>
+    <string name="treatment_pronoun">Drª.</string>
 
 </resources>
