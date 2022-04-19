@@ -77,5 +77,7 @@
     <string name="treatment_pronoun">Drª.</string>
     <string name="specialty_title">Endocrinologista</string>
     <string name="crm_crp">CRM:09/222222</string>
+    <string name="attendance_title">atendimento</string>
+    <string name="meetTypeText">Online e Presencial</string>
 
 </resources>
