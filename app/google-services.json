@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "239915951467",
+    "project_id": "diversaude-bfa52",
+    "storage_bucket": "diversaude-bfa52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239915951467:android:bc9e50c1e721528296582e",
+        "android_client_info": {
+          "package_name": "br.com.ioasys.appcamp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239915951467-0d015hd48fhk3pl4jevof38cno4h9s1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUK8tsp7smxGKSuPWuAVQyL7u4WACrENA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239915951467-0d015hd48fhk3pl4jevof38cno4h9s1m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

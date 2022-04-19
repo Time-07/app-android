@@ -2,7 +2,7 @@ package br.com.ioasys.appcamp.data_remote.model
 
 import com.google.gson.annotations.SerializedName
 
-data class GetProfessionalsRequest(
+data class ProfessionalRequest(
     @SerializedName("id")
     val id: String,
     @SerializedName("crmCrp")
