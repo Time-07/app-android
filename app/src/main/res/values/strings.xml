@@ -79,5 +79,7 @@
     <string name="crm_crp">CRM:09/222222</string>
     <string name="attendance_title">atendimento</string>
     <string name="meetTypeText">Online e Presencial</string>
-
+    <string name="priceText">R$ 100,00</string>
+    <string name="locationText">Fortaleza-CE</string>
+    <string name="addressText">Avenida Brasil, 644, Centro, Sala 266</string>
 </resources>

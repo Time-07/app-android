@@ -28,6 +28,7 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2135" />
         <entry key="app/src/main/res/drawable/ic_localization.xml" value="0.2135" />
         <entry key="app/src/main/res/drawable/ic_meet_type.xml" value="0.2135" />
+        <entry key="app/src/main/res/drawable/ic_money.xml" value="0.303" />
         <entry key="app/src/main/res/drawable/input_search_background.xml" value="0.1965" />
         <entry key="app/src/main/res/drawable/input_sing_up_background.xml" value="0.1435" />
         <entry key="app/src/main/res/drawable/list_item.xml" value="0.258" />
@@ -39,7 +40,7 @@
         <entry key="app/src/main/res/layout/fragment_list_filtered.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/fragment_professional_list.xml" value="0.35520833333333335" />
-        <entry key="app/src/main/res/layout/fragment_professional_profile.xml" value="0.5303265940902022" />
+        <entry key="app/src/main/res/layout/fragment_professional_profile.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
         <entry key="app/src/main/res/layout/header_list_component.xml" value="0.35208333333333336" />

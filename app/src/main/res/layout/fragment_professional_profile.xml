@@ -114,9 +114,7 @@
               android:id="@+id/divider1"
               android:layout_width="match_parent"
               android:layout_height="2dp"
-              android:layout_marginTop="16dp"
-              app:dividerInsetStart="16dp"
-              app:dividerInsetEnd="16dp"
+              android:layout_marginTop="10dp"
               app:dividerColor="@color/colors_primary_20"
               app:layout_constraintTop_toBottomOf="@id/wrapSpecialty"
               app:layout_constraintStart_toEndOf="@id/startVertical"
@@ -133,7 +131,7 @@
               app:layout_constraintStart_toEndOf="@id/startVertical"/>
 
           <androidx.appcompat.widget.AppCompatTextView
-              style="@style/MeetTypeSection"
+              style="@style/AttendanceSection"
               android:id="@+id/meetTypeSection"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -147,14 +145,60 @@
           <com.google.android.material.divider.MaterialDivider
               android:id="@+id/divider2"
               android:layout_width="match_parent"
-              android:layout_height="2dp"
-              android:layout_marginTop="16dp"
-              app:dividerInsetStart="16dp"
-              app:dividerInsetEnd="16dp"
+              android:layout_height="1dp"
+              android:layout_marginTop="5dp"
               app:dividerColor="@color/colors_primary_20"
               app:layout_constraintTop_toBottomOf="@id/meetTypeSection"
               app:layout_constraintStart_toEndOf="@id/startVertical"
               app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+
+          <androidx.appcompat.widget.AppCompatTextView
+              style="@style/AttendanceSection"
+              android:id="@+id/priceSection"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:drawableStart="@drawable/ic_money"
+              android:drawablePadding="8dp"
+              android:text="@string/priceText"
+              app:layout_constraintTop_toBottomOf="@id/divider2"
+              app:layout_constraintStart_toEndOf="@id/startVertical" />
+
+          <com.google.android.material.divider.MaterialDivider
+              android:id="@+id/divider3"
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_marginTop="5dp"
+              app:dividerColor="@color/colors_primary_20"
+              app:layout_constraintTop_toBottomOf="@id/priceSection"
+              app:layout_constraintStart_toEndOf="@id/startVertical"
+              app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+
+          <androidx.appcompat.widget.AppCompatTextView
+              style="@style/AttendanceSection"
+              android:id="@+id/locationSection"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:drawableStart="@drawable/ic_localization"
+              android:drawablePadding="8dp"
+              android:text="@string/locationText"
+              app:layout_constraintTop_toBottomOf="@id/divider3"
+              app:layout_constraintStart_toEndOf="@id/startVertical" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/address"
+              style="@style/AttendanceSectionAddress"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="32dp"
+              app:layout_constraintTop_toBottomOf="@id/locationSection"
+              app:layout_constraintStart_toEndOf="@id/startVertical"
+              android:text="@string/addressText" />
+
+
+
+
 
 
 
