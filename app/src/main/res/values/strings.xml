@@ -82,4 +82,6 @@
     <string name="priceText">R$ 100,00</string>
     <string name="locationText">Fortaleza-CE</string>
     <string name="addressText">Avenida Brasil, 644, Centro, Sala 266</string>
+    <string name="health_insurance">Atende convênio</string>
+    <string name="inclusive_bathroom">Banheiro inclusivo</string>
 </resources>

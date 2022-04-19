@@ -92,7 +92,7 @@
               app:layout_constraintEnd_toStartOf="@id/endVertical">
 
               <com.google.android.material.chip.Chip
-                  android:id="@+id/professionChipCV"
+                  android:id="@+id/specialtyChip"
                   style="@style/TextResult_InterMedium_ChipStyle"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
@@ -195,6 +195,41 @@
               app:layout_constraintTop_toBottomOf="@id/locationSection"
               app:layout_constraintStart_toEndOf="@id/startVertical"
               android:text="@string/addressText" />
+
+          <com.google.android.material.divider.MaterialDivider
+              android:id="@+id/divider4"
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_marginTop="5dp"
+              app:dividerColor="@color/colors_primary_20"
+              app:layout_constraintTop_toBottomOf="@id/address"
+              app:layout_constraintStart_toEndOf="@id/startVertical"
+              app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+
+          <com.google.android.material.chip.Chip
+              android:id="@+id/healthInsurance"
+              style="@style/TextResult_InterMedium_ChipStyle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/colors_primary_800"
+              app:chipBackgroundColor="@color/colors_accent_blue_10"
+              tools:text="@string/health_insurance"
+              app:chipIcon="@drawable/ic_baseline_check_14"
+              app:layout_constraintTop_toBottomOf="@id/divider4"
+              app:layout_constraintStart_toEndOf="@+id/startVertical"/>
+
+          <com.google.android.material.chip.Chip
+              android:id="@+id/inclusiveBathroom"
+              style="@style/TextResult_InterMedium_ChipStyle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/colors_primary_800"
+              app:chipBackgroundColor="@color/colors_accent_blue_10"
+              app:chipIcon="@drawable/ic_baseline_check_14"
+              tools:text="@string/inclusive_bathroom"
+              app:layout_constraintTop_toBottomOf="@id/healthInsurance"
+              app:layout_constraintStart_toEndOf="@+id/startVertical"/>
+
 
 
 
