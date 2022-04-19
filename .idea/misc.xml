@@ -4,12 +4,33 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/button_state_color_background.xml" value="0.106" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/card_view_background.xml" value="0.101" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/custom_popup_background.xml" value="0.101" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/error_background.xml" value="0.101" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/filter_search_background.xml" value="0.101" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/floating_button_background.xml" value="0.101" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.101" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/ic_baseline_manage_search.xml" value="0.101" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/ic_baseline_warning_amber.xml" value="0.106" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/ic_primary_icon.xml" value="0.16" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/input_search_background.xml" value="0.101" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/input_sing_up_background.xml" value="0.106" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/profile_photo_background.xml" value="0.101" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/search_button.xml" value="0.101" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/drawable/see_profile_button_background.xml" value="0.16" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_list.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_default_list.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_list.xml" value="0.22" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_list_filtered.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_login.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_professional_list.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_professional_profile.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_search.xml" value="0.25" />
         <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
-        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/items_cardview.xml" value="0.25" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/header_list.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/header_list_component.xml" value="0.22" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/items_cardview.xml" value="0.18" />
+        <entry key="..\:/Users/xxdan/AndroidStudioProjects/AppCamp/app/src/main/res/layout/professional_item.xml" value="0.22447916666666667" />
         <entry key="app/src/main/res/drawable/button_state_color_background.xml" value="0.32" />
         <entry key="app/src/main/res/drawable/custom_popup_background.xml" value="0.258" />
         <entry key="app/src/main/res/drawable/edittext_focused.xml" value="0.219" />
@@ -17,39 +38,23 @@
         <entry key="app/src/main/res/drawable/edittext_red_focused.xml" value="0.219" />
         <entry key="app/src/main/res/drawable/error_background.xml" value="0.142" />
         <entry key="app/src/main/res/drawable/filter_search_background.xml" value="0.25" />
-        <entry key="app/src/main/res/drawable/gender_female.xml" value="0.2485" />
-        <entry key="app/src/main/res/drawable/horizontal_line.xml" value="0.2725" />
-        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_16.xml" value="0.2365" />
-        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.279" />
-        <entry key="app/src/main/res/drawable/ic_baseline_female.xml" value="0.276" />
         <entry key="app/src/main/res/drawable/ic_baseline_help_outline_14.xml" value="0.2935" />
-        <entry key="app/src/main/res/drawable/ic_baseline_manage_search.xml" value="0.2135" />
-        <entry key="app/src/main/res/drawable/ic_baseline_person_search_24.xml" value="0.27" />
         <entry key="app/src/main/res/drawable/ic_baseline_warning_amber.xml" value="0.279" />
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2135" />
-        <entry key="app/src/main/res/drawable/ic_localization.xml" value="0.2135" />
-        <entry key="app/src/main/res/drawable/ic_meet_type.xml" value="0.2135" />
-        <entry key="app/src/main/res/drawable/ic_money.xml" value="0.303" />
         <entry key="app/src/main/res/drawable/input_search_background.xml" value="0.1965" />
         <entry key="app/src/main/res/drawable/input_sing_up_background.xml" value="0.1435" />
         <entry key="app/src/main/res/drawable/list_item.xml" value="0.258" />
         <entry key="app/src/main/res/drawable/search_button.xml" value="0.2165" />
         <entry key="app/src/main/res/drawable/search_button_background.xml" value="0.198" />
-        <entry key="app/src/main/res/layout/custom_search_input.xml" value="0.35520833333333335" />
-        <entry key="app/src/main/res/layout/fragment_default_list.xml" value="0.35208333333333336" />
-        <entry key="app/src/main/res/layout/fragment_list.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_list_filtered.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/layout/fragment_list.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/fragment_list_filtered.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
-        <entry key="app/src/main/res/layout/fragment_professional_list.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/fragment_professional_profile.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.38461538461538464" />
         <entry key="app/src/main/res/layout/fragment_sing_up.xml" value="0.22" />
         <entry key="app/src/main/res/layout/header_list_component.xml" value="0.35208333333333336" />
-        <entry key="app/src/main/res/layout/items_cardview.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/items_cardview.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.3536458333333333" />
         <entry key="app/src/main/res/layout/search_filters.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/toolbar.xml" value="0.33" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2135" />
       </map>
     </option>
   </component>
