@@ -69,7 +69,7 @@
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:singleLine="true"
-                  android:text="@string/profissional_first_name" />
+                  android:text="@string/professional_first_name" />
 
           </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -79,7 +79,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:singleLine="true"
-              android:text="@string/profissional_last_name"
+              android:text="@string/professional_last_name"
               app:layout_constraintEnd_toEndOf="@+id/wrapProfessionalName"
               app:layout_constraintStart_toStartOf="@+id/wrapProfessionalName"
               app:layout_constraintTop_toBottomOf="@id/wrapProfessionalName" />
@@ -100,7 +100,9 @@
                   android:layout_height="wrap_content"
                   android:textColor="@color/colors_primary_800"
                   app:chipBackgroundColor="@color/colors_accent_blue_10"
-                  tools:text="@string/specialty_title" />
+                  tools:text="@string/specialty_title"
+                  android:visibility="visible"
+                  tools:visibility="visible"/>
 
               <androidx.appcompat.widget.AppCompatTextView
                   android:id="@+id/crmCrp"
@@ -219,7 +221,9 @@
               app:layout_constraintEnd_toEndOf="@+id/inclusiveBathroom"
               app:layout_constraintStart_toEndOf="@+id/startVertical"
               app:layout_constraintTop_toBottomOf="@id/divider4"
-              tools:text="@string/health_insurance" />
+              tools:text="@string/health_insurance"
+              android:visibility="visible"
+              tools:visibility="visible"/>
 
           <com.google.android.material.chip.Chip
               android:id="@+id/inclusiveBathroom"
@@ -231,7 +235,9 @@
               app:chipIcon="@drawable/ic_baseline_check_14"
               tools:text="@string/inclusive_bathroom"
               app:layout_constraintTop_toBottomOf="@id/healthInsurance"
-              app:layout_constraintStart_toEndOf="@+id/startVertical"/>
+              app:layout_constraintStart_toEndOf="@+id/startVertical"
+              android:visibility="visible"
+              tools:visibility="visible"/>
 
             <androidx.appcompat.widget.AppCompatButton
               android:id="@+id/contactButton"
@@ -268,8 +274,8 @@
               app:layout_constraintEnd_toStartOf="@id/endVertical"/>
 
           <include
-              android:id="@+id/contactScrowView"
-              layout="@layout/scrow_view"
+              android:id="@+id/contactScrollView"
+              layout="@layout/scroll_view"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:layout_marginTop="24dp"

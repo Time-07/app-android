@@ -1,10 +1,10 @@
 package br.com.ioasys.appcamp.presentation.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import br.com.ioasys.appcamp.databinding.FragmentProfessionalProfileBinding
 
 class ProfessionalProfileFragment : Fragment() {
@@ -30,7 +30,32 @@ class ProfessionalProfileFragment : Fragment() {
     private fun setListeners() {
         binding.professionalFirstName.text = getFirstName("Silvia Maranhão")
         binding.professionalLastName.text = getLastName("Silvia Maranhão")
+        binding.contactButton.setOnClickListener {
+            binding.run {
+                contactButton.viewTreeObserver.addOnScrollChangedListener {
+                    TODO("Not implemented")
+                }
+            }
+        }
     }
+
+    private fun onScrollChanged() {
+        TODO("Not implemented")
+    }
+
+    /*
+
+    if (scrollView.getChildAt(0).getBottom()
+                 <= (scrollView.getHeight() + scrollView.getScrollY())) {
+                //scroll view is at bottom
+        //set the button visibility to visible here
+            } else {
+                //scroll view is not at bottom
+        //set the button visibility to gone here
+            }
+        }
+
+        */
 
 
     private fun getFirstName(fullName: String?): String? {
