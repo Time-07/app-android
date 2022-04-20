@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true"
+    android:fitsSystemWindows="true"
     tools:context=".presentation.ui.fragments.ProfessionalProfileFragment">
 
 
@@ -214,10 +215,11 @@
               android:layout_height="wrap_content"
               android:textColor="@color/colors_primary_800"
               app:chipBackgroundColor="@color/colors_accent_blue_10"
-              tools:text="@string/health_insurance"
               app:chipIcon="@drawable/ic_baseline_check_14"
+              app:layout_constraintEnd_toEndOf="@+id/inclusiveBathroom"
+              app:layout_constraintStart_toEndOf="@+id/startVertical"
               app:layout_constraintTop_toBottomOf="@id/divider4"
-              app:layout_constraintStart_toEndOf="@+id/startVertical"/>
+              tools:text="@string/health_insurance" />
 
           <com.google.android.material.chip.Chip
               android:id="@+id/inclusiveBathroom"
@@ -248,59 +250,34 @@
               app:layout_constraintTop_toBottomOf="@id/inclusiveBathroom"/>
 
           <include
-              android:id="@+id/profileTexts"
               layout="@layout/profile_texts"
-              android:layout_width="wrap_content"
+              android:id="@+id/profileTexts"
+              android:layout_width="0dp"
               android:layout_height="wrap_content"
+              app:layout_constraintTop_toBottomOf="@id/contactButton"
               app:layout_constraintStart_toStartOf="@id/startVertical"
-              app:layout_constraintEnd_toEndOf="@id/endVertical"
-              app:layout_constraintTop_toBottomOf="@id/contactButton" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+              app:layout_constraintEnd_toEndOf="@id/endVertical" />
 
           <androidx.constraintlayout.widget.Guideline
             android:id="@+id/startVertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="32dp" />
+            app:layout_constraintGuide_begin="16dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/endVertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="32dp" />
+            app:layout_constraintGuide_end="16dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/startHorizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="21dp" />
+            app:layout_constraintGuide_begin="16dp" />
 
 
       </androidx.constraintlayout.widget.ConstraintLayout>
