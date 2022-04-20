@@ -17,6 +17,8 @@
           <include
               layout="@layout/toolbar"
               android:id="@+id/appBar"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
               app:layout_constraintStart_toStartOf="@id/startVertical"
               app:layout_constraintEnd_toEndOf="@id/endVertical" />
 
@@ -245,26 +247,23 @@
               app:layout_constraintEnd_toStartOf="@id/endVertical"
               app:layout_constraintTop_toBottomOf="@id/inclusiveBathroom"/>
 
-
-          <com.google.android.material.divider.MaterialDivider
-              android:id="@+id/divider5"
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_marginTop="16dp"
-              app:dividerColor="@color/colors_primary_20"
-              app:layout_constraintTop_toBottomOf="@id/contactButton"
-              app:layout_constraintStart_toEndOf="@id/startVertical"
-              app:layout_constraintEnd_toStartOf="@id/endVertical"/>
-
-          <androidx.appcompat.widget.AppCompatTextView
-              android:id="@+id/experienceTitle"
-              style="@style/SectionTitle"
+          <include
+              android:id="@+id/profileTexts"
+              layout="@layout/profile_texts"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:layout_marginTop="16dp"
-              android:text="@string/experience_title"
-              app:layout_constraintTop_toBottomOf="@id/divider5"
-              app:layout_constraintStart_toEndOf="@id/startVertical"/>
+              app:layout_constraintStart_toStartOf="@id/startVertical"
+              app:layout_constraintEnd_toEndOf="@id/endVertical"
+              app:layout_constraintTop_toBottomOf="@id/contactButton" />
+
+
+
+
+
+
+
+
+
 
 
 

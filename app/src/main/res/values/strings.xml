@@ -80,11 +80,22 @@
     <string name="crm_crp">CRM:09/222222</string>
     <string name="attendance_title">atendimento</string>
     <string name="experience_title">experiência com pacientes trans</string>
+    <string name="formation_title">currículo e formação</string>
+    <string name="contact_title">contato</string>
     <string name="meetTypeText">Online e Presencial</string>
     <string name="priceText">R$ 100,00</string>
     <string name="locationText">Fortaleza-CE</string>
     <string name="addressText">Avenida Brasil, 644, Centro, Sala 266</string>
     <string name="health_insurance">Atende convênio</string>
     <string name="inclusive_bathroom">Banheiro inclusivo</string>
-    <string name="experience_multitext">Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento...</string>
+    <string name="experience_multitext">Atendo pessoas trans em transição hormonal desde 2012.
+        Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas,
+        passando por todo o início da terapia hormonal até. Atendo pessoas trans em transição hormonal desde 2012.
+        Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas,
+        passando por todo o início da terapia hormonal até.</string>
+    <string name="formation_multitext">Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência
+        no assunto e atuo em todos os estágios do procedimento, das primeiras consultas,
+        passando por todo o início da terapia hormonal até. Atendo pessoas trans em transição hormonal desde 2012.
+        Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas,
+        passando por todo o início da terapia hormonal até.</string>
 </resources>
