@@ -27,8 +27,8 @@
 
     <!-- Login Strings -->
     <string name="login_title">Login</string>
-    <string name="email_hint">email</string>
-    <string name="password_hint">senha</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Senha</string>
     <string name="login_btn_text">Entrar</string>
     <string name="question_text">Ainda não tem uma conta?</string>
     <string name="signup_link">Cadastre-se!</string>
@@ -40,14 +40,14 @@
     <string name="search_text">Pesquisa</string>
     <string name="search_city_hint">Cidade (opcional)</string>
     <string name="search_name_hint">Nome (opcional)</string>
-    <string name="specialty_subtitle_text">especialidade</string>
-    <string name="localization_subtitle_text">localização</string>
-    <string name="gender_subtitle_text">gênero do(a) profissional</string>
+    <string name="specialty_subtitle_text">Especialidade</string>
+    <string name="localization_subtitle_text">Localização</string>
+    <string name="gender_subtitle_text">Gênero</string>
     <string name="psychologist_chip_text">Psicologia</string>
 
     <!-- List Fragment Strings-->
     <string name="disconnect_string">Sair</string>
-    <string name="list_title_string">Profissionais Aliados e Aliadas</string>
+    <string name="list_title_string">Profissionais de saúde</string>
     <string name="text_filter_1">Todas</string>
     <string name="text_filter_2">Psiquiatria</string>
     <string name="text_filter_3">Ginecologia</string>
@@ -59,14 +59,14 @@
     <string name="contact_string">Contato</string>
     <string name="text_input_hint_menu_localization_state">UF-Estado</string>
     <string name="text_input_hint_menu_localization_city">Cidade</string>
-    <string name="text_input_hint_menu_gender">identidade de gênero</string>
+    <string name="text_input_hint_menu_gender">Identidade de gênero</string>
     <string name="text_view_hint_filter_menu">Qualquer</string>
     <string name="search_text_btn">Pesquisar</string>
     <string name="see_profile_string">Ver Perfil</string>
-    <string name="results">resultados</string>
-    <string name="user_name">Meu nome</string>
+    <string name="results">Resultados</string>
+    <string name="user_name">Meu Nome</string>
     <string name="logoutBtn_text">Sair</string>
-    <string name="search_for_name">busca por nome</string>
+    <string name="search_for_name">Busca por nome</string>
     <string name="gender_filter_1">Mulher Cis</string>
     <string name="gender_filter_2">Mulher Trans</string>
     <string name="gender_filter_3">Homem Cis</string>
@@ -78,10 +78,10 @@
     <string name="treatment_pronoun">Drª.</string>
     <string name="specialty_title">Endocrinologista</string>
     <string name="crm_crp">CRM:09/222222</string>
-    <string name="attendance_title">atendimento</string>
-    <string name="experience_title">experiência com pacientes trans</string>
-    <string name="formation_title">currículo e formação</string>
-    <string name="contact_title">contato</string>
+    <string name="attendance_title">Atendimento</string>
+    <string name="experience_title">Experiência com pacientes trans</string>
+    <string name="formation_title">Currículo e formação</string>
+    <string name="contact_title">Contato</string>
     <string name="meetTypeText">Online e Presencial</string>
     <string name="priceText">R$ 100,00</string>
     <string name="locationText">Fortaleza-CE</string>
