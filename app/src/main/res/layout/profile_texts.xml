@@ -6,13 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/divider1"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginTop="16dp"
-        app:dividerColor="@color/colors_primary_20"/>
-
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/experienceTitle"

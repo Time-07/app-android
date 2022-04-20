@@ -146,7 +146,7 @@
 
           <com.google.android.material.divider.MaterialDivider
               android:id="@+id/divider2"
-              android:layout_width="match_parent"
+              android:layout_width="0dp"
               android:layout_height="1dp"
               android:layout_marginTop="5dp"
               app:dividerColor="@color/colors_primary_20"
@@ -168,7 +168,7 @@
 
           <com.google.android.material.divider.MaterialDivider
               android:id="@+id/divider3"
-              android:layout_width="match_parent"
+              android:layout_width="0dp"
               android:layout_height="1dp"
               android:layout_marginTop="5dp"
               app:dividerColor="@color/colors_primary_20"
@@ -200,7 +200,7 @@
 
           <com.google.android.material.divider.MaterialDivider
               android:id="@+id/divider4"
-              android:layout_width="match_parent"
+              android:layout_width="0dp"
               android:layout_height="1dp"
               android:layout_marginTop="5dp"
               app:dividerColor="@color/colors_primary_20"
@@ -243,20 +243,29 @@
               android:drawablePadding="8dp"
               android:text="@string/contact_string"
               android:textAllCaps="false"
+              android:autoLink="phone"
               android:drawableStart="@drawable/ic_baseline_contact"
               android:background="@drawable/search_button"
               app:layout_constraintStart_toEndOf="@id/startVertical"
               app:layout_constraintEnd_toStartOf="@id/endVertical"
               app:layout_constraintTop_toBottomOf="@id/inclusiveBathroom"/>
 
+          <com.google.android.material.divider.MaterialDivider
+              android:id="@+id/divider5"
+              android:layout_width="match_parent"
+              android:layout_height="2dp"
+              android:layout_marginTop="16dp"
+              app:dividerColor="@color/colors_primary_20"
+              app:layout_constraintTop_toBottomOf="@id/contactButton"/>
+
           <include
+              android:id="@+id/textsContainers"
               layout="@layout/profile_texts"
-              android:id="@+id/profileTexts"
               android:layout_width="0dp"
-              android:layout_height="wrap_content"
-              app:layout_constraintTop_toBottomOf="@id/contactButton"
-              app:layout_constraintStart_toStartOf="@id/startVertical"
-              app:layout_constraintEnd_toEndOf="@id/endVertical" />
+              android:layout_height="match_parent"
+              app:layout_constraintTop_toBottomOf="@id/divider5"
+              app:layout_constraintStart_toEndOf="@id/startVertical"
+              app:layout_constraintEnd_toStartOf="@id/endVertical"/>
 
           <androidx.appcompat.widget.LinearLayoutCompat
               android:id="@+id/contactContainer"
@@ -264,7 +273,7 @@
               android:layout_height="wrap_content"
               android:layout_marginTop="24dp"
               android:background="@color/colors_primary_20"
-              app:layout_constraintTop_toBottomOf="@id/profileTexts"
+              app:layout_constraintTop_toBottomOf="@id/textsContainers"
               app:layout_constraintStart_toEndOf="@id/startVertical"
               app:layout_constraintEnd_toStartOf="@id/endVertical"
               android:orientation="vertical">
