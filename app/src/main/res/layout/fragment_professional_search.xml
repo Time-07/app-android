@@ -168,12 +168,18 @@
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/chipGroupSpecialty" />
 
-    <br.com.ioasys.appcamp.presentation.ui.custom_views.CustomSearchInput
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edSearchLocalization"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_marginTop="8dp"
-        app:custon_hint="@string/search_city_hint"
+        android:drawableEnd="@drawable/ic_baseline_search_32"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:singleLine="true"
+        android:background="@drawable/input_search_background"
+        android:hint="@string/search_city_hint"
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/tvLocalizationSubtitle" />
@@ -185,6 +191,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:isScrollContainer="true"
         app:ensureMinTouchTargetSize="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -296,15 +303,21 @@
         app:layout_constraintTop_toBottomOf="@+id/chipGroupGender"
         tools:layout_editor_absoluteX="32dp" />
 
-    <br.com.ioasys.appcamp.presentation.ui.custom_views.CustomSearchInput
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/tilSpecialistNameSearch"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_marginTop="8dp"
-        app:custon_hint="@string/search_name_hint"
+        android:drawableEnd="@drawable/ic_baseline_search_32"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:singleLine="true"
+        android:background="@drawable/input_search_background"
+        android:hint="@string/search_city_hint"
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/tvNameSearchSubtitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNameSearchSubtitle"/>
 
 
     <androidx.appcompat.widget.AppCompatButton

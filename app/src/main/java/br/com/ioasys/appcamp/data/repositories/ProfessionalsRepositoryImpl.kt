@@ -16,11 +16,11 @@ class ProfessionalsRepositoryImpl(
     override fun getProfessionals(): Flow<List<Professional>> = flow{
         professionalsLocalDataSource.getAccessToken().collect { token ->
             if (token.isNotEmpty()) {
-                professionalsRemoteDataSource.getProfessionals(token).collect { professionalList ->
+                professionalsLocalDataSource.getProfessionals(accessToken = token).collect { professionalList ->
                     emit(professionalList)
                 }
             } else {
-                professionalsLocalDataSource.getProfessionals().collect { professionalList ->
+                professionalsRemoteDataSource.getAllProfessionalsList(token).collect { professionalList ->
                     emit(professionalList)
                 }
             }

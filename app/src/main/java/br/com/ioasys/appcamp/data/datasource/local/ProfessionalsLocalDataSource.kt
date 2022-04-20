@@ -8,6 +8,6 @@ interface ProfessionalsLocalDataSource {
 
     fun getAccessToken(): Flow<String>
     fun saveProfessionals(professionalList: List<Professional>)
-    fun getProfessionals(): Flow<List<Professional>>
+    fun getProfessionals(accessToken: String): Flow<List<Professional>>
 
 }

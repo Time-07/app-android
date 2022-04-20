@@ -5,22 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
-import br.com.ioasys.appcamp.databinding.FragmentProfessionalListBinding
+import br.com.ioasys.appcamp.databinding.FragmentProfessionalSearchBinding
 import br.com.ioasys.appcamp.presentation.viewmodel.ProfessionalsListViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ProfessionalSearchFragment : Fragment() {
 
-    private var _binding: FragmentProfessionalListBinding? = null
-    private val binding: FragmentProfessionalListBinding get() = _binding!!
+    private var _binding: FragmentProfessionalSearchBinding? = null
+    private val binding: FragmentProfessionalSearchBinding get() = _binding!!
 
     private val professionalistViewModel: ProfessionalsListViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = FragmentProfessionalListBinding.inflate(inflater, container, false).apply {
+    ): View = FragmentProfessionalSearchBinding.inflate(inflater, container, false).apply {
         _binding = this
     }.root
 
@@ -31,9 +32,12 @@ class ProfessionalSearchFragment : Fragment() {
     }
 
     private fun configureListeners(){
-        binding.edSearchLocalization.textChangeListener = { input ->
+        binding.edSearchLocalization.addTextChangedListener { inputLocalization ->
             TODO("Ainda não implementado! (usecase só do filtro)")
 //            professionalsViewModel.search(input)
+        }
+        binding.tilSpecialistNameSearch.addTextChangedListener { inputName ->
+
         }
         binding.SearchButton.setOnClickListener {
             findNavController().navigate(

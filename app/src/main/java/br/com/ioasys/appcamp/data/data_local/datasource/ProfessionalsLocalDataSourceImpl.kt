@@ -15,6 +15,9 @@ class ProfessionalsLocalDataSourceImpl(
     private val sharedPreferencesHelper: SharedPreferencesHelper,
     private val professionalDao: ProfessionalDao
 ): ProfessionalsLocalDataSource {
+
+
+//    TODO: Passar o accessToken remoto aqui para o sharedpreference
     override fun getAccessToken(): Flow<String> = flow {
         emit(sharedPreferencesHelper.getString(LocalConstants.ACCESS_TOKEN_KEY))
     }
@@ -23,7 +26,7 @@ class ProfessionalsLocalDataSourceImpl(
         professionalList = professionalList.map { it.toDao() }
     )
 
-    override fun getProfessionals(): Flow<List<Professional>> = flow {
+    override fun getProfessionals(accessToken: String): Flow<List<Professional>> = flow {
         val professionalList = professionalDao.getProfessionals().map { it.toDomain() }
         emit(professionalList)
     }

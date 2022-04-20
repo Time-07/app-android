@@ -2,49 +2,51 @@ package br.com.ioasys.appcamp.data_remote.model
 
 import com.google.gson.annotations.SerializedName
 
-data class ProfessionalRequest(
+data class ProfessionalResponse(
     @SerializedName("id")
     val id: String,
+    @SerializedName("access_token")
+    val accessToken: String,
     @SerializedName("crmCrp")
-    val crmCrp: String? = null,
+    val crmCrp: String? = "",
     @SerializedName("name")
-    val name: String? = null,
+    val name: String? = "",
     @SerializedName("cpf")
-    val cpf: String? = null,
+    val cpf: String? = "",
     @SerializedName("email")
-    val email: String? = null,
+    val email: String? = "",
     @SerializedName("password")
-    val password: String? = null,
+    val password: String? = "",
     @SerializedName("gender")
-    val gender: String? = null,
+    val gender: String? = "",
     @SerializedName("role")
-    val role: String? = null,
+    val role: String? = "",
     @SerializedName("phone")
-    val phone: String? = null,
+    val phone: String? = "",
     @SerializedName("cellPhone")
-    val cellphone: String? = null,
+    val cellphone: String? = "",
     @SerializedName("speciality")
-    val specialty: String? = null,
+    val specialty: String? = "",
     @SerializedName("street")
-    val street: String? = null,
+    val street: String? = "",
     @SerializedName("number")
-    val number: String? = null,
+    val number: String? = "",
     @SerializedName("neighborhood")
-    val neighborhood: String? = null,
+    val neighborhood: String? = "",
     @SerializedName("city")
-    val city: String? = null,
+    val city: String? = "",
     @SerializedName("state")
-    val state: String? = null,
+    val state: String? = "",
     @SerializedName("value")
-    val value: String? = null,
+    val value: String? = "",
     @SerializedName("description")
-    val description: String? = null,
+    val description: String? = "",
     @SerializedName("course")
-    val courses: String? = null,
+    val courses: String? = "",
     @SerializedName("healthPlan")
-    val healthPlan: String? = null,
+    val healthPlan: String? = "",
     @SerializedName("bathroomSpecific")
-    val bathroomSpecific: Boolean?=null,
+    val bathroomSpecific: String? = "",
     @SerializedName("linkedin")
-    val linkedin: String? = null,
+    val linkedin: String? = "",
 )

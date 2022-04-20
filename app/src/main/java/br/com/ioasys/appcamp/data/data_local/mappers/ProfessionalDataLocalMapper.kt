@@ -25,8 +25,10 @@ fun Professional.toDao() : ProfessionalDataLocal = ProfessionalDataLocal(
         description = this.description,
         courses = this.courses,
         healthPlan = this.healthPlan,
-        bathroomSpecific = this.bathroomSpecific,
-        linkedin = this.linkedin
+        //checar se da erro
+        bathroomSpecific = this.bathroomSpecific.toBoolean(),
+        linkedin = this.linkedin,
+        accessToken = token
 )
 
 fun ProfessionalDataLocal.toDomain(): Professional = Professional(
@@ -50,6 +52,7 @@ fun ProfessionalDataLocal.toDomain(): Professional = Professional(
         description = this.description?:"",
         courses = this.courses?:"",
         healthPlan = this.healthPlan?:"",
-        bathroomSpecific = this.bathroomSpecific?:false,
-        linkedin = this.linkedin?:""
+        bathroomSpecific = this.bathroomSpecific.toString(),
+        linkedin = this.linkedin?:"",
+        token = this.accessToken
 )
