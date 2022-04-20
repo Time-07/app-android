@@ -258,6 +258,72 @@
               app:layout_constraintStart_toStartOf="@id/startVertical"
               app:layout_constraintEnd_toEndOf="@id/endVertical" />
 
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:id="@+id/contactContainer"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="24dp"
+              android:background="@color/colors_primary_20"
+              app:layout_constraintTop_toBottomOf="@id/profileTexts"
+              app:layout_constraintStart_toEndOf="@id/startVertical"
+              app:layout_constraintEnd_toStartOf="@id/endVertical"
+              android:orientation="vertical">
+
+              <androidx.appcompat.widget.AppCompatTextView
+                  android:id="@+id/contactContainerTitle"
+                  style="@style/SectionTitle"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:text="@string/attendance_title"
+                  app:layout_constraintTop_toBottomOf="@id/divider1"
+                  app:layout_constraintStart_toEndOf="@id/startVertical"/>
+
+              <TextView
+                 android:id="@+id/telephoneListItem"
+                  style="@style/Contact_Container_Text"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="8dp"
+                 android:text="@string/telephone_item_text"
+                 android:drawablePadding="8dp"
+                 app:drawableStartCompat="@drawable/ic_baseline_phonedrawable" />
+
+              <TextView
+                  android:id="@+id/whatsappListItem"
+                  style="@style/Contact_Container_Text"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:text="@string/telephone_item_text"
+                  android:drawablePadding="8dp"
+                  app:drawableStartCompat="@drawable/ic_baseline_whatsappdrawable" />
+
+              <TextView
+                  android:id="@+id/emailListItem"
+                  style="@style/Contact_Container_Text"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:text="@string/whatsapp_item_text"
+                  android:drawablePadding="8dp"
+                  app:drawableStartCompat="@drawable/ic_baseline_mail_outlinedrawable" />
+
+              <TextView
+                  android:id="@+id/linkedinListItem"
+                  style="@style/Contact_Container_Text"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:text="@string/linkedin_item_text"
+                  android:textColor="@color/colors_primary_300"
+                  android:drawablePadding="8dp"
+                  app:drawableStartCompat="@drawable/ic_baseline_linkedin" />
+
+
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+
           <androidx.constraintlayout.widget.Guideline
             android:id="@+id/startVertical"
             android:layout_width="wrap_content"
