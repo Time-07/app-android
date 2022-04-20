@@ -13,7 +13,8 @@ interface ProfessionalService {
         @Header("authorization") accessToken: String,
         @Query("gender") gender: String,
         @Query("specialty") specialty: String,
-        @Query("city") city: String
+        @Query("city") city: String,
+        @Query("name") name: String
     ): Response<ProfessionalListResponse>
 
     @GET("/api/v1/users")

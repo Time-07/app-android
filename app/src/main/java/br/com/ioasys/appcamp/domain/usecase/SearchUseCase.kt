@@ -18,7 +18,7 @@ class SearchUseCase(
     data class Params(
         val searchGender: String,
         val searchLocalization: String,
-        val searchSpeciality: String,
+        val searchSpecialty: String,
         val searchName: String
     )
 }

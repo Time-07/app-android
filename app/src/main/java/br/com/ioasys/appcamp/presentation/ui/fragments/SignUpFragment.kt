@@ -58,7 +58,7 @@ class SignUpFragment : Fragment() {
                     email = emailTextInputEditText.text.toString(),
                     password = passwordTextInputEditText.text.toString(),
                     confirmPassword = confirmPasswordTextInputEditText.text.toString(),
-                    genre = signUpViewModel.gender,
+                    gender = signUpViewModel.gender,
                     cpf = cpfTIET.text.toString()
                 )
                 emailTextInputEditText.addTextChangedListener {
@@ -115,7 +115,6 @@ class SignUpFragment : Fragment() {
             }
         }
     }
-
 
     private fun getInputRadioButton() {
         binding.apply {

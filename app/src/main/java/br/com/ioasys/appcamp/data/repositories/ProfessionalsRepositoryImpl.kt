@@ -25,14 +25,18 @@ class ProfessionalsRepositoryImpl(
                 }
             }
         }
-
     }
 
     override fun saveProfessionals(professionalList: List<Professional>) = professionalsLocalDataSource.saveProfessionals(
         professionalList = professionalList
     )
 
-    override fun getSearchProfessionalsRepository(query: String): Flow<List<Professional>> {
+    override fun getSearchProfessionalsRepository(
+        gender: String,
+        localization: String,
+        specialty: String,
+        name: String
+    ): Flow<List<Professional>> {
         TODO("Not yet implemented")
     }
 }

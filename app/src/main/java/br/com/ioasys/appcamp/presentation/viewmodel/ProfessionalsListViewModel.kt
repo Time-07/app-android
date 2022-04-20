@@ -25,6 +25,20 @@ class ProfessionalsListViewModel: ViewModel(), KoinComponent{
     private var _professionalListViewState = MutableLiveData<ViewState<List<Professional>>>()
     val professionalListViewState = _professionalListViewState as LiveData<ViewState<List<Professional>>>
 
+    var genderSearch: String = ""
+        private set
+
+    var specialtySearch: String = ""
+        private set
+
+    fun setSearchGender(gender: String){
+        genderSearch = gender
+    }
+
+    fun setSpecialtySearch(specialty: String){
+        specialtySearch = specialty
+    }
+
     fun putProfessionalListOnView(){
         _professionalListViewState.postLoading()
         getProfessionalListUseCase(
@@ -43,7 +57,7 @@ class ProfessionalsListViewModel: ViewModel(), KoinComponent{
     fun search(
         searchGender: String,
         searchLocalization: String,
-        searchSpeciality: String,
+        searchSpecialty: String,
         searchName: String
     ) {
         _professionalListViewState.postLoading()
@@ -51,7 +65,7 @@ class ProfessionalsListViewModel: ViewModel(), KoinComponent{
             params = SearchUseCase.Params(
                 searchGender = searchGender,
                 searchLocalization = searchLocalization,
-                searchSpeciality = searchSpeciality,
+                searchSpecialty = searchSpecialty,
                 searchName = searchName
             ),
             onSuccess = {

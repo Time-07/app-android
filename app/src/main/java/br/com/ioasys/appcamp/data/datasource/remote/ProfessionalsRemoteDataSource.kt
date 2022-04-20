@@ -9,7 +9,8 @@ interface ProfessionalsRemoteDataSource {
         accessToken: String,
         gender: String?,
         specialty: String?,
-        city: String?
+        city: String?,
+        name: String?
     ) : Flow<List<Professional>>
 
     fun getAllProfessionalsList(
