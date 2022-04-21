@@ -6,11 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.ioasys.appcamp.databinding.FragmentProfessionalProfileBinding
+import br.com.ioasys.appcamp.domain.model.Items
 
 class ProfessionalProfileFragment : Fragment() {
 
     private var _binding: FragmentProfessionalProfileBinding? = null
     private val binding: FragmentProfessionalProfileBinding get() = _binding!!
+
+    private var items: Items? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,6 +28,7 @@ class ProfessionalProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setListeners()
+        setUpView()
     }
 
     private fun setListeners() {
@@ -36,6 +40,19 @@ class ProfessionalProfileFragment : Fragment() {
                     TODO("Not implemented")
                 }
             }
+        }
+    }
+
+    private fun setUpView(){
+        binding.apply {
+            specialtyChip.text = items?.specialty
+            crmCrp.text = items?.crmCrp
+            meetTypeSection.text = items?.meet
+            priceSection.text = items?.value
+            locationSection.text = items?.cityAndState
+            address.text = items?.address
+            healthInsurance.text = items?.healthPlan
+            inclusiveBathroom.text = items?.bathroomSpecific
         }
     }
 
@@ -70,5 +87,10 @@ class ProfessionalProfileFragment : Fragment() {
         return if (index == -1) {
             null
         } else return index?.plus(1)?.let { it1 -> fullName.substring(it1) }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

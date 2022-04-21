@@ -45,6 +45,7 @@ class ProfessionalsListViewModel: ViewModel(), KoinComponent{
             Unit,
             onSuccess = {
                 saveProfessionals(professionalList = it)
+                _professionalListViewState.postSuccess(it)
             },
             onError = {
                 _professionalListViewState.postError(it)

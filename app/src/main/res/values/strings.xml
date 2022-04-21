@@ -106,4 +106,5 @@
     <string name="whatsapp_item_text">(31) 99999-9999</string>
     <string name="email_item_text">silvia@mail.com.br</string>
     <string name="linkedin_item_text">Linkedin</string>
+    <string name="do_login_string">Faça login</string>
 </resources>

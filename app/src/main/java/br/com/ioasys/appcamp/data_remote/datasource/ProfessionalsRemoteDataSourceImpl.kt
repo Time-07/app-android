@@ -1,5 +1,6 @@
 package br.com.ioasys.appcamp.data_remote.datasource
 
+import br.com.ioasys.appcamp.data.data_local.utils.LocalConstants
 import br.com.ioasys.appcamp.data.datasource.remote.ProfessionalsRemoteDataSource
 import br.com.ioasys.appcamp.data_remote.mappers.toDomain
 import br.com.ioasys.appcamp.data_remote.service.ProfessionalService
@@ -12,7 +13,7 @@ class ProfessionalsRemoteDataSourceImpl(
 ):ProfessionalsRemoteDataSource{
 
     override fun getAllProfessionalsList(accessToken: String): Flow<List<Professional>>  = flow{
-        val response = professionalService.getAllProfessionalsList(accessToken = accessToken)
+        val response = professionalService.getAllProfessionalsList(accessToken = LocalConstants.ACCESS_TOKEN_KEY)
         if(response.isSuccessful){
             response.body()?.data?.toDomain()
         }
@@ -26,7 +27,7 @@ class ProfessionalsRemoteDataSourceImpl(
         name: String?
     ): Flow<List<Professional>> = flow {
         val response = professionalService.getListFilteredProfessionals(
-            accessToken = accessToken,
+            accessToken = LocalConstants.ACCESS_TOKEN_KEY,
             gender?:"",
             specialty?:"",
             city?:"",

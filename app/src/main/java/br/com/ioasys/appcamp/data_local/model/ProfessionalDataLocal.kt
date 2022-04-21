@@ -27,7 +27,7 @@ data class ProfessionalDataLocal(
     val description: String? = null,
     val courses: String? = null,
     val healthPlan: String? = null,
-    val bathroomSpecific: Boolean?=null,
+    val bathroomSpecific: String? = null,
     val linkedin: String? = null,
     val accessToken: String
 

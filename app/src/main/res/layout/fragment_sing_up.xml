@@ -245,6 +245,34 @@
             app:layout_constraintTop_toBottomOf="@id/otherOptionTextInputLayout" />
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/loginLinkText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:text="@string/question_text"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textColor="@color/colors_neutral_700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/singUpButton"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignIn"
+            style="@style/Signup_Link"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:background="@color/transparent"
+            app:layout_constraintTop_toBottomOf="@id/loginLinkText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:textColor="@color/colors_primary_300"
+            android:text="@string/do_login_string" />
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/errorEmailSingUp"
             style="@style/TextErrorStyle"
             android:layout_width="0dp"

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/listFragment"
+        android:icon="@drawable/person_icon"
+        android:title="Profissionais" />
+    <item
+        android:id="@+id/healthFragment"
+        android:icon="@drawable/health_icon"
+        android:title="Saúde" />
+    <item
+        android:id="@+id/doubtFragment"
+        android:icon="@drawable/doubt_icon"
+        android:title="Sobre" />
+</menu>

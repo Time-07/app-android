@@ -1,10 +1,10 @@
-package br.com.ioasys.appcamp.data.data_local.datasource
+package br.com.ioasys.appcamp.data_local.datasource
 
 
-import br.com.ioasys.appcamp.data.data_local.mappers.toDao
-import br.com.ioasys.appcamp.data.data_local.mappers.toDomain
+import br.com.ioasys.appcamp.data_local.mappers.toDao
+import br.com.ioasys.appcamp.data_local.mappers.toDomain
 import br.com.ioasys.appcamp.data.data_local.utils.LocalConstants
-import br.com.ioasys.appcamp.data.data_local.utils.SharedPreferencesHelper
+import br.com.ioasys.appcamp.data_local.utils.SharedPreferencesHelper
 import br.com.ioasys.appcamp.data.datasource.local.ProfessionalsLocalDataSource
 import br.com.ioasys.appcamp.data_local.database.ProfessionalDao
 import br.com.ioasys.appcamp.domain.model.Professional

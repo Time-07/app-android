@@ -119,7 +119,7 @@
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/guideline5"
         app:layout_constraintTop_toBottomOf="@id/listFilteredResultsLayout"
-        tools:text="3 resultados" />
+        android:text=""/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
@@ -130,7 +130,7 @@
         android:orientation="vertical"
         android:paddingHorizontal="0dp"
         android:paddingVertical="24dp"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guideline6"

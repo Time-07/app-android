@@ -17,6 +17,7 @@ import br.com.ioasys.appcamp.domain.exception.EmptyInputException
 import br.com.ioasys.appcamp.domain.exception.InvalidEmailException
 import br.com.ioasys.appcamp.domain.exception.InvalidPasswordException
 import br.com.ioasys.appcamp.presentation.viewmodel.SingUpViewModel
+import br.com.ioasys.appcamp.util.Mask
 import br.com.ioasys.appcamp.util.ViewState
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 
@@ -48,6 +49,8 @@ class SignUpFragment : Fragment() {
 
     private fun setListeners() {
         binding.run {
+
+            cpfTIET.addTextChangedListener(Mask.mask("###.###.###-##", cpfTIET))
             singUpButton.setOnClickListener {
                 if (signUpViewModel.gender.isBlank()) {
                     signUpViewModel.setGender(
@@ -92,7 +95,6 @@ class SignUpFragment : Fragment() {
         signUpViewModel.singUpViewState.observe(viewLifecycleOwner) { state ->
             when (state) {
                 is ViewState.Success -> {
-                    Toast.makeText(context, "DEU CERTOOO!", Toast.LENGTH_SHORT).show()
                     showInvalidPasswordError(false)
                     showInvalidEmailError(false)
                     showInvalidRequiredGenreError(false)
@@ -105,7 +107,7 @@ class SignUpFragment : Fragment() {
                         is InvalidPasswordException -> showInvalidPasswordError(true)
                         is InvalidEmailException -> showInvalidEmailError(true)
                         is EmptyInputException -> showInvalidRequiredGenreError(true)
-                        else -> Toast.makeText(requireActivity(), "Deu errado, merda", Toast.LENGTH_SHORT).show()
+                        else -> Toast.makeText(requireActivity(), "Algo deu errado!", Toast.LENGTH_SHORT).show()
                     }
                 }
                 is ViewState.Loading -> {
@@ -142,7 +144,8 @@ class SignUpFragment : Fragment() {
                 userTextInputEditText,
                 emailTextInputEditText,
                 passwordTextInputEditText,
-                confirmPasswordTextInputEditText
+                confirmPasswordTextInputEditText,
+                cpfTIET
             )
             for (editText in editTexts) {
                 editText.addTextChangedListener(object : TextWatcher {
@@ -164,12 +167,14 @@ class SignUpFragment : Fragment() {
                         val emailInput = editTexts[1].text.toString().trim()
                         val passwordInput = editTexts[2].text.toString().trim()
                         val confirmPasswordInput = editTexts[3].text.toString().trim()
+                        val cpfInput = editTexts[4].text.toString().trim()
 
                         singUpButton.isEnabled =
                             userInput.isEmpty().not() &&
                                     emailInput.isEmpty().not() &&
                                     passwordInput.isEmpty().not() &&
-                                    confirmPasswordInput.isEmpty().not()
+                                    confirmPasswordInput.isEmpty().not() &&
+                                    cpfInput.isEmpty().not()
                     }
 
                     override fun afterTextChanged(s: Editable?) {}

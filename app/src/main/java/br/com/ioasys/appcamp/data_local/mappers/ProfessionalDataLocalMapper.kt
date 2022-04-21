@@ -1,4 +1,4 @@
-package br.com.ioasys.appcamp.data.data_local.mappers
+package br.com.ioasys.appcamp.data_local.mappers
 
 import br.com.ioasys.appcamp.data_local.model.ProfessionalDataLocal
 import br.com.ioasys.appcamp.domain.model.Professional
@@ -26,7 +26,7 @@ fun Professional.toDao() : ProfessionalDataLocal = ProfessionalDataLocal(
         courses = this.courses,
         healthPlan = this.healthPlan,
         //checar se da erro
-        bathroomSpecific = this.bathroomSpecific.toBoolean(),
+        bathroomSpecific = this.bathroomSpecific,
         linkedin = this.linkedin,
         accessToken = token
 )

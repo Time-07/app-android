@@ -3,6 +3,6 @@ package br.com.ioasys.appcamp.data_remote.model
 import com.google.gson.annotations.SerializedName
 
 data class ProfessionalListResponse(
-    @SerializedName("Users")
+    @SerializedName("")
     val data: List<ProfessionalResponse>
 )

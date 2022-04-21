@@ -42,9 +42,6 @@ class ProfessionalSearchFragment : Fragment() {
 
                 is ViewState.Success -> {
                     Toast.makeText(context, "DEU CERTOOO!", Toast.LENGTH_SHORT).show()
-                    findNavController().navigate(
-                    ProfessionalSearchFragmentDirections.actionSearchFragmentToListFilteredFragment()
-                )
                 }
                 is ViewState.Error -> {
                     Toast.makeText(requireActivity(), "Deu errado, merda", Toast.LENGTH_SHORT).show()
@@ -66,6 +63,10 @@ class ProfessionalSearchFragment : Fragment() {
                     searchName = editTextNameSearch.text.toString(),
                     searchSpecialty = professionalsListViewModel.specialtySearch
                     )
+
+                findNavController().navigate(
+                    ProfessionalSearchFragmentDirections.actionSearchFragmentToListFilteredFragment()
+                )
             }
         }
         setChipText()

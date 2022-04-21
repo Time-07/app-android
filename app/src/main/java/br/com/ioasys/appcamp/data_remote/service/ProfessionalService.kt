@@ -8,7 +8,7 @@ import retrofit2.http.Query
 
 interface ProfessionalService {
 
-    @GET("/api/v1/users")
+    @GET("/api/v1/users/?")
     suspend fun getListFilteredProfessionals(
         @Header("authorization") accessToken: String,
         @Query("gender") gender: String,

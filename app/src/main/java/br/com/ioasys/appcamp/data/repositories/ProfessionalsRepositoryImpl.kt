@@ -10,8 +10,15 @@ import kotlinx.coroutines.flow.flow
 
 class ProfessionalsRepositoryImpl(
     private val professionalsRemoteDataSource: ProfessionalsRemoteDataSource,
-    private val professionalsLocalDataSource: ProfessionalsLocalDataSource
+    private val professionalsLocalDataSource: ProfessionalsLocalDataSource,
 ) : ProfessionalsRepository {
+    override fun getAllProfessionals(accessToken: String): Flow<List<Professional>> = flow {
+        professionalsLocalDataSource.getAccessToken().collect { accessToken ->
+            professionalsRemoteDataSource.getAllProfessionalsList(accessToken = accessToken).collect {
+                emit(it)
+            }
+        }
+    }
 
     override fun getProfessionals(
         gender: String,
@@ -21,10 +28,7 @@ class ProfessionalsRepositoryImpl(
     ): Flow<List<Professional>> = flow {
         professionalsLocalDataSource.getAccessToken().collect { token ->
             if (token.isNotEmpty()) {
-                professionalsRemoteDataSource.getProfessionalsListFiltered(gender, city, specialty, name, name).collect{
-                    emit(it)
-                }
-                professionalsRemoteDataSource.getAllProfessionalsList(accessToken = token).collect {
+                professionalsRemoteDataSource.getProfessionalsListFiltered(gender, city, specialty, name, token).collect{
                     emit(it)
                 }
             }

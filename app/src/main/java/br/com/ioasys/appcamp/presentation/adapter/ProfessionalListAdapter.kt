@@ -6,12 +6,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import br.com.ioasys.appcamp.databinding.ItemsCardviewBinding
-import br.com.ioasys.appcamp.domain.model.Professional
-
+import br.com.ioasys.appcamp.domain.model.Items
 
 class ProfessionalListAdapter(
     private val professionalClickListener: ProfessionalClickListener
-) : ListAdapter<Professional, ProfessionalListAdapter.ProfessionalsListViewHolder>(DIFF_CALLBACK) {
+) : ListAdapter<Items, ProfessionalListAdapter.ProfessionalsListViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfessionalsListViewHolder {
         return ProfessionalsListViewHolder.create(parent, professionalClickListener)
@@ -22,12 +21,12 @@ class ProfessionalListAdapter(
     }
 
     companion object {
-        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Professional>() {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Items>() {
 
-            override fun areItemsTheSame(oldItem: Professional, newItem: Professional): Boolean =
+            override fun areItemsTheSame(oldItem: Items, newItem: Items): Boolean =
                 oldItem.id == newItem.id
 
-            override fun areContentsTheSame(oldItem: Professional, newItem: Professional): Boolean =
+            override fun areContentsTheSame(oldItem: Items, newItem: Items): Boolean =
                 oldItem == newItem
 
         }
@@ -37,16 +36,16 @@ class ProfessionalListAdapter(
         private val binding: ItemsCardviewBinding,
         private val professionalClickListener: ProfessionalClickListener
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(items: Professional) {
+        fun bind(items: Items) {
             binding.apply {
                 professionChipCV.text = items.specialty
                 valueTxt.text = items.value
-                cityAndState.text = items.city
+                cityAndState.text = items.cityAndState
                 meetType.text = items.state
                 professionalName.text = items.name
 
                 seeProfileButton.setOnClickListener {
-                    professionalClickListener.onProfessionalClickListener(items)
+                    professionalClickListener.onProfessionalClickListener(Items.Companion)
                 }
             }
         }
