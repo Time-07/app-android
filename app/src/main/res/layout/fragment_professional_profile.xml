@@ -249,7 +249,6 @@
               android:drawablePadding="8dp"
               android:text="@string/contact_string"
               android:textAllCaps="false"
-              android:autoLink="phone"
               android:drawableStart="@drawable/ic_baseline_contact"
               android:background="@drawable/search_button"
               app:layout_constraintStart_toEndOf="@id/startVertical"
@@ -265,11 +264,30 @@
               app:layout_constraintTop_toBottomOf="@id/contactButton"/>
 
           <include
-              android:id="@+id/textsContainers"
-              layout="@layout/profile_texts"
+              android:id="@+id/expTvExperience"
+              layout="@layout/expandable_experience_text_view"
               android:layout_width="0dp"
               android:layout_height="match_parent"
+              android:layout_marginTop="16dp"
               app:layout_constraintTop_toBottomOf="@id/divider5"
+              app:layout_constraintStart_toEndOf="@id/startVertical"
+              app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+
+          <com.google.android.material.divider.MaterialDivider
+              android:id="@+id/divider6"
+              android:layout_width="match_parent"
+              android:layout_height="2dp"
+              android:layout_marginTop="16dp"
+              app:dividerColor="@color/colors_primary_20"
+              app:layout_constraintTop_toBottomOf="@id/expTvExperience"/>
+
+          <include
+              android:id="@+id/expTvFormation"
+              layout="@layout/expandable_formation_text_view"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_marginTop="16dp"
+              app:layout_constraintTop_toBottomOf="@id/divider6"
               app:layout_constraintStart_toEndOf="@id/startVertical"
               app:layout_constraintEnd_toStartOf="@id/endVertical"/>
 
@@ -280,7 +298,7 @@
               android:layout_height="wrap_content"
               android:layout_marginTop="24dp"
               android:background="@color/colors_primary_20"
-              app:layout_constraintTop_toBottomOf="@id/textsContainers"
+              app:layout_constraintTop_toBottomOf="@id/expTvFormation"
               app:layout_constraintStart_toEndOf="parent"
               app:layout_constraintEnd_toStartOf="parent"/>
 
@@ -289,24 +307,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="16dp" />
+            app:layout_constraintGuide_begin="32dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/endVertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="16dp" />
+            app:layout_constraintGuide_end="32dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/startHorizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="16dp" />
+            app:layout_constraintGuide_begin="24dp" />
 
 
       </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.core.widget.NestedScrollView>
