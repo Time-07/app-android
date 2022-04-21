@@ -50,6 +50,12 @@ class SignUpFragment : Fragment() {
     private fun setListeners() {
         binding.run {
 
+            btnSignIn.setOnClickListener {
+                findNavController().navigate(
+                    SignUpFragmentDirections.actionSingUpFragmentToLoginFragment()
+                )
+            }
+
             cpfTIET.addTextChangedListener(Mask.mask("###.###.###-##", cpfTIET))
             singUpButton.setOnClickListener {
                 if (signUpViewModel.gender.isBlank()) {

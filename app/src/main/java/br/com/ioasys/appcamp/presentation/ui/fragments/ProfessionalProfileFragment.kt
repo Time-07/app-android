@@ -5,15 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import br.com.ioasys.appcamp.databinding.FragmentProfessionalProfileBinding
-import br.com.ioasys.appcamp.domain.model.Items
+import br.com.ioasys.appcamp.domain.model.Item
 
 class ProfessionalProfileFragment : Fragment() {
 
     private var _binding: FragmentProfessionalProfileBinding? = null
     private val binding: FragmentProfessionalProfileBinding get() = _binding!!
-
-    private var items: Items? = null
+    
+    private val args: ProfessionalProfileFragmentArgs by navArgs()    
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,17 +46,17 @@ class ProfessionalProfileFragment : Fragment() {
 
     private fun setUpView(){
         binding.apply {
-            specialtyChip.text = items?.specialty
-            crmCrp.text = items?.crmCrp
-            meetTypeSection.text = items?.meet
-            priceSection.text = items?.value
-            locationSection.text = items?.cityAndState
-            address.text = items?.address
-            healthInsurance.text = items?.healthPlan
-            inclusiveBathroom.text = items?.bathroomSpecific
-            treatmentPronoun.text = items?.treatmentPronoun
-            professionalFirstName.text = items?.professionalFirstName
-            professionalLastName.text = items?.professionalLastName
+            specialtyChip.text = args.itemArgs.specialty
+            crmCrp.text = args.itemArgs.crmCrp
+            meetTypeSection.text = args.itemArgs.meet
+            priceSection.text = args.itemArgs.value
+            locationSection.text = args.itemArgs.cityAndState
+            address.text = args.itemArgs.address
+            healthInsurance.text = args.itemArgs.healthPlan
+            inclusiveBathroom.text = args.itemArgs.bathroomSpecific
+            treatmentPronoun.text = args.itemArgs.treatmentPronoun
+            professionalFirstName.text = args.itemArgs.professionalFirstName
+            professionalLastName.text = args.itemArgs.professionalLastName
         }
     }
 
@@ -98,10 +99,8 @@ class ProfessionalProfileFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(items: Items? = null): ProfessionalProfileFragment {
-            return ProfessionalProfileFragment().apply {
-                this.items = items
-            }
+        fun newInstance(): ProfessionalProfileFragment {
+            return ProfessionalProfileFragment()
         }
     }
 }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/listFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -67,12 +67,34 @@
         <action
             android:id="@+id/action_ListFilteredFragment_to_ListFragment"
             app:destination="@id/listFragment"/>
+        <action
+            android:id="@+id/action_listFilteredFragment_to_professionalProfileFragment"
+            app:destination="@id/professionalProfileFragment" />
+
     </fragment>
 
     <fragment
         android:id="@+id/professionalProfileFragment"
         android:name="br.com.ioasys.appcamp.presentation.ui.fragments.ProfessionalProfileFragment"
         android:label="fragment_professional_profile"
-        tools:layout="@layout/fragment_professional_profile" />
+        tools:layout="@layout/fragment_professional_profile" >
+        <action
+            android:id="@+id/action_professionalProfileFragment_to_listFilteredFragment"
+            app:destination="@id/listFilteredFragment" />
+        <argument
+            android:name="itemArgs"
+            app:argType="br.com.ioasys.appcamp.domain.model.Item" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="br.com.ioasys.appcamp.presentation.ui.fragments.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/transHealthFragment"
+        android:name="br.com.ioasys.appcamp.presentation.ui.fragments.TransHealthFragment"
+        android:label="fragment_trans_health"
+        tools:layout="@layout/fragment_trans_health" />
 
 </navigation>

@@ -7,13 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.appcamp.databinding.FragmentListFilteredBinding
-import br.com.ioasys.appcamp.domain.model.Items
+import br.com.ioasys.appcamp.domain.model.Item
 import br.com.ioasys.appcamp.presentation.adapter.ProfessionalClickListener
 import br.com.ioasys.appcamp.presentation.adapter.ProfessionalListAdapter
-import br.com.ioasys.appcamp.presentation.viewmodel.ProfessionalsListViewModel
-import org.koin.androidx.viewmodel.ext.android.getViewModel
 
-class ListFilteredFragment : Fragment(){
+class ListFilteredFragment : Fragment(), ProfessionalClickListener{
 
     private lateinit var professionalListAdapter: ProfessionalListAdapter
     private var _binding: FragmentListFilteredBinding? = null
@@ -88,9 +86,9 @@ class ListFilteredFragment : Fragment(){
     }
 
     private fun setItemsListData(){
-        professionalListAdapter = ProfessionalListAdapter()
+        professionalListAdapter = ProfessionalListAdapter(this)
         binding.recycleView.adapter = professionalListAdapter
-        professionalListAdapter.submitList(Items.getMockList())
+        professionalListAdapter.submitList(Item.getMockList())
 //        professionalsListViewModel.search()
     }
 
@@ -109,5 +107,11 @@ class ListFilteredFragment : Fragment(){
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    override fun onProfessionalClickListener(item: Item) {
+        findNavController().navigate(
+            ListFilteredFragmentDirections.actionListFilteredFragmentToProfessionalProfileFragment(item)
+        )
     }
 }

@@ -1,6 +1,10 @@
 package br.com.ioasys.appcamp.domain.model
 
-data class Items(
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+data class Item(
     val id: Int,
     val crmCrp: String,
     val name: String,
@@ -23,11 +27,11 @@ data class Items(
     val treatmentPronoun: String,
     val professionalFirstName: String,
     val professionalLastName: String
-) {
+): Parcelable {
     companion object {
 
         fun getMockList() = listOf(
-            Items(
+            Item(
                 id = 1,
                 crmCrp = "CRM/SP 123456",
                 name = "Dr.Silva\nMaranhão",
