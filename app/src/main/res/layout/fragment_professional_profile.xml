@@ -249,7 +249,6 @@
               android:drawablePadding="8dp"
               android:text="@string/contact_string"
               android:textAllCaps="false"
-              android:autoLink="phone"
               android:drawableStart="@drawable/ic_baseline_contact"
               android:background="@drawable/search_button"
               app:layout_constraintStart_toEndOf="@id/startVertical"
@@ -326,6 +325,5 @@
 
 
       </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.core.widget.NestedScrollView>
