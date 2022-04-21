@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.ioasys.appcamp.databinding.ActivityMainBinding
 
+
 class MainActivity : AppCompatActivity() {
 
     private var _binding: ActivityMainBinding? = null

@@ -5,5 +5,5 @@ import br.com.ioasys.appcamp.domain.model.Professional
 
 interface ProfessionalClickListener {
 
-    fun onProfessionalClickListener(items: Items.Companion)
+   fun onProfessionalClickListener(items: Items.Companion)
 }

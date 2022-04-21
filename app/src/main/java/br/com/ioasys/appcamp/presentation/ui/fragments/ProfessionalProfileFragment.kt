@@ -53,6 +53,9 @@ class ProfessionalProfileFragment : Fragment() {
             address.text = items?.address
             healthInsurance.text = items?.healthPlan
             inclusiveBathroom.text = items?.bathroomSpecific
+            treatmentPronoun.text = items?.treatmentPronoun
+            professionalFirstName.text = items?.professionalFirstName
+            professionalLastName.text = items?.professionalLastName
         }
     }
 
@@ -92,5 +95,13 @@ class ProfessionalProfileFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+        fun newInstance(items: Items? = null): ProfessionalProfileFragment {
+            return ProfessionalProfileFragment().apply {
+                this.items = items
+            }
+        }
     }
 }

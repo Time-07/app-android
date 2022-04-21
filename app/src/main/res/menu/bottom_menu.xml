@@ -6,7 +6,7 @@
         android:icon="@drawable/person_icon"
         android:title="Profissionais" />
     <item
-        android:id="@+id/healthFragment"
+        android:id="@+id/transHealthFragment"
         android:icon="@drawable/health_icon"
         android:title="Saúde" />
     <item

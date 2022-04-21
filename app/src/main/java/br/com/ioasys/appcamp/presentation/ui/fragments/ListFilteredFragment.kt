@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.appcamp.databinding.FragmentListFilteredBinding
 import br.com.ioasys.appcamp.domain.model.Items
+import br.com.ioasys.appcamp.presentation.adapter.ProfessionalClickListener
 import br.com.ioasys.appcamp.presentation.adapter.ProfessionalListAdapter
 import br.com.ioasys.appcamp.presentation.viewmodel.ProfessionalsListViewModel
 import org.koin.androidx.viewmodel.ext.android.getViewModel

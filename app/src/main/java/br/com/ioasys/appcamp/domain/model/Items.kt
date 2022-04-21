@@ -13,18 +13,16 @@ data class Items(
     val specialty: String,
     val street: String,
     val number: String,
-    val neighborhood: String,
     val cityAndState: String,
-    val city: String,
     val address: String,
     val state: String,
     val value: String,
-    val description: String,
-    val courses: String,
     val healthPlan: String,
     val bathroomSpecific: String,
-    val linkedin: String,
-    val meet: String
+    val meet: String,
+    val treatmentPronoun: String,
+    val professionalFirstName: String,
+    val professionalLastName: String
 ) {
     companion object {
 
@@ -32,28 +30,26 @@ data class Items(
             Items(
                 id = 1,
                 crmCrp = "CRM/SP 123456",
-                name = "Dr.Lucas",
+                name = "Dr.Silva\nMaranhão",
                 cpf = "001.001.001-01",
-                email = "luscas@gmail.com",
-                gender = "Homem Cis",
+                email = "silva@gmail.com",
+                gender = "Mulher Cis",
                 role = "Profissional",
                 phone = "(71) 0111-2222",
                 cellphone = "(71) 0222-1111",
                 specialty = "Urologia",
                 street = "Av. Roberto Carlos",
                 number = "190",
-                neighborhood = "Bairro do Juazeiro",
                 cityAndState = "SP - São Paulo ",
-                city = "São Paulo",
                 state = "Online e\n Presencial",
                 value = "R$159,99",
-                description = "",
-                courses = "",
                 healthPlan = "Atende convênio",
                 bathroomSpecific = "Banheiro Inclusivo",
-                linkedin = "",
                 meet = "Online e Presencial",
-                address = "Avenida Brasil, 644, Centro, Sala 266"
+                address = "Avenida Brasil, 644, Centro, Sala 266",
+                treatmentPronoun = "Dra",
+                professionalFirstName = "Silva",
+                professionalLastName = "Maranhão"
             )
         )
     }
