@@ -46,9 +46,14 @@
         <entry key="app/src/main/res/drawable/search_button.xml" value="0.2165" />
         <entry key="app/src/main/res/drawable/search_button_background.xml" value="0.198" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.19270833333333334" />
-        <entry key="app/src/main/res/layout/bottom_sheet_layout.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/bottom_sheet_experience.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/bottom_sheet_formation.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/bottom_sheet_layout.xml" value="0.5" />
         <entry key="app/src/main/res/layout/contact_material_list.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/expandable_formation_text_view.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/expandable_list_adapter.xml" value="0.3536458333333333" />
+        <entry key="app/src/main/res/layout/expandable_text_view.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/fragment_formation_bottom_sheet.xml" value="0.3536458333333333" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/fragment_list_filtered.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35520833333333335" />
@@ -60,9 +65,10 @@
         <entry key="app/src/main/res/layout/list_group.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.3536458333333333" />
         <entry key="app/src/main/res/layout/profile_texts.xml" value="0.3536458333333333" />
+        <entry key="app/src/main/res/layout/scroll_view.xml" value="0.3536458333333333" />
         <entry key="app/src/main/res/layout/scrow_view.xml" value="0.25" />
         <entry key="app/src/main/res/layout/search_filters.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/toolbar.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.33" />
       </map>
     </option>
   </component>

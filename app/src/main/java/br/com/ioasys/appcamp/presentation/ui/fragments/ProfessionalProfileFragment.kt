@@ -25,6 +25,8 @@ class ProfessionalProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setListeners()
+        expandableExperienceTextView()
+        expandableFormationTextView()
     }
 
     private fun setListeners() {
@@ -37,6 +39,25 @@ class ProfessionalProfileFragment : Fragment() {
                 }
             }
         }
+    }
+
+    private fun expandableExperienceTextView(){
+
+        val expTVexperience = binding.expTvExperience.expandExperienceTextView
+        expTVexperience.setText("Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas, passando por todo o início da terapia hormonal até.\n" +
+                "\n" +
+                "Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas, passando por todo o início da terapia hormonal até.")
+
+    }
+
+
+    private fun expandableFormationTextView(){
+
+        val expTVformation = binding.expTvFormation.expandFormationTextView
+        expTVformation.setText("Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas, passando por todo o início da terapia hormonal até.\n" +
+                "\n" +
+                "Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas, passando por todo o início da terapia hormonal até.")
+
     }
 
     private fun onScrollChanged() {
