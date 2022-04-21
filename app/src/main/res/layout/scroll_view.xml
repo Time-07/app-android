@@ -10,13 +10,13 @@
         android:id="@+id/contactContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/contactContainerTitle"
             style="@style/SectionTitle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/attendance_title" />
@@ -24,7 +24,7 @@
         <TextView
             android:id="@+id/telephoneListItem"
             style="@style/Contact_Container_Text"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/telephone_item_text"
@@ -34,7 +34,7 @@
         <TextView
             android:id="@+id/whatsappListItem"
             style="@style/Contact_Container_Text"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/telephone_item_text"
@@ -44,7 +44,7 @@
         <TextView
             android:id="@+id/emailListItem"
             style="@style/Contact_Container_Text"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/email_item_text"
@@ -54,7 +54,7 @@
         <TextView
             android:id="@+id/linkedinListItem"
             style="@style/Contact_Container_Text"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/linkedin_item_text"

@@ -60,6 +60,7 @@ class ProfessionalProfileFragment : Fragment() {
 
     }
 
+
     private fun onScrollChanged() {
         TODO("Not implemented")
     }
