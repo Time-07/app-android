@@ -14,6 +14,5 @@ class GetProfessionalListUseCase(
 
     override fun run(params: Unit?): Flow<List<Professional>> = flow {
         TODO("Implement call of data's professionals")
-        professionalsRepository.getProfessionals()
     }
 }

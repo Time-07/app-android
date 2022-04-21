@@ -15,8 +15,6 @@ data class ProfessionalResponse(
     val cpf: String? = "",
     @SerializedName("email")
     val email: String? = "",
-    @SerializedName("password")
-    val password: String? = "",
     @SerializedName("gender")
     val gender: String? = "",
     @SerializedName("role")

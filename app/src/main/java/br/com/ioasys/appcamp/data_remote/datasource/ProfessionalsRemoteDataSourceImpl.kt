@@ -12,7 +12,7 @@ class ProfessionalsRemoteDataSourceImpl(
 ):ProfessionalsRemoteDataSource{
 
     override fun getAllProfessionalsList(accessToken: String): Flow<List<Professional>>  = flow{
-        val response = professionalService.getAllProfessionalsList(accessToken = "Bearer $accessToken")
+        val response = professionalService.getAllProfessionalsList(accessToken = accessToken)
         if(response.isSuccessful){
             response.body()?.data?.toDomain()
         }
@@ -26,7 +26,7 @@ class ProfessionalsRemoteDataSourceImpl(
         name: String?
     ): Flow<List<Professional>> = flow {
         val response = professionalService.getListFilteredProfessionals(
-            accessToken = "Bearer $accessToken",
+            accessToken = accessToken,
             gender?:"",
             specialty?:"",
             city?:"",
@@ -34,14 +34,7 @@ class ProfessionalsRemoteDataSourceImpl(
 
         if (response.isSuccessful){
             response.body()?.data?.let { remoteList ->
-                (gender.isNullOrEmpty()&&specialty.isNullOrEmpty()&&city.isNullOrEmpty()&&name.isNullOrEmpty()).toString().let {
-                    emit(remoteList.filter { professional ->
-                        professional.gender?.trim()?.contains(it , ignoreCase = true)?: false
-                        professional.specialty?.trim()?.contains(it , ignoreCase = true)?: false
-                        professional.city?.trim()?.contains(it , ignoreCase = true)?: false
-                        professional.name?.trim()?.contains(it , ignoreCase = true)?: false
-                    }.toDomain())
-                }
+                    emit(remoteList.toDomain())
             }
         }
     }

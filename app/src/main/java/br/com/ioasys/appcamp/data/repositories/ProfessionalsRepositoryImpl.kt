@@ -11,32 +11,28 @@ import kotlinx.coroutines.flow.flow
 class ProfessionalsRepositoryImpl(
     private val professionalsRemoteDataSource: ProfessionalsRemoteDataSource,
     private val professionalsLocalDataSource: ProfessionalsLocalDataSource
-): ProfessionalsRepository {
+) : ProfessionalsRepository {
 
-    override fun getProfessionals(): Flow<List<Professional>> = flow{
+    override fun getProfessionals(
+        gender: String,
+        name: String,
+        specialty: String,
+        city: String
+    ): Flow<List<Professional>> = flow {
         professionalsLocalDataSource.getAccessToken().collect { token ->
             if (token.isNotEmpty()) {
-                professionalsLocalDataSource.getProfessionals(accessToken = token).collect { professionalList ->
-                    emit(professionalList)
+                professionalsRemoteDataSource.getProfessionalsListFiltered(gender, city, specialty, name, name).collect{
+                    emit(it)
                 }
-            } else {
-                professionalsRemoteDataSource.getAllProfessionalsList(token).collect { professionalList ->
-                    emit(professionalList)
+                professionalsRemoteDataSource.getAllProfessionalsList(accessToken = token).collect {
+                    emit(it)
                 }
             }
         }
     }
 
-    override fun saveProfessionals(professionalList: List<Professional>) = professionalsLocalDataSource.saveProfessionals(
-        professionalList = professionalList
-    )
-
-    override fun getSearchProfessionalsRepository(
-        gender: String,
-        localization: String,
-        specialty: String,
-        name: String
-    ): Flow<List<Professional>> {
-        TODO("Not yet implemented")
-    }
+    override fun saveProfessionals(professionalList: List<Professional>) =
+        professionalsLocalDataSource.saveProfessionals(
+            professionalList = professionalList
+        )
 }

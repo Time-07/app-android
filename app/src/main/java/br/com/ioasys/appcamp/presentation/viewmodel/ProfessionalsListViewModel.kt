@@ -70,6 +70,7 @@ class ProfessionalsListViewModel: ViewModel(), KoinComponent{
             ),
             onSuccess = {
                 _professionalListViewState.postSuccess(it)
+                saveProfessionals(it)
             },
             onError = {
                 _professionalListViewState.postError(it)

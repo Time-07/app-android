@@ -12,7 +12,6 @@ fun List<ProfessionalResponse>.toDomain(): List<Professional> {
             name = it.name ?: "",
             cpf = it.cpf ?: "",
             email = it.email ?: "",
-            password = it.password ?: "",
             gender = it.gender ?: "",
             role = it.role ?: "",
             phone = it.phone ?: "",

@@ -82,7 +82,7 @@ class ProfessionalSearchFragment : Fragment() {
                         urologist -> R.string.urologist_string.toString()
                         endocrinology -> R.string.endocrinology_string.toString()
                         psychology -> R.string.psychology_string.toString()
-                        else -> R.string.all_options_string.toString()
+                        else -> ""
                     }
                 )
             }
@@ -99,7 +99,7 @@ class ProfessionalSearchFragment : Fragment() {
                         cisgenderMen -> R.string.cisgender_men_string.toString()
                         transMen -> R.string.trans_men_string.toString()
                         nonBinaryPerson -> R.string.non_binary_person_string.toString()
-                        else -> R.string.all_options_string.toString()
+                        else -> ""
                     }
                 )
             }
