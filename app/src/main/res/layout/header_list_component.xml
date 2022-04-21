@@ -54,7 +54,7 @@
         android:textSize="32sp"
         android:paddingStart="32dp"
         android:paddingEnd="32dp"
-        android:text="@string/list_title_string"
+        android:text= "@string/list_title_string"
         android:textColor="@color/colors_neutral_800"
         android:fontFamily="@font/fredoka_regular_400"
         android:background="@color/colors_white"

@@ -18,7 +18,6 @@ class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding: FragmentLoginBinding get() = _binding!!
-
     private val loginViewModel : LoginViewModel by lazy {
         getViewModel()
     }
