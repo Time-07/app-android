@@ -70,6 +70,8 @@
         <entry key="app/src/main/res/layout/expandable_formation_text_view.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/expandable_list_adapter.xml" value="0.3536458333333333" />
         <entry key="app/src/main/res/layout/expandable_text_view.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/expandable_text_view2.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/expandable_trans_health1.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_formation_bottom_sheet.xml" value="0.3536458333333333" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.19270833333333334" />
