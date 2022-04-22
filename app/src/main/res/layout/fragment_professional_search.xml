@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context=".presentation.ui.fragments.ProfessionalSearchFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutLisSearch"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/colors_primary_30"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/listSearchReturnFilterButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_weight="0"
+            android:background="@drawable/ic_baseline_arrow_back_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_weight="0"
+            android:fontFamily="@font/fredoka_regular_400"
+            android:gravity="center"
+            android:text="@string/results"
+            android:textColor="@color/colors_neutral_800"
+            android:textSize="28sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/listSearchCloseButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_weight="0"
+            android:background="@drawable/ic_baseline_close" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSpecialtyFilterTitle"
+        style="@style/Search_Text_Subtitles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/specialty_subtitle_text"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutLisSearch"
+        tools:layout_editor_absoluteY="23dp" />
+
+    <HorizontalScrollView
+        android:id="@+id/scrollSpecialty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSpecialtyFilterTitle">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupSpecialty"
+            style="@style/Widget.MaterialComponents.ChipGroup"
+            android:layout_width="0dp"
+            app:singleSelection="true"
+            android:layout_height="wrap_content"
+            app:ensureMinTouchTargetSize="true"
+            app:singleLine="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/allOptionsSpecialty"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/all_options_string"
+                android:textAlignment="center"
+                app:chipBackgroundColor="@color/colors_primary_50"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeColor="@color/colors_primary_60"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/psychiatrist"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/psychiatrist_string"
+                android:textAlignment="center"
+                app:chipBackgroundColor="@color/colors_primary_30"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeColor="@color/colors_primary_60"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/gynecologist"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/gynecologist_string"
+                android:textAlignment="center"
+                app:chipBackgroundColor="@color/colors_primary_30"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeColor="@color/colors_primary_60"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/urologist"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/urologist_string"
+                android:textAlignment="center"
+                app:chipBackgroundColor="@color/colors_primary_30"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeColor="@color/colors_primary_60"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/endocrinology"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/endocrinology_string"
+                android:textAlignment="center"
+                app:chipBackgroundColor="@color/colors_primary_30"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeColor="@color/colors_primary_60"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/psychology"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/psychology_string"
+                android:textAlignment="center"
+                app:chipBackgroundColor="@color/colors_primary_30"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeColor="@color/colors_primary_60"
+                app:chipStrokeWidth="1dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLocalizationSubtitle"
+        style="@style/Search_Text_Subtitles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/localization_subtitle_text"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/scrollSpecialty" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutSearchLocalization"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        app:boxStrokeColor="@color/transparent"
+        app:boxStrokeWidth="0dp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocalizationSubtitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextLocalization"
+            style="@style/SingUp_TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/input_sing_up_background"
+            android:drawableEnd="@drawable/ic_baseline_search_32"
+            android:hint="@string/search_city_hint"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:singleLine="true"
+            android:textColorHint="#757575" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGenderSubtitle">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupGender"
+            style="@style/Widget.MaterialComponents.ChipGroup"
+            android:layout_width="0dp"
+            app:singleSelection="true"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            app:ensureMinTouchTargetSize="true"
+            app:singleLine="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAllOptionsGender"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/all_options_string"
+                android:textAlignment="center"
+                app:chipBackgroundColor="@color/colors_primary_50"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeColor="@color/colors_primary_60"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cisgenderWomen"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/cisgender_women_string"
+                android:textAlignment="center"
+                app:chipBackgroundColor="@color/colors_primary_30"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeColor="@color/colors_primary_60"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/transWomen"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/trans_women_string"
+                android:textAlignment="center"
+                app:chipBackgroundColor="@color/colors_primary_30"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeColor="@color/colors_primary_60"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cisgenderMen"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/cisgender_men_string"
+                android:textAlignment="center"
+                app:chipBackgroundColor="@color/colors_primary_30"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeColor="@color/colors_primary_60"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/trans_men"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/trans_men_string"
+                android:textAlignment="center"
+                app:chipBackgroundColor="@color/colors_primary_30"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeColor="@color/colors_primary_60"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/nonBinaryPerson"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/non_binary_person_string"
+                android:textAlignment="center"
+                app:chipBackgroundColor="@color/colors_primary_30"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeColor="@color/colors_primary_60"
+                app:chipStrokeWidth="1dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvGenderSubtitle"
+        style="@style/Search_Text_Subtitles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/gender_subtitle_text"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutSearchLocalization" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNameSearchSubtitle"
+        style="@style/Search_Text_Subtitles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/search_for_name"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/scrollGender"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutListNameSearch"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        app:boxStrokeColor="@color/transparent"
+        app:boxStrokeWidth="0dp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameSearchSubtitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextNameSearch"
+            style="@style/SingUp_TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/input_sing_up_background"
+            android:drawableEnd="@drawable/ic_baseline_search_32"
+            android:hint="@string/search_name_hint"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:singleLine="true"
+            android:textColorHint="#757575" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/SearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/search_button"
+        android:backgroundTint="@color/colors_accent_pink_10"
+        android:drawableStart="@drawable/ic_baseline_person_search_24"
+        android:drawablePadding="8dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/search_string"
+        android:textAllCaps="false"
+        android:textColor="@color/colors_accent_pink_700"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutListNameSearch" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintGuide_begin="32dp"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="23dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="23dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

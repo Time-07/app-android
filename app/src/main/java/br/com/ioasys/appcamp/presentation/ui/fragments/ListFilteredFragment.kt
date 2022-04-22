@@ -5,30 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.appcamp.databinding.FragmentListFilteredBinding
-import br.com.ioasys.appcamp.domain.exception.EmptyProfessionalListException
-import br.com.ioasys.appcamp.domain.exception.UnknowException
-import br.com.ioasys.appcamp.domain.model.Professional
+import br.com.ioasys.appcamp.domain.model.Item
 import br.com.ioasys.appcamp.presentation.adapter.ProfessionalClickListener
 import br.com.ioasys.appcamp.presentation.adapter.ProfessionalListAdapter
-import br.com.ioasys.appcamp.presentation.viewmodel.ProfessionalsListViewModel
-import br.com.ioasys.appcamp.util.ViewState
-import org.koin.androidx.viewmodel.ext.android.getViewModel
-import org.koin.core.component.KoinComponent
-import org.koin.core.component.inject
-import org.koin.core.parameter.parametersOf
 
-class ListFilteredFragment : Fragment(), ProfessionalClickListener {
+class ListFilteredFragment : Fragment(), ProfessionalClickListener{
 
     private lateinit var professionalListAdapter: ProfessionalListAdapter
     private var _binding: FragmentListFilteredBinding? = null
     private val binding: FragmentListFilteredBinding get() = _binding!!
 
-    private val professionalsListViewModel: ProfessionalsListViewModel by lazy{
-        getViewModel()
-    }
+//    private val professionalsListViewModel: ProfessionalsListViewModel by lazy{
+//        getViewModel()
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,29 +35,35 @@ class ListFilteredFragment : Fragment(), ProfessionalClickListener {
         super.onViewCreated(view, savedInstanceState)
         setListeners()
         setItemsListData()
-        addObserver()
+//        addObserver()
     }
 
-    private fun addObserver(){
-        professionalsListViewModel.professionalListViewState.observe(viewLifecycleOwner){ state ->
-            when(state){
-                is ViewState.Success -> {
-                    professionalListAdapter.submitList(
-                        state.data
-                    )
-                }
-                is ViewState.Error -> {
-                    when(state.throwable){
-                        is EmptyProfessionalListException -> {
-                            professionalListAdapter.submitList(listOf())
-                        }
-                        else -> Unit
-                    }
-                }
-                else -> Unit
-            }
-        }
-    }
+//    private fun addObserver(){
+//        professionalsListViewModel.professionalListViewState.observe(viewLifecycleOwner){ state ->
+//            when(state){
+//                is ViewState.Success -> {
+//                    professionalListAdapter.submitList(state.data)
+//                    binding.apply {
+//                        recycleView.visibility = View.VISIBLE
+//                        setVisibility(false)
+//                    }
+//                }
+//                is ViewState.Error -> {
+//                    when(state.throwable){
+//                        is EmptyProfessionalListException -> {
+//                            professionalListAdapter.submitList(listOf())
+//                            binding.apply {
+//                                recycleView.visibility = View.GONE
+//                                setVisibility(true)
+//                            }
+//                        }
+//                        else -> Unit
+//                    }
+//                }
+//                else -> Unit
+//            }
+//        }
+//    }
 
     private fun setListeners() {
         binding.apply {
@@ -91,7 +88,20 @@ class ListFilteredFragment : Fragment(), ProfessionalClickListener {
     private fun setItemsListData(){
         professionalListAdapter = ProfessionalListAdapter(this)
         binding.recycleView.adapter = professionalListAdapter
-        professionalsListViewModel.putProfessionalListOnView()
+        professionalListAdapter.submitList(Item.getMockList())
+//        professionalsListViewModel.search()
+    }
+
+    private fun setVisibility(hasError: Boolean){
+        binding.apply {
+        val visibility = View.VISIBLE
+            if (hasError){
+                binding.imgPerson.visibility = visibility
+                responseEmptyText1.visibility = visibility
+                responseEmptyText2.visibility = visibility
+                responseEmptyText3.visibility = visibility
+            } else Unit
+        }
     }
 
     override fun onDestroy() {
@@ -99,8 +109,9 @@ class ListFilteredFragment : Fragment(), ProfessionalClickListener {
         _binding = null
     }
 
-    override fun onProfessionalClickListener(professional: Professional) {
-        //implementar os dados que forem passados no perfil aqui
+    override fun onProfessionalClickListener(item: Item) {
+        findNavController().navigate(
+            ListFilteredFragmentDirections.actionListFilteredFragmentToProfessionalProfileFragment(item)
+        )
     }
-
 }

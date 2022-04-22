@@ -4,6 +4,16 @@ import br.com.ioasys.appcamp.domain.model.Professional
 import kotlinx.coroutines.flow.Flow
 
 interface ProfessionalsRemoteDataSource {
+    //passar os parâmetros que necessários para a requisição
+    fun getProfessionalsListFiltered(
+        accessToken: String,
+        gender: String?,
+        specialty: String?,
+        city: String?,
+        name: String?
+    ) : Flow<List<Professional>>
 
-    fun getProfessionals(accessToken: String) : Flow<List<Professional>>
+    fun getAllProfessionalsList(
+        accessToken: String
+    ) : Flow<List<Professional>>
 }

@@ -10,29 +10,33 @@ import kotlinx.coroutines.flow.flow
 
 class ProfessionalsRepositoryImpl(
     private val professionalsRemoteDataSource: ProfessionalsRemoteDataSource,
-    private val professionalsLocalDataSource: ProfessionalsLocalDataSource
-): ProfessionalsRepository {
+    private val professionalsLocalDataSource: ProfessionalsLocalDataSource,
+) : ProfessionalsRepository {
+    override fun getAllProfessionals(accessToken: String): Flow<List<Professional>> = flow {
+        professionalsLocalDataSource.getAccessToken().collect { accessToken ->
+            professionalsRemoteDataSource.getAllProfessionalsList(accessToken = accessToken).collect {
+                emit(it)
+            }
+        }
+    }
 
-    override fun getProfessionals(): Flow<List<Professional>> = flow{
+    override fun getProfessionals(
+        gender: String,
+        name: String,
+        specialty: String,
+        city: String
+    ): Flow<List<Professional>> = flow {
         professionalsLocalDataSource.getAccessToken().collect { token ->
             if (token.isNotEmpty()) {
-                professionalsRemoteDataSource.getProfessionals(token).collect { professionalList ->
-                    emit(professionalList)
-                }
-            } else {
-                professionalsLocalDataSource.getProfessionals().collect { professionalList ->
-                    emit(professionalList)
+                professionalsRemoteDataSource.getProfessionalsListFiltered(gender, city, specialty, name, token).collect{
+                    emit(it)
                 }
             }
         }
-
     }
 
-    override fun saveProfessionals(professionalList: List<Professional>) = professionalsLocalDataSource.saveProfessionals(
-        professionalList = professionalList
-    )
-
-    override fun getSearchProfessionalsRepository(query: String): Flow<List<Professional>> {
-        TODO("Not yet implemented")
-    }
+    override fun saveProfessionals(professionalList: List<Professional>) =
+        professionalsLocalDataSource.saveProfessionals(
+            professionalList = professionalList
+        )
 }

@@ -29,7 +29,7 @@ class SingUpViewModel: ViewModel(), KoinComponent {
         email: String,
         password: String,
         confirmPassword: String,
-        genre: String,
+        gender: String,
         cpf: String
     ){
         _singUpViewState.postLoading()
@@ -39,7 +39,7 @@ class SingUpViewModel: ViewModel(), KoinComponent {
                 email = email,
                 password = password,
                 confirmPassword = confirmPassword,
-                gender = genre,
+                gender = gender,
                 cpf = cpf
             ),
             onSuccess = {

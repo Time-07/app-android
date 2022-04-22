@@ -7,6 +7,7 @@ import br.com.ioasys.appcamp.data.datasource.remote.SingUpRemoteDataSource
 import br.com.ioasys.appcamp.data_remote.datasource.ProfessionalsRemoteDataSourceImpl
 import br.com.ioasys.appcamp.data_remote.datasource.SingUpRemoteDataSourceImpl
 import br.com.ioasys.appcamp.data_remote.service.AuthService
+import br.com.ioasys.appcamp.data_remote.service.ProfessionalService
 import br.com.ioasys.appcamp.data_remote.service.SingUpService
 import br.com.ioasys.appcamp.data_remote.utils.ApiConstants
 import br.com.ioasys.appcamp.data_remote.utils.WebServiceFactory
@@ -28,6 +29,13 @@ val dataRemoteModule = module {
         )
     }
 
+    single<ProfessionalService>{
+        WebServiceFactory.createWebService(
+            okHttpClient = get(),
+            url = ApiConstants.BASE_URL
+        )
+    }
+
     single { WebServiceFactory.providerOkHttpClient() }
 
     single<LoginRemoteDataSource> {
@@ -39,7 +47,7 @@ val dataRemoteModule = module {
     }
 
     single<ProfessionalsRemoteDataSource> {
-        ProfessionalsRemoteDataSourceImpl()
+        ProfessionalsRemoteDataSourceImpl(get())
     }
 
 }

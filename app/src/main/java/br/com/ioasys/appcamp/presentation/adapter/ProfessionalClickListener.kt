@@ -1,8 +1,8 @@
 package br.com.ioasys.appcamp.presentation.adapter
 
-import br.com.ioasys.appcamp.domain.model.Professional
+import br.com.ioasys.appcamp.domain.model.Item
 
 interface ProfessionalClickListener {
 
-    fun onProfessionalClickListener(professional: Professional)
+   fun onProfessionalClickListener(item: Item)
 }

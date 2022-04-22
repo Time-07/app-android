@@ -119,19 +119,22 @@
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/guideline5"
         app:layout_constraintTop_toBottomOf="@id/listFilteredResultsLayout"
-        tools:text="3 resultados" />
+        android:text=""/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
         android:clipToPadding="true"
         android:orientation="vertical"
         android:paddingHorizontal="0dp"
         android:paddingVertical="24dp"
+        android:visibility="visible"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guideline6"
         app:layout_constraintStart_toStartOf="@id/guideline5"
         app:layout_constraintTop_toBottomOf="@id/listFilteredResultNumber"
@@ -142,7 +145,7 @@
         style="@style/TextResult_InterMediumStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="62dp"
         android:padding="16dp"
         android:text="@string/filter_string"
         android:textAllCaps="false"
@@ -154,6 +157,67 @@
         app:iconTint="@color/colors_neutral_20"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guideline6" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_person"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/pessoat1_1"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/listFilteredResultNumber"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/responseEmptyText1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/inter_regular"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/empty_list_response1_string"
+        android:textColor="@color/colors_neutral_700"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/img_person"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/responseEmptyText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter_regular"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/empty_list_response2_string"
+        android:textColor="@color/colors_neutral_700"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/responseEmptyText1"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/responseEmptyText3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter_regular"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/empty_list_response3_string"
+        android:textColor="@color/colors_neutral_700"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/responseEmptyText2"
+        tools:visibility="visible" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
