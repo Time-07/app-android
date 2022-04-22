@@ -103,4 +103,9 @@
     <string name="email_item_text">silvia@mail.com.br</string>
     <string name="linkedin_item_text">Linkedin</string>
     <string name="read_more">Leia mais</string>
+    <string name="about_title">Sobre</string>
+    <string name="about_subtitle">Fale conosco</string>
+    <string name="about_text"><span><b>DiverSaúde</b></span> é uma iniciativa criada para conectar pessoas trans aos profissionais da saúde interessados(as) em oferecer um tratamento digno, diminuindo a violência sofrida por essas pessoas.
+O aplicativo segue em desenvolvimento e contará com mais funcionalidades no futuro, pensando sempre em facilitar o acesso à saúde para a comunidade trans e não binária.</string>
+    <string name="fale_conosco_text">Tem alguma dúvida ou feedback?\n fale conosco pelo email\n <span><b>contato@diversaude.com.br</b></span></string>
 </resources>
