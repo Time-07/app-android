@@ -1,14 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.ui.fragments.TransHealthFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <include
+            layout="@layout/toolbar2"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/container"
+            app:layout_constraintStart_toEndOf="@id/container"
+            app:layout_constraintEnd_toStartOf="@id/container"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/staticTitle"
+            style="@style/StaticSectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/trans_health_title"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toEndOf="@id/startVertical"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/staticText"
+            style="@style/StaticSectionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/trans_health_introduction"
+            app:layout_constraintTop_toBottomOf="@id/staticTitle"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            app:dividerColor="@color/colors_primary_20"
+            app:layout_constraintTop_toBottomOf="@id/staticText"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/question1"
+            style="@style/TransHealthQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/trans_health_question_1"
+            app:layout_constraintTop_toBottomOf="@id/divider1"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            app:dividerColor="@color/colors_primary_20"
+            app:layout_constraintTop_toBottomOf="@id/question1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/question2"
+            style="@style/TransHealthQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/trans_health_question_2"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            app:dividerColor="@color/colors_primary_20"
+            app:layout_constraintTop_toBottomOf="@id/question2"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/question3"
+            style="@style/TransHealthQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/trans_health_question_3"
+            app:layout_constraintTop_toBottomOf="@id/divider3"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            app:dividerColor="@color/colors_primary_20"
+            app:layout_constraintTop_toBottomOf="@id/question3"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/question4"
+            style="@style/TransHealthQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/trans_health_question_4"
+            app:layout_constraintTop_toBottomOf="@id/divider4"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="32dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="32dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

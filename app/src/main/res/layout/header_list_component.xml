@@ -25,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="16sp"
         android:fontFamily="@font/inter_medium"
-        tools:text="Fernanda"
+        android:text="Fernanda"
         android:textColor="@color/colors_neutral_800"/>
 
     <androidx.appcompat.widget.AppCompatButton

@@ -99,7 +99,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="@id/guidelineBeginCardView"
             app:layout_constraintTop_toTopOf="parent"
-            tools:background="@drawable/profile_photo_background" />
+            tools:background="@drawable/professional_picture_drawable_" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/professionalName"

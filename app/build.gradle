@@ -91,6 +91,7 @@ dependencies {
     //ExpandableTextView
     implementation 'com.ms-square:expandableTextView:0.1.4'
 
+
     testImplementation "org.mockito.kotlin:mockito-kotlin:4.0.0"
 
     implementation 'de.hdodenhof:circleimageview:2.1.0'

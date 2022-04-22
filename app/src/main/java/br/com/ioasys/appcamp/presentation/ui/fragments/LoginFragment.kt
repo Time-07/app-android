@@ -82,7 +82,6 @@ class LoginFragment : Fragment() {
 
             when (state) {
                 is ViewState.Success -> {
-                    Toast.makeText(context, "DEU CERTOOO!", Toast.LENGTH_SHORT).show()
                     invalidPassword(false)
                     invalidEmail(false)
                     findNavController().navigate(
@@ -97,7 +96,6 @@ class LoginFragment : Fragment() {
                     }
                 }
                 is ViewState.Loading -> {
-                    Toast.makeText(context, "Aguarde", Toast.LENGTH_SHORT).show()
                 }
                 else -> Unit
             }

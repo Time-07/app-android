@@ -282,4 +282,37 @@
         <item name="android:textColor">@color/colors_neutral_800</item>
         <item name="android:lineHeight" tools:targetApi="p" tools:ignore="NewApi">24dp</item>
     </style>
+    <!-- Static pages -->
+
+    <style name="StaticSectionTitle">
+        <item name="fontFamily">@font/fredoka_regular</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/colors_primary_800</item>
+    </style>
+
+    <style name="StaticSectionText">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colors_neutral_700</item>
+        <item name="lineHeight">24dp</item>
+    </style>
+
+    <style name="StaticSectionSubtitle">
+        <item name="fontFamily">@font/fredoka_regular</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colors_primary_600</item>
+    </style>
+
+    <style name="TransHealthQuestion">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colors_primary_600</item>
+    </style>
+
+
+
+
+
+
+
 </resources>

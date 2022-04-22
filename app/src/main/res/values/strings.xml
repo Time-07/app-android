@@ -82,7 +82,7 @@
     <string name="treatment_pronoun">Drª.</string>
     <string name="specialty_title">Endocrinologista</string>
     <string name="crm_crp">CRM:09/222222</string>
-    <string name="attendance_title">Atendimento</string>
+    <string name="attendance_title">Contato</string>
     <string name="experience_title">Experiência com pacientes trans</string>
     <string name="formation_title">Currículo e formação</string>
     <string name="contact_title">Contato</string>
@@ -107,6 +107,18 @@
     <string name="email_item_text">silvia@mail.com.br</string>
     <string name="linkedin_item_text">Linkedin</string>
     <string name="read_more">Leia mais</string>
+    <string name="about_title">Sobre</string>
+    <string name="about_subtitle">Fale conosco</string>
+    <string name="about_text"><span><b>DiverSaúde</b></span> é uma iniciativa criada para conectar pessoas trans aos profissionais da saúde interessados(as) em oferecer um tratamento digno, diminuindo a violência sofrida por essas pessoas.
+O aplicativo segue em desenvolvimento e contará com mais funcionalidades no futuro, pensando sempre em facilitar o acesso à saúde para a comunidade trans e não binária.</string>
+    <string name="fale_conosco_text">Tem alguma dúvida ou feedback?\n fale conosco pelo email\n <span><b>contato@diversaude.com.br</b></span></string>
+    <string name="trans_health_title">Saúde Trans</string>
+    <string name="trans_health_introduction">Confira abaixo algumas respostas para perguntas frequentes sobre saúde.</string>
+    <string name="trans_health_question_1"><b>Estou passando por um momento de crise e falta de esperança, o que devo fazer?</b> </string>
+    <string name="trans_health_question_2"><b>O que fazer em caso de preconceito e discriminação em um atendimento médico ou psicológico?</b></string>
+    <string name="trans_health_question_3"><b>Qual é o papel de cada profissional da saúde e como eles(as) podem ajudar?</b> </string>
+    <string name="trans_health_question_4"><b>Quais são os riscos do uso de hormônios sem supervisão médica?
+Ler mais</b></string>
     <string name="do_login_string">Faça login</string>
     <string name="yes_string">Sim</string>
     <string name="no_string">Não</string>

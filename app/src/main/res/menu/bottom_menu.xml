@@ -10,7 +10,7 @@
         android:icon="@drawable/health_icon"
         android:title="Saúde" />
     <item
-        android:id="@+id/doubtFragment"
+        android:id="@+id/aboutFragment"
         android:icon="@drawable/doubt_icon"
         android:title="Sobre" />
 </menu>
