@@ -41,6 +41,83 @@
             app:layout_constraintStart_toEndOf="@id/startVertical"
             app:layout_constraintEnd_toStartOf="@id/endVertical"/>
 
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            app:dividerColor="@color/colors_primary_20"
+            app:layout_constraintTop_toBottomOf="@id/staticText"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/question1"
+            style="@style/TransHealthQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/trans_health_question_1"
+            app:layout_constraintTop_toBottomOf="@id/divider1"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            app:dividerColor="@color/colors_primary_20"
+            app:layout_constraintTop_toBottomOf="@id/question1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/question2"
+            style="@style/TransHealthQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/trans_health_question_2"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            app:dividerColor="@color/colors_primary_20"
+            app:layout_constraintTop_toBottomOf="@id/question2"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/question3"
+            style="@style/TransHealthQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/trans_health_question_3"
+            app:layout_constraintTop_toBottomOf="@id/divider3"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            app:dividerColor="@color/colors_primary_20"
+            app:layout_constraintTop_toBottomOf="@id/question3"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/question4"
+            style="@style/TransHealthQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/trans_health_question_4"
+            app:layout_constraintTop_toBottomOf="@id/divider4"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+
+
 
 
         <androidx.constraintlayout.widget.Guideline

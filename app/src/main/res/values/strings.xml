@@ -110,4 +110,9 @@ O aplicativo segue em desenvolvimento e contará com mais funcionalidades no fut
     <string name="fale_conosco_text">Tem alguma dúvida ou feedback?\n fale conosco pelo email\n <span><b>contato@diversaude.com.br</b></span></string>
     <string name="trans_health_title">Saúde Trans</string>
     <string name="trans_health_introduction">Confira abaixo algumas respostas para perguntas frequentes sobre saúde.</string>
+    <string name="trans_health_question_1"><b>Estou passando por um momento de crise e falta de esperança, o que devo fazer?</b> </string>
+    <string name="trans_health_question_2"><b>O que fazer em caso de preconceito e discriminação em um atendimento médico ou psicológico?</b></string>
+    <string name="trans_health_question_3"><b>Qual é o papel de cada profissional da saúde e como eles(as) podem ajudar?</b> </string>
+    <string name="trans_health_question_4"><b>Quais são os riscos do uso de hormônios sem supervisão médica?
+Ler mais</b></string>
 </resources>
