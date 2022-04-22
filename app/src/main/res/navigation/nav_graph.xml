@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/listFragment">
+    app:startDestination="@id/onBoardingFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -103,5 +103,38 @@
         android:name="br.com.ioasys.appcamp.presentation.ui.fragments.TransHealthFragment"
         android:label="fragment_trans_health"
         tools:layout="@layout/fragment_trans_health" />
+
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="br.com.ioasys.appcamp.presentation.ui.fragments.OnboardingFragment"
+        android:label="onboarding_fragment"
+        tools:layout="@layout/fragment_onboarding"
+        >
+        <action
+            android:id="@+id/action_Onboarding_to_Login"
+            app:destination="@id/loginFragment"/>
+
+        <action
+            android:id="@+id/action_Onboarding_toOnboarding2"
+            app:destination="@id/onBoardingFragment2"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/onBoardingFragment2"
+        android:name="br.com.ioasys.appcamp.presentation.ui.fragments.OnboardingFragment2"
+        android:label="onboarding_fragment"
+        tools:layout="@layout/fragment_onboarding2"
+        >
+
+        <action android:id="@+id/action_Onboarding2_to_SignUp"
+            app:destination="@id/SignUpFragment"/>
+
+        <action
+            android:id="@+id/action_Onboarding2_to_Login"
+            app:destination="@id/loginFragment"/>
+    </fragment>
+
+
 
 </navigation>

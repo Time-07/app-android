@@ -128,7 +128,7 @@
         app:layout_constraintTop_toBottomOf="@id/btnLogin" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSignupLink"
+        android:id="@+id/btn_login_link"
         style="@style/Signup_Link"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

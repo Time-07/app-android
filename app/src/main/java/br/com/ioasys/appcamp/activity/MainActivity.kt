@@ -39,6 +39,9 @@ class MainActivity : AppCompatActivity() {
             bottomNavigationView.visibility = when(destination.id){
                 R.id.SignUpFragment -> View.GONE
                 R.id.loginFragment -> View.GONE
+                R.id.onBoardingFragment -> View.GONE
+                R.id.onBoardingFragment2 -> View.GONE
+
                 else -> View.VISIBLE
             }
         }

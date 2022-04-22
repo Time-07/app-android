@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@color/colors_primary_30">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/onboardcontainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/onboarding_bg"
+        app:layout_constraintEnd_toStartOf="@id/endVertical"
+        app:layout_constraintStart_toEndOf="@id/startVertical"
+        app:layout_constraintTop_toTopOf="@+id/startHorizontal"
+        app:layout_constraintBottom_toTopOf="@id/endHorizontal">
+
+
+        <ImageButton
+            android:id="@+id/outBtn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="24dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_baseline_close"
+            app:layout_constraintEnd_toEndOf="@id/onboardcontainer"
+            app:layout_constraintTop_toTopOf="@id/onboardcontainer" />
+
+        <TextView
+            android:id="@+id/onboardTitle"
+            style="@style/OnboardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:minLines="2"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:singleLine="false"
+            android:text="@string/onboard_title1"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/onboardcontainer"
+            app:layout_constraintStart_toStartOf="@id/onboardcontainer"
+            app:layout_constraintTop_toBottomOf="@id/outBtn" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/onboardImage"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="68dp"
+            android:src="@drawable/pessoatrans5_1"
+            app:layout_constraintEnd_toEndOf="@id/onboardcontainer"
+            app:layout_constraintStart_toStartOf="@id/onboardcontainer"
+            app:layout_constraintTop_toBottomOf="@id/onboardTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/onboardText"
+            style="@style/OnboardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:minLines="4"
+            android:paddingStart="40dp"
+            android:visibility="visible"
+            android:paddingEnd="40dp"
+            android:text="@string/onboard_text1"
+            app:layout_constraintEnd_toEndOf="@id/onboardcontainer"
+            app:layout_constraintStart_toStartOf="@id/onboardcontainer"
+            app:layout_constraintTop_toBottomOf="@id/onboardImage" />
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="24dp"
+            android:background="@color/transparent"
+            android:src="@drawable/arrow_rigth_vector"
+            app:layout_constraintBottom_toBottomOf="@id/onboardcontainer"
+            app:layout_constraintEnd_toEndOf="@id/onboardcontainer" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/questionLogin"
+        style="@style/OnboardText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/question_login"
+        app:layout_constraintEnd_toStartOf="@+id/endVertical"
+        app:layout_constraintStart_toEndOf="@+id/startVertical"
+        app:layout_constraintTop_toBottomOf="@+id/onboardcontainer" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login_link"
+        style="@style/Signup_Link"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:background="@color/transparent"
+        android:textColor="@color/colors_primary_300"
+        app:layout_constraintTop_toBottomOf="@id/questionLogin"
+        app:layout_constraintStart_toStartOf="@id/startVertical"
+        app:layout_constraintEnd_toEndOf="@id/endVertical"
+        android:text="@string/login_link_text" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="124dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

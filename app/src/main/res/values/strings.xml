@@ -113,4 +113,13 @@
 
     <string name="title_dialog_string">Sair do app</string>
     <string name="subtitle_dialog_string">Gostaria de encerrar sua sessão?\nSelecionando “Sim” você retornará à\ntela de login.</string>
+
+    <!-- Onboard -->
+    <string name="onboard_title1">Oi! Que bom te ver aqui! 😉</string>
+    <string name="onboard_title2">Já conhece nossa missão?</string>
+    <string name="onboard_title3">Então vamos começar!</string>
+    <string name="onboard_text1">Estamos reunindo no DiverSaúde profissionais de saúde que respeitam a comunidade trans e as suas diversas identidades. </string>
+    <string name="question_login_text">Já tem uma conta?</string>
+    <string name="login_link_text">Faça login</string>
+    <string name="question_login">Já tem uma conta?</string>
 </resources>

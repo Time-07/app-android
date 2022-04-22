@@ -57,7 +57,7 @@ class LoginFragment : Fragment() {
                     txtLoginError.visibility = View.GONE
                 }
             }
-            btnSignupLink.setOnClickListener {
+            btnLoginLink.setOnClickListener {
                 findNavController().navigate(
                     LoginFragmentDirections.actionLoginFragmentToSingUpFragment()
                 )
@@ -73,7 +73,7 @@ class LoginFragment : Fragment() {
             }
         }
 
-
+        editEnableButton()
     }
 
 
