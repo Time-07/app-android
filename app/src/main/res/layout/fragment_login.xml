@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/logo_login_screen" />
+        android:src="@drawable/logo_media_img" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvLoginLabel"
