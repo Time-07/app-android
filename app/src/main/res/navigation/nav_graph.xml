@@ -15,11 +15,11 @@
             app:destination="@id/listFragment" />
         <action
             android:id="@+id/action_loginFragment_to_SingUpFragment"
-            app:destination="@id/SingUpFragment" />
+            app:destination="@id/SignUpFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/SingUpFragment"
+        android:id="@+id/SignUpFragment"
         android:name="br.com.ioasys.appcamp.presentation.ui.fragments.SignUpFragment"
         android:label="fragment_book_list"
         tools:layout="@layout/fragment_sing_up" >

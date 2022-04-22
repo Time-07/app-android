@@ -2,13 +2,13 @@ package br.com.ioasys.appcamp.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
+import android.provider.Telephony
+import android.view.View
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import br.com.ioasys.appcamp.R
 import br.com.ioasys.appcamp.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import okhttp3.internal.wait
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +18,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        Thread.sleep(1000)
+
+        setTheme(R.style.Theme_AppCamp)
+
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setBottomNavigation()
@@ -29,6 +34,14 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView = binding.bottomNavigationView
         binding.fragmentContainerView
         bottomNavigationView.setupWithNavController(navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            bottomNavigationView.visibility = when(destination.id){
+                R.id.SignUpFragment -> View.GONE
+                R.id.loginFragment -> View.GONE
+                else -> View.VISIBLE
+            }
+        }
 
         bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId) {

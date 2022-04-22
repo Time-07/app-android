@@ -18,7 +18,7 @@
     <string name="third_option_sing_up_string">Pessoa Trans Não Binária</string>
     <string name="fourth_option_sing_up_string">Outra Identidade</string>
     <string name="user_messenger_string">Nome pelo qual você se identifica*</string>
-    <string name="sing_up_button_string">Cadastro</string>
+    <string name="sing_up_button_string">Cadastrar</string>
     <string name="others_option_sing_up_string">Qual é a sua identidade de gênero</string>
     <string name="error_email_sing_up_string">Formato de email inválido</string>
     <string name="error_password_string">As senhas precisam ser iguais</string>
@@ -107,4 +107,9 @@
     <string name="email_item_text">silvia@mail.com.br</string>
     <string name="linkedin_item_text">Linkedin</string>
     <string name="do_login_string">Faça login</string>
+    <string name="yes_string">Sim</string>
+    <string name="no_string">Não</string>
+
+    <string name="title_dialog_string">Sair do app</string>
+    <string name="subtitle_dialog_string">Gostaria de encerrar sua sessão?\nSelecionando “Sim” você retornará à\ntela de login.</string>
 </resources>

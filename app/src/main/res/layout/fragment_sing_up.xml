@@ -11,16 +11,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/logoSignUp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo_media_img"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/singUpText"
             style="@style/SingUp_Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="237dp"
+            android:layout_marginTop="16dp"
             android:text="@string/singUp"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
             app:layout_constraintStart_toStartOf="@id/guideline1"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/logoSignUp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/userTextLayoutInput"
@@ -233,13 +243,15 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/singUpButton"
             style="@style/SingUp_TextButtonDisable_Style"
-            android:layout_width="256dp"
+            android:layout_width="0dp"
             android:layout_height="64dp"
             android:layout_marginTop="88dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/button_state_color_background"
             android:enabled="false"
+            android:textAllCaps="false"
             android:text="@string/sing_up_button_string"
+            android:textColor="@color/colors_neutral_700"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
             app:layout_constraintStart_toStartOf="@id/guideline1"
             app:layout_constraintTop_toBottomOf="@id/otherOptionTextInputLayout" />
@@ -271,6 +283,7 @@
             android:textAllCaps="false"
             android:textColor="@color/colors_primary_300"
             android:text="@string/do_login_string" />
+
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/errorEmailSingUp"

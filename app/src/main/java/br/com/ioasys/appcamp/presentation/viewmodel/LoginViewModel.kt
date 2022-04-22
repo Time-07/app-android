@@ -19,9 +19,7 @@ class LoginViewModel
     private val _loggedUserViewState = MutableLiveData<ViewState<String>>()
     val loggedUserViewState = _loggedUserViewState as LiveData<ViewState<String>>
 
-    private val loginUseCase: LoginUseCase by inject {
-        parametersOf(viewModelScope)
-    }
+    private val loginUseCase: LoginUseCase by inject { parametersOf(viewModelScope) }
 
     fun login(email: String, password: String) {
         loginUseCase(
