@@ -13,8 +13,8 @@ class ProfessionalProfileFragment : Fragment() {
 
     private var _binding: FragmentProfessionalProfileBinding? = null
     private val binding: FragmentProfessionalProfileBinding get() = _binding!!
-    
-    private val args: ProfessionalProfileFragmentArgs by navArgs()    
+
+    private val args: ProfessionalProfileFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,8 +37,11 @@ class ProfessionalProfileFragment : Fragment() {
         binding.professionalLastName.text = getLastName("Silvia Maranhão")
         binding.contactButton.setOnClickListener {
             binding.run {
-                contactButton.viewTreeObserver.addOnScrollChangedListener {
-                    TODO("Not implemented")
+                binding.contactScrollView.scrollView.isSmoothScrollingEnabled
+                when {
+                    (binding.contactScrollView.scrollView.getChildAt(0).bottom) <=
+                            (binding.contactScrollView.scrollView.height) + (binding.contactScrollView.scrollView.scrollY) -> binding.contactScrollView.scrollView.visibility = View.VISIBLE
+                    else -> binding.contactScrollView.scrollView.visibility = GONE
                 }
             }
         }
@@ -62,21 +65,19 @@ class ProfessionalProfileFragment : Fragment() {
 
     private fun onScrollChanged() {
         TODO("Not implemented")
+    private fun expandableExperienceTextView(){
+        val expTVexperience = binding.expTvExperience.expandExperienceTextView
+        expTVexperience.setText("Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas, passando por todo o início da terapia hormonal até.\n" +
+                "\n" +
+                "Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas, passando por todo o início da terapia hormonal até.")
     }
 
-    /*
-
-    if (scrollView.getChildAt(0).getBottom()
-                 <= (scrollView.getHeight() + scrollView.getScrollY())) {
-                //scroll view is at bottom
-        //set the button visibility to visible here
-            } else {
-                //scroll view is not at bottom
-        //set the button visibility to gone here
-            }
-        }
-
-        */
+    private fun expandableFormationTextView(){
+        val expTVformation = binding.expTvFormation.expandFormationTextView
+        expTVformation.setText("Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas, passando por todo o início da terapia hormonal até.\n" +
+                "\n" +
+                "Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas, passando por todo o início da terapia hormonal até.")
+    }
 
 
     private fun getFirstName(fullName: String?): String? {
