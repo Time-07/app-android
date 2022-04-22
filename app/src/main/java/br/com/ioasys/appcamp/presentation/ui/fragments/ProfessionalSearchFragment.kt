@@ -68,6 +68,11 @@ class ProfessionalSearchFragment : Fragment() {
                     ProfessionalSearchFragmentDirections.actionSearchFragmentToListFilteredFragment()
                 )
             }
+            listSearchCloseButton.setOnClickListener {
+                findNavController().navigate(
+                    ProfessionalSearchFragmentDirections.actionSearchFragmentToListFiltFragment()
+                )
+            }
         }
         setChipText()
         setSpecialty()

@@ -7,6 +7,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
 import br.com.ioasys.appcamp.R
 import br.com.ioasys.appcamp.presentation.ui.fragments.ListFragmentDirections
+import br.com.ioasys.appcamp.presentation.ui.fragments.ProfessionalProfileFragmentDirections
 
 class CustomDialogFragment: DialogFragment() {
 
@@ -31,7 +32,7 @@ class CustomDialogFragment: DialogFragment() {
 
         view.findViewById<Button>(R.id.confirmDialogButton).setOnClickListener {
             findNavController().navigate(
-                ListFragmentDirections.actionListFragmentToLoginFragment()
+                ListFragmentDirections.actionListFragmentToLoginFragment(),
             )
             dismiss()
         }

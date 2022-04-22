@@ -33,6 +33,10 @@
         android:name="br.com.ioasys.appcamp.presentation.ui.fragments.ProfessionalSearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_professional_search">
+
+        <action
+            android:id="@+id/action_SearchFragment_toListFiltFragment"
+            app:destination="@id/listFragment"/>
      <action
          android:id="@+id/action_SearchFragment_toListFilteredFragment"
             app:destination="@id/listFilteredFragment"/>
@@ -81,6 +85,9 @@
         <action
             android:id="@+id/action_professionalProfileFragment_to_listFilteredFragment"
             app:destination="@id/listFilteredFragment" />
+        <action
+            android:id="@+id/action_professionalProfileFragment_to_login"
+            app:destination="@id/loginFragment"/>
         <argument
             android:name="itemArgs"
             app:argType="br.com.ioasys.appcamp.domain.model.Item" />

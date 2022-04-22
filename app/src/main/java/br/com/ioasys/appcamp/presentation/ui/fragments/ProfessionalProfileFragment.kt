@@ -6,6 +6,7 @@ import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import br.com.ioasys.appcamp.databinding.FragmentProfessionalProfileBinding
 import br.com.ioasys.appcamp.domain.model.Item
@@ -39,6 +40,11 @@ class ProfessionalProfileFragment : Fragment() {
     }
 
     private fun setListeners() {
+        binding.appBar.backIcon.setOnClickListener {
+            findNavController().navigate(
+                ProfessionalProfileFragmentDirections.actionProfessionalProfileFragmentToListFilteredFragment()
+            )
+        }
         binding.contactButton.setOnClickListener {
             binding.run {
                 binding.contactScrollView.scrollView.isSmoothScrollingEnabled
