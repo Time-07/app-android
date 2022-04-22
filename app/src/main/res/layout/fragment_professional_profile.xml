@@ -265,23 +265,35 @@
 
         <include
             android:id="@+id/textsContainers"
-            layout="@layout/profile_texts"
+            layout="@layout/expandable_experience_text_view"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toStartOf="@id/endVertical"
             app:layout_constraintStart_toEndOf="@id/startVertical"
             app:layout_constraintTop_toBottomOf="@id/divider5" />
+
+        <include
+            android:id="@+id/textsContainers2"
+            layout="@layout/expandable_formation_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/textsContainers"/>
+
 
         <include
             android:id="@+id/contactScrollView"
             layout="@layout/scroll_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
             android:layout_marginTop="24dp"
             android:background="@color/colors_primary_20"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="parent"
             app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textsContainers" />
+            app:layout_constraintTop_toBottomOf="@id/textsContainers2" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/startVertical"

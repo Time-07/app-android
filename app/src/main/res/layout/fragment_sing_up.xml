@@ -85,6 +85,7 @@
                 style="@style/SingUp_TextInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:inputType="number"
                 android:background="@drawable/input_sing_up_background"
                 android:hint="@string/cpf_string"
                 android:singleLine="true" />

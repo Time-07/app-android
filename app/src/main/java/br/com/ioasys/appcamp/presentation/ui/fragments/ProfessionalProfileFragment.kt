@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import br.com.ioasys.appcamp.databinding.FragmentProfessionalProfileBinding
 import br.com.ioasys.appcamp.domain.model.Item
+import br.com.ioasys.appcamp.presentation.ui.CustomDialogFragment
 
 class ProfessionalProfileFragment : Fragment() {
 
@@ -31,6 +32,10 @@ class ProfessionalProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setListeners()
         setUpView()
+        binding.appBar.logoutBtn.setOnClickListener{
+            val dialog = CustomDialogFragment()
+            dialog.show(parentFragmentManager,  dialog.tag)
+        }
     }
 
     private fun setListeners() {
@@ -59,6 +64,9 @@ class ProfessionalProfileFragment : Fragment() {
             treatmentPronoun.text = args.itemArgs.treatmentPronoun
             professionalFirstName.text = args.itemArgs.professionalFirstName
             professionalLastName.text = args.itemArgs.professionalLastName
+            textsContainers.expandableText.text = args.itemArgs.experience
+            textsContainers2.expandableText.text = args.itemArgs.curriculum
+
         }
     }
     override fun onDestroyView() {

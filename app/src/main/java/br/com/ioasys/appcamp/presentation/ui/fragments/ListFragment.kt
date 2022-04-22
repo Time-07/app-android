@@ -43,8 +43,6 @@ class ListFragment : Fragment() {
         binding.headerTitle.textButton.setOnClickListener {
             val dialog = CustomDialogFragment()
             dialog.show(parentFragmentManager,  dialog.tag)
-
-
         }
     }
 
