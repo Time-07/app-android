@@ -10,7 +10,7 @@
         android:id="@+id/logoList"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:background="@drawable/logo_login_screen"
+        android:background="@drawable/logo_media_img"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@id/guidelineHeaderBegin"
         app:layout_constraintEnd_toEndOf="@id/guidelineHeaderEnd"
@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="@id/guidelineHeaderEnd"
         android:text="@string/disconnect_string"
         android:textSize="14sp"
-        android:textColor="@color/colors_neutral_800"
+        android:textColor="@color/colors_neutral_100"
         android:background="@color/transparent"
         app:textAllCaps="false"
         />

@@ -11,10 +11,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCamp">
-        <activity
-            android:name=".testActivity"
-            android:exported="false" />
+        android:theme="@style/Theme.Splash">
         <activity
             android:name=".activity.MainActivity"
             android:exported="true">

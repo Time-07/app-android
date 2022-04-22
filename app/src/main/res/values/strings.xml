@@ -18,7 +18,7 @@
     <string name="third_option_sing_up_string">Pessoa Trans Não Binária</string>
     <string name="fourth_option_sing_up_string">Outra Identidade</string>
     <string name="user_messenger_string">Nome pelo qual você se identifica*</string>
-    <string name="sing_up_button_string">Cadastro</string>
+    <string name="sing_up_button_string">Cadastrar</string>
     <string name="others_option_sing_up_string">Qual é a sua identidade de gênero</string>
     <string name="error_email_sing_up_string">Formato de email inválido</string>
     <string name="error_password_string">As senhas precisam ser iguais</string>
@@ -48,12 +48,12 @@
     <!-- List Fragment Strings-->
     <string name="disconnect_string">Sair</string>
     <string name="list_title_string">Profissionais de saúde</string>
-    <string name="text_filter_1">Todas</string>
-    <string name="text_filter_2">Psiquiatria</string>
-    <string name="text_filter_3">Ginecologia</string>
-    <string name="text_filter_4">Urologia</string>
-    <string name="text_filter_5">Endocrinologia</string>
-    <string name="text_filter_6">Psicologia</string>
+    <string name="all_options_string">Todas</string>
+    <string name="psychiatrist_string">Psiquiatria</string>
+    <string name="gynecologist_string">Ginecologia</string>
+    <string name="urologist_string">Urologia</string>
+    <string name="endocrinology_string">Endocrinologia</string>
+    <string name="psychology_string">Psicologia</string>
     <string name="explain_search_string">Use o botão Pesquisar para encontrar profissionais que se cadastraram com o compromisso de tratar (bem) pacientes trans.</string>
     <string name="search_string">Pesquisar</string>
     <string name="contact_string">Contato</string>
@@ -64,15 +64,19 @@
     <string name="search_text_btn">Pesquisar</string>
     <string name="see_profile_string">Ver Perfil</string>
     <string name="results">Resultados</string>
-    <string name="user_name">Meu Nome</string>
+    <string name="user_name">Bruna</string>
     <string name="logoutBtn_text">Sair</string>
     <string name="search_for_name">Busca por nome</string>
-    <string name="gender_filter_1">Mulher Cis</string>
-    <string name="gender_filter_2">Mulher Trans</string>
-    <string name="gender_filter_3">Homem Cis</string>
-    <string name="gender_filter_4">Homem Trans</string>
-    <string name="gender_filter_5">Gênero Não Binário</string>
+    <string name="cisgender_women_string">Mulher Cis</string>
+    <string name="trans_women_string">Mulher Trans</string>
+    <string name="cisgender_men_string">Homem Cis</string>
+    <string name="trans_men_string">Homem Trans</string>
+    <string name="non_binary_person_string">Gênero Não Binário</string>
     <string name="filter_string">Filtrar</string>
+    <string name="empty_list_response1_string">Infelizmente ainda não temos resultados para esses critérios ou localização.</string>
+    <string name="empty_list_response2_string">Estamos trabalhando para que cada vez mais profissionais estejam disponíveis na plataforma.</string>
+    <string name="empty_list_response3_string">Enquanto isso, que tal tentar uma nova pesquisa? Obrigado pela paciência!</string>
+
     <string name="professional_first_name">Silvia</string>
     <string name="professional_last_name">Maranhão</string>
     <string name="treatment_pronoun">Drª.</string>
@@ -115,4 +119,19 @@ O aplicativo segue em desenvolvimento e contará com mais funcionalidades no fut
     <string name="trans_health_question_3"><b>Qual é o papel de cada profissional da saúde e como eles(as) podem ajudar?</b> </string>
     <string name="trans_health_question_4"><b>Quais são os riscos do uso de hormônios sem supervisão médica?
 Ler mais</b></string>
+    <string name="do_login_string">Faça login</string>
+    <string name="yes_string">Sim</string>
+    <string name="no_string">Não</string>
+
+    <string name="title_dialog_string">Sair do app</string>
+    <string name="subtitle_dialog_string">Gostaria de encerrar sua sessão?\nSelecionando “Sim” você retornará à\ntela de login.</string>
+
+    <!-- Onboard -->
+    <string name="onboard_title1">Oi! Que bom te ver aqui! 😉</string>
+    <string name="onboard_title2">Já conhece nossa missão?</string>
+    <string name="onboard_title3">Então vamos começar!</string>
+    <string name="onboard_text1">Estamos reunindo no DiverSaúde profissionais de saúde que respeitam a comunidade trans e as suas diversas identidades. </string>
+    <string name="question_login_text">Já tem uma conta?</string>
+    <string name="login_link_text">Faça login</string>
+    <string name="question_login">Já tem uma conta?</string>
 </resources>

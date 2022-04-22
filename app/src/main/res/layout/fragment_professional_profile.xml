@@ -1,38 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true"
     android:fitsSystemWindows="true"
     tools:context=".presentation.ui.fragments.ProfessionalProfileFragment">
 
 
-      <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/profileProfessionalContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-          <include
-              layout="@layout/toolbar"
-              android:id="@+id/appBar"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              app:layout_constraintStart_toStartOf="@id/startVertical"
-              app:layout_constraintEnd_toEndOf="@id/endVertical" />
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/endVertical"
+            app:layout_constraintStart_toStartOf="@id/startVertical" />
 
 
-          <androidx.appcompat.widget.AppCompatImageView
-              android:id="@+id/profilePicture"
-              android:layout_width="120dp"
-              android:layout_height="120dp"
-              android:layout_marginTop="24dp"
-              app:layout_constraintTop_toBottomOf="@id/appBar"
-              app:layout_constraintStart_toEndOf="@id/startVertical"
-              app:layout_constraintEnd_toStartOf="@id/endVertical"
-              android:src="@drawable/professional_picture_drawable_" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/professional_picture_drawable_"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/appBar" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/genderSymbol"
@@ -43,287 +42,282 @@
             app:layout_constraintEnd_toStartOf="@+id/endVertical"
             app:layout_constraintStart_toEndOf="@+id/profilePicture" />
 
-          <androidx.appcompat.widget.LinearLayoutCompat
-              android:id="@+id/wrapProfessionalName"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="24dp"
-              android:layout_marginLeft="11dp"
-              android:layout_marginRight="11dp"
-              app:layout_constraintTop_toBottomOf="@id/profilePicture"
-              app:layout_constraintStart_toStartOf="@id/startVertical"
-              app:layout_constraintEnd_toEndOf="@id/endVertical">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/wrapProfessionalName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="11dp"
+            app:layout_constraintEnd_toEndOf="@id/endVertical"
+            app:layout_constraintStart_toStartOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/profilePicture">
 
-              <androidx.appcompat.widget.AppCompatTextView
-                  android:id="@+id/treatmentPronoun"
-                  style="@style/ProfessionalName"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_marginEnd="6dp"
-                  android:text="@string/treatment_pronoun"
-                  android:singleLine="true"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/treatmentPronoun"
+                style="@style/ProfessionalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:singleLine="true"
+                android:text="@string/treatment_pronoun" />
 
-              <androidx.appcompat.widget.AppCompatTextView
-                  android:id="@+id/professionalFirstName"
-                  style="@style/ProfessionalName"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:singleLine="true"
-                  android:text="@string/professional_first_name" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/professionalFirstName"
+                style="@style/ProfessionalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/professional_first_name" />
 
-          </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-          <androidx.appcompat.widget.AppCompatTextView
-              android:id="@+id/professionalLastName"
-              style="@style/ProfessionalName"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:singleLine="true"
-              android:text="@string/professional_last_name"
-              app:layout_constraintEnd_toEndOf="@+id/wrapProfessionalName"
-              app:layout_constraintStart_toStartOf="@+id/wrapProfessionalName"
-              app:layout_constraintTop_toBottomOf="@id/wrapProfessionalName" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/professionalLastName"
+            style="@style/ProfessionalName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/professional_last_name"
+            app:layout_constraintEnd_toEndOf="@+id/wrapProfessionalName"
+            app:layout_constraintStart_toStartOf="@+id/wrapProfessionalName"
+            app:layout_constraintTop_toBottomOf="@id/wrapProfessionalName" />
 
-          <androidx.appcompat.widget.LinearLayoutCompat
-              android:id="@+id/wrapSpecialty"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="16dp"
-              app:layout_constraintTop_toBottomOf="@id/professionalLastName"
-              app:layout_constraintStart_toEndOf="@id/startVertical"
-              app:layout_constraintEnd_toStartOf="@id/endVertical">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/wrapSpecialty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/professionalLastName">
 
-              <com.google.android.material.chip.Chip
-                  android:id="@+id/specialtyChip"
-                  style="@style/TextResult_InterMedium_ChipStyle"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:textColor="@color/colors_primary_800"
-                  app:chipBackgroundColor="@color/colors_accent_blue_10"
-                  tools:text="@string/specialty_title"
-                  android:visibility="visible"
-                  tools:visibility="visible"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/specialtyChip"
+                style="@style/TextResult_InterMedium_ChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colors_primary_800"
+                android:visibility="visible"
+                app:chipBackgroundColor="@color/colors_accent_blue_10"
+                tools:text="@string/specialty_title"
+                tools:visibility="visible" />
 
-              <androidx.appcompat.widget.AppCompatTextView
-                  android:id="@+id/crmCrp"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_marginStart="8dp"
-                  android:text="@string/crm_crp"
-                  android:textColor="@color/colors_primary_800" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/crmCrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/crm_crp"
+                android:textColor="@color/colors_primary_800" />
 
-          </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-          <com.google.android.material.divider.MaterialDivider
-              android:id="@+id/divider1"
-              android:layout_width="match_parent"
-              android:layout_height="2dp"
-              android:layout_marginTop="10dp"
-              app:dividerColor="@color/colors_primary_20"
-              app:layout_constraintTop_toBottomOf="@id/wrapSpecialty"
-              app:layout_constraintStart_toEndOf="@id/startVertical"
-              app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            app:dividerColor="@color/colors_primary_20"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/wrapSpecialty" />
 
-          <androidx.appcompat.widget.AppCompatTextView
-              android:id="@+id/attendanceTitle"
-              style="@style/SectionTitle"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="10dp"
-              android:text="@string/attendance_title"
-              app:layout_constraintTop_toBottomOf="@id/divider1"
-              app:layout_constraintStart_toEndOf="@id/startVertical"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/attendanceTitle"
+            style="@style/SectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/attendance_title"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
 
-          <androidx.appcompat.widget.AppCompatTextView
-              style="@style/AttendanceSection"
-              android:id="@+id/meetTypeSection"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="8dp"
-              android:drawableStart="@drawable/ic_meet_type"
-              android:drawablePadding="8dp"
-              android:text="@string/meetTypeText"
-              app:layout_constraintTop_toBottomOf="@id/attendanceTitle"
-              app:layout_constraintStart_toEndOf="@id/startVertical" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/meetTypeSection"
+            style="@style/AttendanceSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_meet_type"
+            android:drawablePadding="8dp"
+            android:text="@string/meetTypeText"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/attendanceTitle" />
 
-          <com.google.android.material.divider.MaterialDivider
-              android:id="@+id/divider2"
-              android:layout_width="0dp"
-              android:layout_height="1dp"
-              android:layout_marginTop="5dp"
-              app:dividerColor="@color/colors_primary_20"
-              app:layout_constraintTop_toBottomOf="@id/meetTypeSection"
-              app:layout_constraintStart_toEndOf="@id/startVertical"
-              app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            app:dividerColor="@color/colors_primary_20"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/meetTypeSection" />
 
-          <androidx.appcompat.widget.AppCompatTextView
-              style="@style/AttendanceSection"
-              android:id="@+id/priceSection"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="8dp"
-              android:drawableStart="@drawable/ic_money"
-              android:drawablePadding="8dp"
-              android:text="@string/priceText"
-              app:layout_constraintTop_toBottomOf="@id/divider2"
-              app:layout_constraintStart_toEndOf="@id/startVertical" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/priceSection"
+            style="@style/AttendanceSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_money"
+            android:drawablePadding="8dp"
+            android:text="@string/priceText"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
 
-          <com.google.android.material.divider.MaterialDivider
-              android:id="@+id/divider3"
-              android:layout_width="0dp"
-              android:layout_height="1dp"
-              android:layout_marginTop="5dp"
-              app:dividerColor="@color/colors_primary_20"
-              app:layout_constraintTop_toBottomOf="@id/priceSection"
-              app:layout_constraintStart_toEndOf="@id/startVertical"
-              app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            app:dividerColor="@color/colors_primary_20"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/priceSection" />
 
-          <androidx.appcompat.widget.AppCompatTextView
-              style="@style/AttendanceSection"
-              android:id="@+id/locationSection"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="8dp"
-              android:drawableStart="@drawable/ic_localization"
-              android:drawablePadding="8dp"
-              android:text="@string/locationText"
-              app:layout_constraintTop_toBottomOf="@id/divider3"
-              app:layout_constraintStart_toEndOf="@id/startVertical" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/locationSection"
+            style="@style/AttendanceSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_localization"
+            android:drawablePadding="8dp"
+            android:text="@string/locationText"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/divider3" />
 
-          <androidx.appcompat.widget.AppCompatTextView
-              android:id="@+id/address"
-              style="@style/AttendanceSectionAddress"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginStart="32dp"
-              app:layout_constraintTop_toBottomOf="@id/locationSection"
-              app:layout_constraintStart_toEndOf="@id/startVertical"
-              android:text="@string/addressText" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/address"
+            style="@style/AttendanceSectionAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="@string/addressText"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/locationSection" />
 
-          <com.google.android.material.divider.MaterialDivider
-              android:id="@+id/divider4"
-              android:layout_width="0dp"
-              android:layout_height="1dp"
-              android:layout_marginTop="5dp"
-              app:dividerColor="@color/colors_primary_20"
-              app:layout_constraintTop_toBottomOf="@id/address"
-              app:layout_constraintStart_toEndOf="@id/startVertical"
-              app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            app:dividerColor="@color/colors_primary_20"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/address" />
 
-          <com.google.android.material.chip.Chip
-              android:id="@+id/healthInsurance"
-              style="@style/TextResult_InterMedium_ChipStyle"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:textColor="@color/colors_primary_800"
-              app:chipBackgroundColor="@color/colors_accent_blue_10"
-              app:chipIcon="@drawable/ic_baseline_check_14"
-              app:layout_constraintEnd_toEndOf="@+id/inclusiveBathroom"
-              app:layout_constraintStart_toEndOf="@+id/startVertical"
-              app:layout_constraintTop_toBottomOf="@id/divider4"
-              tools:text="@string/health_insurance"
-              android:visibility="visible"
-              tools:visibility="visible"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/healthInsurance"
+            style="@style/TextResult_InterMedium_ChipStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colors_primary_800"
+            android:visibility="visible"
+            app:chipBackgroundColor="@color/colors_accent_blue_10"
+            app:chipIcon="@drawable/ic_baseline_check_14"
+            app:layout_constraintEnd_toEndOf="@+id/inclusiveBathroom"
+            app:layout_constraintStart_toEndOf="@+id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/divider4"
+            tools:text="@string/health_insurance"
+            tools:visibility="visible" />
 
-          <com.google.android.material.chip.Chip
-              android:id="@+id/inclusiveBathroom"
-              style="@style/TextResult_InterMedium_ChipStyle"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:textColor="@color/colors_primary_800"
-              app:chipBackgroundColor="@color/colors_accent_blue_10"
-              app:chipIcon="@drawable/ic_baseline_check_14"
-              tools:text="@string/inclusive_bathroom"
-              app:layout_constraintTop_toBottomOf="@id/healthInsurance"
-              app:layout_constraintStart_toEndOf="@+id/startVertical"
-              android:visibility="visible"
-              tools:visibility="visible"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/inclusiveBathroom"
+            style="@style/TextResult_InterMedium_ChipStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colors_primary_800"
+            android:visibility="visible"
+            app:chipBackgroundColor="@color/colors_accent_blue_10"
+            app:chipIcon="@drawable/ic_baseline_check_14"
+            app:layout_constraintStart_toEndOf="@+id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/healthInsurance"
+            tools:text="@string/inclusive_bathroom"
+            tools:visibility="visible" />
 
-            <androidx.appcompat.widget.AppCompatButton
-              android:id="@+id/contactButton"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="24dp"
-              android:paddingStart="24dp"
-              android:paddingEnd="24dp"
-              android:drawablePadding="8dp"
-              android:text="@string/contact_string"
-              android:textAllCaps="false"
-              android:drawableStart="@drawable/ic_baseline_contact"
-              android:background="@drawable/search_button"
-              app:layout_constraintStart_toEndOf="@id/startVertical"
-              app:layout_constraintEnd_toStartOf="@id/endVertical"
-              app:layout_constraintTop_toBottomOf="@id/inclusiveBathroom"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/contactButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:autoLink="phone"
+            android:background="@drawable/search_button"
+            android:drawableStart="@drawable/ic_baseline_contact"
+            android:drawablePadding="8dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="@string/contact_string"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/inclusiveBathroom" />
 
-          <com.google.android.material.divider.MaterialDivider
-              android:id="@+id/divider5"
-              android:layout_width="match_parent"
-              android:layout_height="2dp"
-              android:layout_marginTop="16dp"
-              app:dividerColor="@color/colors_primary_20"
-              app:layout_constraintTop_toBottomOf="@id/contactButton"/>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            app:dividerColor="@color/colors_primary_20"
+            app:layout_constraintTop_toBottomOf="@id/contactButton" />
 
-          <include
-              android:id="@+id/expTvExperience"
-              layout="@layout/expandable_experience_text_view"
-              android:layout_width="0dp"
-              android:layout_height="match_parent"
-              android:layout_marginTop="16dp"
-              app:layout_constraintTop_toBottomOf="@id/divider5"
-              app:layout_constraintStart_toEndOf="@id/startVertical"
-              app:layout_constraintEnd_toStartOf="@id/endVertical"/>
+        <include
+            android:id="@+id/textsContainers"
+            layout="@layout/expandable_experience_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/divider5" />
 
-          <com.google.android.material.divider.MaterialDivider
-              android:id="@+id/divider6"
-              android:layout_width="match_parent"
-              android:layout_height="2dp"
-              android:layout_marginTop="16dp"
-              app:dividerColor="@color/colors_primary_20"
-              app:layout_constraintTop_toBottomOf="@id/expTvExperience"/>
+        <include
+            android:id="@+id/textsContainers2"
+            layout="@layout/expandable_formation_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/endVertical"
+            app:layout_constraintStart_toEndOf="@id/startVertical"
+            app:layout_constraintTop_toBottomOf="@id/textsContainers"/>
 
-          <include
-              android:id="@+id/expTvFormation"
-              layout="@layout/expandable_formation_text_view"
-              android:layout_width="0dp"
-              android:layout_height="match_parent"
-              android:layout_marginTop="16dp"
-              app:layout_constraintTop_toBottomOf="@id/divider6"
-              app:layout_constraintStart_toEndOf="@id/startVertical"
-              app:layout_constraintEnd_toStartOf="@id/endVertical"/>
 
-          <include
-              android:id="@+id/contactScrollView"
-              layout="@layout/scroll_view"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="24dp"
-              android:background="@color/colors_primary_20"
-              app:layout_constraintTop_toBottomOf="@id/expTvFormation"
-              app:layout_constraintStart_toEndOf="parent"
-              app:layout_constraintEnd_toStartOf="parent"/>
+        <include
+            android:id="@+id/contactScrollView"
+            layout="@layout/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/colors_primary_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textsContainers2" />
 
-          <androidx.constraintlayout.widget.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/startVertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="32dp" />
+            app:layout_constraintGuide_begin="16dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/endVertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="32dp" />
+            app:layout_constraintGuide_end="16dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/startHorizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="24dp" />
+            app:layout_constraintGuide_begin="16dp" />
 
 
-      </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.core.widget.NestedScrollView>

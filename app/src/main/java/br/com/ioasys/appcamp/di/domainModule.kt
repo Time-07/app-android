@@ -1,9 +1,6 @@
 package br.com.ioasys.appcamp.di
 
-import br.com.ioasys.appcamp.domain.usecase.GetProfessionalListUseCase
-import br.com.ioasys.appcamp.domain.usecase.LoginUseCase
-import br.com.ioasys.appcamp.domain.usecase.SaveProfessionalListUseCase
-import br.com.ioasys.appcamp.domain.usecase.SignUpUseCase
+import br.com.ioasys.appcamp.domain.usecase.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import org.koin.dsl.module
@@ -22,5 +19,8 @@ val domainModule = module {
     }
     factory { (scope:CoroutineScope) ->
         SaveProfessionalListUseCase(get(), scope)
+    }
+    factory { (scope:CoroutineScope) ->
+        SearchUseCase(get(), scope)
     }
 }

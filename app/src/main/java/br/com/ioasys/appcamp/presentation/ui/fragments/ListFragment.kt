@@ -1,12 +1,19 @@
 package br.com.ioasys.appcamp.presentation.ui.fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
+import br.com.ioasys.appcamp.R
 import br.com.ioasys.appcamp.databinding.FragmentListBinding
+import br.com.ioasys.appcamp.presentation.ui.CustomDialogFragment
+import org.koin.androidx.scope.fragmentScope
+import org.koin.core.component.getScopeId
 
 class ListFragment : Fragment() {
 
@@ -31,6 +38,11 @@ class ListFragment : Fragment() {
             findNavController().navigate(
                 ListFragmentDirections.actionListFragmentToSearchFragment()
             )
+        }
+
+        binding.headerTitle.textButton.setOnClickListener {
+            val dialog = CustomDialogFragment()
+            dialog.show(parentFragmentManager,  dialog.tag)
         }
     }
 

@@ -1,4 +1,4 @@
-package br.com.ioasys.appcamp.data.data_local.utils
+package br.com.ioasys.appcamp.data_local.utils
 
 import android.content.Context
 import br.com.ioasys.appcamp.data.data_local.utils.LocalConstants.SHARED_PREFERENCES_NAME
