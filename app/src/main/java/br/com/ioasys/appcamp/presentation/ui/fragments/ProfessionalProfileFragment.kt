@@ -3,6 +3,7 @@ package br.com.ioasys.appcamp.presentation.ui.fragments
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
@@ -33,8 +34,6 @@ class ProfessionalProfileFragment : Fragment() {
     }
 
     private fun setListeners() {
-        binding.professionalFirstName.text = getFirstName("Silvia Maranhão")
-        binding.professionalLastName.text = getLastName("Silvia Maranhão")
         binding.contactButton.setOnClickListener {
             binding.run {
                 binding.contactScrollView.scrollView.isSmoothScrollingEnabled
@@ -62,38 +61,6 @@ class ProfessionalProfileFragment : Fragment() {
             professionalLastName.text = args.itemArgs.professionalLastName
         }
     }
-
-    private fun onScrollChanged() {
-        TODO("Not implemented")
-    private fun expandableExperienceTextView(){
-        val expTVexperience = binding.expTvExperience.expandExperienceTextView
-        expTVexperience.setText("Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas, passando por todo o início da terapia hormonal até.\n" +
-                "\n" +
-                "Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas, passando por todo o início da terapia hormonal até.")
-    }
-
-    private fun expandableFormationTextView(){
-        val expTVformation = binding.expTvFormation.expandFormationTextView
-        expTVformation.setText("Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas, passando por todo o início da terapia hormonal até.\n" +
-                "\n" +
-                "Atendo pessoas trans em transição hormonal desde 2012. Tenho ampla experiência no assunto e atuo em todos os estágios do procedimento, das primeiras consultas, passando por todo o início da terapia hormonal até.")
-    }
-
-
-    private fun getFirstName(fullName: String?): String? {
-        val index = fullName?.lastIndexOf(' ')
-        return if (index == -1) {
-            fullName
-        } else index?.let { it1 -> fullName.substring(0, it1) }
-    }
-
-    private fun getLastName(fullName: String?): String? {
-        val index = fullName?.lastIndexOf(' ')
-        return if (index == -1) {
-            null
-        } else return index?.plus(1)?.let { it1 -> fullName.substring(it1) }
-    }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
